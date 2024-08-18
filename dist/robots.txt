@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://geiltonxavier-github-io.vercel.app/sitemap-index.xml
