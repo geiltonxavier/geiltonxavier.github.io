@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geilton Xavier - Senior Software Engineer</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/photos.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -112,39 +113,7 @@
     <section class="section" id="photos">
         <div class="container">
             <h2>Photography</h2>
-            <div class="photos-grid">
-                <div class="photo-card">
-                    <div class="photo-placeholder">📸</div>
-                    <div class="photo-info">
-                        <h3>Mountain Sunrise</h3>
-                        <p>Early morning hike to catch the first light hitting the peaks. There's something magical about being above the clouds as the world wakes up.</p>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-placeholder">🌲</div>
-                    <div class="photo-info">
-                        <h3>Forest Path</h3>
-                        <p>A peaceful trail through the Portuguese countryside. Sometimes the best debugging happens while walking through nature.</p>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-placeholder">🌅</div>
-                    <div class="photo-info">
-                        <h3>Coastal View</h3>
-                        <p>The Atlantic coast of Portugal offers stunning vistas. This spot has become my go-to place for reflection and inspiration.</p>
-                    </div>
-                </div>
-                
-                <div class="photo-card">
-                    <div class="photo-placeholder">🏰</div>
-                    <div class="photo-info">
-                        <h3>Historic Architecture</h3>
-                        <p>Exploring Lisbon's rich history through its architecture. Every building tells a story, much like every line of code has a purpose.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="photos-grid" id="photosGrid"></div>
         </div>
     </section>
 
@@ -196,5 +165,28 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Render photos from photos.json
+    fetch('photos.json')
+      .then(response => response.json())
+      .then(photos => {
+        const grid = document.getElementById('photosGrid');
+        grid.innerHTML = '';
+        photos.forEach(photo => {
+          const card = document.createElement('div');
+          card.className = 'photo-card';
+          card.innerHTML = `
+            <div class="photo-img-wrapper">
+              <img src="${photo.url}" alt="${photo.title}" class="photo-img" onerror="this.style.display='none';this.parentNode.innerHTML='📷';">
+            </div>
+            <div class="photo-info">
+              <h3>${photo.title}</h3>
+              <p>${photo.description}</p>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      });
+    </script>
 </body>
 </html>
