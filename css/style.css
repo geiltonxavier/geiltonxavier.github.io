@@ -45,7 +45,7 @@
   margin-bottom: 1.2rem;
 }
 .footer-social-link {
-  color: white;
+  color: var(--text-dark);
   font-size: 1.25rem;
   transition: color 0.2s, transform 0.2s;
   display: flex;
@@ -55,13 +55,13 @@
 }
 .footer-social-link:hover {
   color: var(--accent-color);
-  background: rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.04);
   transform: scale(1.13);
 }
 .footer-text {
   margin-top: 1.2rem;
   font-size: 1rem;
-  color: #e2e8f0;
+  color: var(--text-light);
   opacity: 0.85;
 }
 
@@ -572,8 +572,8 @@ body.dark-theme .bg-toggle {
 
 .footer {
     position: relative;
-    background: var(--primary-color);
-    color: white;
+    background: transparent;
+    color: var(--text-dark);
     padding: 3rem 0;
     padding-top: 80px;
     text-align: center;
