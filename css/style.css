@@ -1,12 +1,4 @@
 /* SVG de montanhas no topo do footer */
-.footer {
-    position: relative;
-    background: transparent;
-    color: white;
-    padding: 0 0 0 0;
-    text-align: center;
-    overflow: hidden;
-}
 .footer-mountains {
     position: absolute;
     top: 0;
@@ -477,11 +469,13 @@ body {
 }
 
 .footer {
+    position: relative;
     background: var(--primary-color);
     color: white;
     padding: 3rem 0;
+    padding-top: 80px;
     text-align: center;
-    margin-top: 5rem;
+    overflow: hidden;
 }
 
 .contact-info {
