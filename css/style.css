@@ -85,15 +85,57 @@ body {
     z-index: 2;
 }
 
-.bg-controls {
+
+/* Light/Dark theme toggle button */
+.bg-toggle {
     position: absolute;
-    top: 100px;
-    right: 20px;
-    z-index: 1001;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    top: 30px;
+    right: 30px;
+    z-index: 1002;
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+.bg-toggle:hover, .bg-toggle:focus {
+    background: var(--accent-color);
+    color: white;
+    opacity: 1;
+    outline: none;
+}
+.hero.bg-dark {
+    /* Mantém a imagem de fundo, mas com overlay escuro para efeito noite */
+    background:
+        linear-gradient(135deg, rgba(30,34,40,0.85) 60%, rgba(26,32,44,0.92) 100%),
+        linear-gradient(135deg, rgba(44, 95, 45, 0.5), rgba(74, 124, 89, 0.3)),
+        url('https://i.pinimg.com/1200x/a6/bd/4d/a6bd4db7ee7053689bd971b36cbcd1ef.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f7fafc;
+}
+.hero.bg-dark .hero-content h1,
+.hero.bg-dark .hero-content p {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.85);
+    color: #f7fafc;
+}
+.hero.bg-dark .cta-button {
+    background: #23272f;
+    color: #97bc62;
+}
+.hero.bg-dark .cta-button:hover {
+    background: #1a202c;
+    color: #fff;
 }
 
 .bg-controls h4 {

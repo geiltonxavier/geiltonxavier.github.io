@@ -2,23 +2,25 @@
 // Author: Geilton Xavier
 // Date: 2025-08-10
 
-// Background style switcher
-const bgControls = document.querySelectorAll('.bg-option');
+
+
+// Light/Dark theme toggle
+const bgThemeToggle = document.getElementById('bgThemeToggle');
 const heroSection = document.getElementById('home');
 
-bgControls.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        bgControls.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-        // Remove all background classes
-        heroSection.classList.remove('bg-image', 'bg-svg', 'bg-gradient', 'bg-css');
-        // Add selected background class
-        const bgClass = button.getAttribute('data-bg');
-        heroSection.classList.add(bgClass);
+if (bgThemeToggle && heroSection) {
+    bgThemeToggle.addEventListener('click', () => {
+        const isDark = heroSection.classList.contains('bg-dark');
+        heroSection.classList.remove('bg-image', 'bg-dark');
+        if (isDark) {
+            heroSection.classList.add('bg-image');
+            bgThemeToggle.textContent = '🌙';
+        } else {
+            heroSection.classList.add('bg-dark');
+            bgThemeToggle.textContent = '☀️';
+        }
     });
-});
+}
 
 // Navigation functionality
 const navLinks = document.querySelectorAll('.nav-link');
@@ -68,5 +70,8 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Initialize - show home section
+// Initialize - show home section and set default background
 hero.style.display = 'flex';
+heroSection.classList.remove('bg-svg', 'bg-gradient', 'bg-css', 'bg-dark');
+heroSection.classList.add('bg-image');
+if (bgThemeToggle) bgThemeToggle.textContent = '🌙';
