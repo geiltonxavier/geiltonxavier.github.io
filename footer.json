@@ -1,7 +1,6 @@
 {
   "contact": [
     { "icon": "📧", "value": "geilton@live.com" },
-    { "icon": "📱", "value": "+351 910 702 889" },
     { "icon": "🌐", "value": "www.geiltonxavier.dev" }
   ],
   "cv": {

@@ -1,3 +1,83 @@
+/* Footer custom styles */
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+}
+.footer-cv {
+  margin-bottom: 1.2rem;
+}
+.footer-cv-link {
+  background: var(--accent-color);
+  color: var(--text-dark);
+  padding: 8px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.footer-cv-link:hover {
+  background: #a8c670;
+  color: #23272f;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.footer-social-link {
+  color: white;
+  font-size: 1.25rem;
+  transition: color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50%;
+}
+.footer-social-link:hover {
+  color: var(--accent-color);
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.13);
+}
+.footer-text {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  color: #e2e8f0;
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 0.98rem;
+  }
+  .footer-social {
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+  .footer-cv-link {
+    padding: 7px 14px;
+    font-size: 0.98rem;
+  }
+  .footer-text {
+    font-size: 0.95rem;
+  }
+}
 /* SVG de montanhas no topo do footer */
 .footer-mountains {
     position: absolute;
