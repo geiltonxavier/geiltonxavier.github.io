@@ -1,3 +1,8 @@
+/* Remove underline from logo link */
+a.logo {
+  text-decoration: none;
+  color: inherit;
+}
 .bg-toggle {
   visibility: visible !important;
   opacity: 1 !important;
