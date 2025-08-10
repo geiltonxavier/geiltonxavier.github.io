@@ -41,35 +41,8 @@
     <section class="section" id="about">
         <div class="container">
             <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="profile-card">
-                    <div class="profile-image"><img src="https://avatars2.githubusercontent.com/u/4085573" alt="Geilton Xavier" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-                    <h3>Senior Software Engineer</h3>
-                    <p>Based in Lisbon, Portugal</p>
-                    <p>Originally from São Paulo, Brazil</p>
-                </div>
-                <div class="about-content">
-                    <h3>Passionate Developer & Nature Enthusiast</h3>
-                    <p>With over a decade of experience in software development, I specialize in .NET technologies, cloud-native solutions, and technical leadership. Currently working at Siemens Portugal, I focus on building scalable, secure applications using Azure services and DevOps practices.</p>
-                    <p>My journey spans from junior developer to senior software architect, working with companies across Brazil and Portugal. I'm passionate about clean architecture, domain-driven design, and helping teams deliver high-quality software solutions.</p>
-                    <p>When I'm not coding, you'll find me exploring nature, hiking mountains, and capturing moments through photography. I believe the best solutions come from a clear mind and fresh perspective.</p>
-                </div>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>🔧 Technologies</h3>
-                    <p>.NET Core/8, C#, Azure, Docker, Kubernetes</p>
-                </div>
-                <div class="skill-card">
-                    <h3>☁️ Cloud Expertise</h3>
-                    <p>Azure Functions, DevOps, Infrastructure as Code</p>
-                </div>
-                <div class="skill-card">
-                    <h3>🏗️ Architecture</h3>
-                    <p>Clean Architecture, DDD, TDD, Microservices</p>
-                </div>
-            </div>
+            <div class="about-grid" id="aboutGrid"></div>
+            <div class="skills-grid" id="skillsGrid"></div>
         </div>
     </section>
 
@@ -77,39 +50,7 @@
     <section class="section" id="now">
         <div class="container">
             <h2>What I'm Doing Now</h2>
-            <div class="now-content">
-                <div class="current-item">
-                    <div class="icon">🏢</div>
-                    <div>
-                        <h3>Senior Software Engineer at Siemens Portugal</h3>
-                        <p>Leading cloud-native development in Smart Infrastructure, focusing on Azure services, DevOps practices, and technical leadership since December 2024.</p>
-                    </div>
-                </div>
-                
-                <div class="current-item">
-                    <div class="icon">📚</div>
-                    <div>
-                        <h3>Continuous Learning</h3>
-                        <p>Recently completed my Bachelor's in Computer Science at ETEP University. Always exploring new technologies and best practices in software architecture.</p>
-                    </div>
-                </div>
-                
-                <div class="current-item">
-                    <div class="icon">🌱</div>
-                    <div>
-                        <h3>Open Source Contribution</h3>
-                        <p>Maintaining "Aprenda GO" - an open source knowledge center for the Go programming language, helping developers learn and grow.</p>
-                    </div>
-                </div>
-                
-                <div class="current-item">
-                    <div class="icon">🏔️</div>
-                    <div>
-                        <h3>Exploring Portugal</h3>
-                        <p>Discovering the beautiful landscapes of Portugal, from mountain trails to coastal paths, always with my camera ready for the perfect shot.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="now-content" id="nowContent"></div>
         </div>
     </section>
 
@@ -131,15 +72,7 @@
     <section class="section" id="blog">
         <div class="container">
             <h2>Blog & Thoughts</h2>
-            <div class="blog-content">
-                <h3>Technical Insights & Experiences</h3>
-                <p>I share my thoughts on software architecture, cloud development, and lessons learned from years in the industry. From technical deep-dives to career reflections, you'll find authentic insights from a developer's journey.</p>
-                <p>Topics include .NET best practices, Azure cloud solutions, clean architecture principles, and the intersection of technology with nature and mindfulness.</p>
-                <a href="https://geiltonxavier.substack.com/" target="_blank" class="blog-link">Visit My Blog →</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
-                    <em>Blog link will redirect to your external blog platform</em>
-                </p>
-            </div>
+            <div class="blog-content" id="blogContent"></div>
         </div>
     </section>
 
@@ -201,6 +134,63 @@
       closeBtn.onclick = function() { modal.style.display = 'none'; };
       modal.onclick = function(e) { if(e.target === modal) modal.style.display = 'none'; };
       document.addEventListener('keydown', function(e) { if(e.key === 'Escape') modal.style.display = 'none'; });
+
+      // Render About, Skills, Now, Blog from content.json
+      fetch('content.json')
+        .then(response => response.json())
+        .then(content => {
+          // About/Profile
+          const aboutGrid = document.getElementById('aboutGrid');
+          if (aboutGrid && content.profile && content.about) {
+            aboutGrid.innerHTML = `
+              <div class="profile-card">
+                <div class="profile-image"><img src="${content.profile.avatar}" alt="${content.profile.name}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+                <h3>${content.profile.title}</h3>
+                <p>Based in ${content.profile.location}</p>
+                <p>Originally from ${content.profile.origin}</p>
+              </div>
+              <div class="about-content">
+                <h3>${content.about.headline}</h3>
+                ${content.about.description.map(p => `<p>${p}</p>`).join('')}
+              </div>
+            `;
+          }
+          // Skills
+          const skillsGrid = document.getElementById('skillsGrid');
+          if (skillsGrid && Array.isArray(content.skills)) {
+            skillsGrid.innerHTML = content.skills.map(skill => `
+              <div class="skill-card">
+                <h3>${skill.title}</h3>
+                <p>${skill.items}</p>
+              </div>
+            `).join('');
+          }
+          // Now
+          const nowContent = document.getElementById('nowContent');
+          if (nowContent && Array.isArray(content.now)) {
+            nowContent.innerHTML = content.now.map(item => `
+              <div class="current-item">
+                <div class="icon">${item.icon}</div>
+                <div>
+                  <h3>${item.title}</h3>
+                  <p>${item.description}</p>
+                </div>
+              </div>
+            `).join('');
+          }
+          // Blog
+          const blogContent = document.getElementById('blogContent');
+          if (blogContent && content.blog) {
+            blogContent.innerHTML = `
+              <h3>${content.blog.headline}</h3>
+              ${content.blog.description.map(p => `<p>${p}</p>`).join('')}
+              <a href="${content.blog.link}" target="_blank" class="blog-link">Visit My Blog →</a>
+              <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                <em>${content.blog.note}</em>
+              </p>
+            `;
+          }
+        });
     });
     </script>
 </body>
