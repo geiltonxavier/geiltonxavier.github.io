@@ -1,3 +1,8 @@
+.bg-toggle {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
 /* Footer custom styles */
 .footer-contact {
   display: flex;
@@ -190,31 +195,48 @@ body {
 
 
 /* Light/Dark theme toggle button */
+/* Toggle Switch Minimalista */
 .bg-toggle {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    z-index: 1002;
-    background: rgba(255,255,255,0.7);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    cursor: pointer;
-    box-shadow: 0 2px 8px var(--shadow);
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.7;
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 2000;
+  width: 48px;
+  height: 26px;
+  background: #e2e8f0;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px var(--shadow);
+  padding: 0 4px;
 }
-.bg-toggle:hover, .bg-toggle:focus {
-    background: var(--accent-color);
-    color: white;
-    opacity: 1;
-    outline: none;
+.bg-toggle:focus {
+  outline: 2px solid var(--accent-color);
+}
+.bg-toggle .slider {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px #0002;
+  transition: transform 0.2s, background 0.2s;
+  transform: translateX(0);
+}
+body.dark-theme .bg-toggle {
+  background: #23272f;
+}
+body.dark-theme .bg-toggle .slider {
+  background: #97bc62;
+}
+body.dark-theme .bg-toggle {
+  box-shadow: 0 2px 8px #0008;
+}
+.bg-toggle.active .slider {
+  transform: translateX(22px);
+  background: var(--accent-color);
 }
 .hero.bg-dark {
     /* Mantém a imagem de fundo, mas com overlay escuro para efeito noite */
