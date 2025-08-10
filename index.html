@@ -1,125 +1,765 @@
----
-permalink: /
----
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{ site.description }}">
-        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        {% if site.favicon_img %}
-        <link rel="shortcut icon" href="{{ site.favicon_img_path }}" />
-        {% endif %}
-        <link rel="stylesheet" href="{{ "css/front.css" | prepend: site.baseurl }}">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div class="content">
-            {% if site.front_img %}
-            <img src="{{ site.front_img_path }}" id="fullscreen">
-            {% endif %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geilton Xavier - Senior Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            {% if site.avatar %}
-                <img src="{{ site.avatar_img_path }}" id="avatar">
-            {% endif %}
+        :root {
+            --primary-color: #2c5f2d;
+            --secondary-color: #4a7c59;
+            --accent-color: #97bc62;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --background: #ffffff;
+            --card-bg: #f7fafc;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
 
-            <h1>{{ site.name }}</h1>
-            <h3>{{ site.description }}</h3>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--background);
+        }
 
-                <ul>
-                    {% if site.github_username %}
-                    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github_username }}"><span class="description">GitHub</span></a></li>
-                    {% endif %}
+        /* Header with Mountain Background */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-                    {% if site.codepen_username %}
-                    <li><a class="fa fa-2x fa-codepen" href="https://codepen.io/{{ site.codepen_username }}"><span class="description">CodePen</span></a></li>
-                    {% endif %}
+        /* Background options - you can easily switch between them */
+        
+        /* Option 1: Real mountain image */
+        .hero.bg-image {
+            background: linear-gradient(135deg, rgba(44, 95, 45, 0.7), rgba(74, 124, 89, 0.6)), 
+                        url('https://i.pinimg.com/1200x/a6/bd/4d/a6bd4db7ee7053689bd971b36cbcd1ef.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-                    {% if site.facebook_username %}
-                    <li><a class="fa fa-2x fa-facebook" href="https://facebook.com/{{ site.facebook_username }}"><span class="description">Facebook</span></a></li>
-                    {% endif %}
+        /* Option 2: SVG mountain design (original) */
+        .hero.bg-svg {
+            background: linear-gradient(135deg, rgba(44, 95, 45, 0.8), rgba(74, 124, 89, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path fill="%234a7c59" d="M0,400 C150,350 300,300 450,320 C600,340 750,280 900,300 C1050,320 1200,280 1200,280 L1200,600 L0,600 Z"/><path fill="%2397bc62" d="M0,450 C200,400 400,420 600,400 C800,380 1000,410 1200,390 L1200,600 L0,600 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+        }
 
-                    {% if site.vk_username %}
-                    <li><a class="fa fa-2x fa-vk" href="https://vk.com/{{ site.vk_username }}"><span class="description">ВКонтакте</span></a></li>
-                    {% endif %}
+        /* Option 3: Pure gradient */
+        .hero.bg-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        }
 
-                    {% if site.twitter_username %}
-                    <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/{{ site.twitter_username }}"><span class="description">Twitter</span></a></li>
-                    {% endif %}
+        /* Option 4: Animated CSS mountains */
+        .hero.bg-css {
+            background: linear-gradient(135deg, #2c5f2d, #4a7c59);
+            position: relative;
+        }
 
-                    {% if site.google_plus_username %}
-                    <li><a class="fa fa-2x fa-google-plus" href="https://plus.google.com/+{{ site.google_plus_username }}"><span class="description">Google +</span></a></li>
-                    {% endif %}
+        .hero.bg-css::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: 
+                radial-gradient(ellipse at 20% 100%, rgba(151, 188, 98, 0.8) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 100%, rgba(74, 124, 89, 0.6) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 100%, rgba(151, 188, 98, 0.7) 0%, transparent 50%);
+            z-index: 1;
+        }
 
-                    {% if site.linkedin_username %}
-                    <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/in/{{ site.linkedin_username }}"><span class="description">LinkedIn</span></a></li>
-                    {% endif %}
+        .hero.bg-css .hero-content {
+            position: relative;
+            z-index: 2;
+        }
 
-                    {% if site.vine_username %}
-                    <li><a class="fa fa-2x fa-vine" href="https://vine.co/{{ site.vine_username }}"><span class="description">Vine</span></a></li>
-                    {% endif %}
+        /* Background toggle controls */
+        .bg-controls {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
 
-                    {% if site.instagram_username %}
-                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}"><span class="description">Instagram</span></a></li>
-                    {% endif %}
+        .bg-controls h4 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
 
-                    {% if site.flickr_usernmae %}
-                    <li><a class="fa fa-2x fa-flickr" href="https://flickr.com/photos/{{ site.flickr_username }}"><span class="description">Flickr</span></a></li>
-                    {% endif %}
+        .bg-option {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            margin-bottom: 5px;
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
 
-                    {% if site.steam_username %}
-                    <li><a class="fa fa-2x fa-steam" href="http://steamcommunity.com/id/{{ site.steam_username }}"><span class="description">Steam</span></a></li>
-                    {% endif %}
+        .bg-option:hover {
+            background: var(--accent-color);
+            color: white;
+        }
 
-                    {% if site.soundcloud_username %}
-                    <li><a class="fa fa-2x fa-soundcloud" href="https://soundcloud.com/{{ site.soundcloud_username }}"><span class="description">Soundcloud</span></a></li>
-                    {% endif %}
+        .bg-option.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
 
-                    {% if site.lastfm_username %}
-                    <li><a class="fa fa-2x fa-lastfm" href="http://www.last.fm/user/{{ site.lastfm_username }}"><span class="description">Last.fm</span></a></li>
-                    {% endif %}
+        /* Enhanced text shadow for better readability on real images */
+        .hero.bg-image .hero-content h1,
+        .hero.bg-image .hero-content p {
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
 
-                    {% if site.stack_of_username %}
-                    <li><a class="fa fa-2x fa-stack-overflow" href="https://pt.stackoverflow.com/users/{{ site.stack_of_username }}"><span class="description">Stack OF</span></a></li>
-                    {% endif %}
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
 
-                    {% if site.reddit_username %}
-                    <li><a class="fa fa-2x fa-reddit" href="https://reddit.com/user/{{ site.reddit_username }}"><span class="description">Reddit</span></a></li>
-                    {% endif %}
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
 
-                    {% if site.medium_username %}
-                    <li><a class="fa fa-2x fa-medium" href="https://medium.com/@{{ site.medium_username }}"><span class="description">Medium</span></a></li>
-                    {% endif %}
+        .cta-button {
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
 
-                    {% if site.tumblr_username %}
-                    <li><a class="fa fa-2x fa-tumblr" href="https://{{ site.tumblr_username }}.tumblr.com/"><span class="description">Tumblr</span></a></li>
-                    {% endif %}
+        .cta-button:hover {
+            background: #a8c670;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
 
-                    {% if site.weibo_username %}
-                    <li><a class="fa fa-2x fa-weibo" href="https://weibo.com/{{ site.weibo_username }}"><span class="description">微博</span></a></li>
-                    {% endif %}
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-                    {% if site.blog_url %}
-                    <li><a class="fa fa-2x fa-tags" href="{{ site.blog_url }}"><span class="description">Blog</span></a></li>
-                    {% endif %}
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px var(--shadow);
+        }
 
-                    {% if site.email %}
-                    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}"><span class="description">Email</span></a></li>
-                    {% endif %}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-                    {% if site.public_key_url %}
-                    <li><a class="fa fa-2x fa-key" href="{{ site.public_key_url }}"><span class="description">PGP Key</span></a></li>
-                    {% endif %}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
 
-                    {% if site.cv %}
-                    <li><a class="fa fa-2x fa-file" href="{{ site.cv }}"><span class="description">Resume</span></a></li>
-                    {% endif %}
-                </ul>
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .about-content h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Now Section */
+        .now-content {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .current-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .current-item .icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        /* Photos Section */
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .photo-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .photo-placeholder {
+            height: 250px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .photo-info {
+            padding: 1.5rem;
+        }
+
+        .photo-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Blog Section */
+        .blog-content {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 4rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .blog-link {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .blog-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-cv {
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .download-cv:hover {
+            background: #a8c670;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .bg-controls {
+                top: 80px;
+                right: 10px;
+                padding: 10px;
+            }
+
+            .bg-controls h4 {
+                font-size: 0.8rem;
+            }
+
+            .bg-option {
+                font-size: 0.7rem;
+                padding: 6px 10px;
+            }
+
+            /* Disable parallax on mobile for better performance */
+            .hero.bg-image {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Geilton Xavier</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#now" class="nav-link">Now</a></li>
+                <li><a href="#photos" class="nav-link">Photos</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+            </ul>
         </div>
+    </nav>
 
-    </body>
+    <!-- Hero Section -->
+    <section class="hero bg-image" id="home">
+        <!-- Background Style Controls -->
+        <div class="bg-controls">
+            <h4>🎨 Background Style</h4>
+            <button class="bg-option active" data-bg="bg-image">📸 Mountain Photo</button>
+            <button class="bg-option" data-bg="bg-svg">🎨 SVG Design</button>
+            <button class="bg-option" data-bg="bg-gradient">🌈 Gradient</button>
+            <button class="bg-option" data-bg="bg-css">⛰️ CSS Mountains</button>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Geilton Xavier</h1>
+            <p>Senior Software Engineer • Cloud Native Developer • Tech Leader</p>
+            <a href="#about" class="cta-button">Discover More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="profile-card">
+                    <div class="profile-image">GX</div>
+                    <h3>Senior Software Engineer</h3>
+                    <p>Based in Lisbon, Portugal</p>
+                    <p>Originally from São Paulo, Brazil</p>
+                </div>
+                <div class="about-content">
+                    <h3>Passionate Developer & Nature Enthusiast</h3>
+                    <p>With over a decade of experience in software development, I specialize in .NET technologies, cloud-native solutions, and technical leadership. Currently working at Siemens Portugal, I focus on building scalable, secure applications using Azure services and DevOps practices.</p>
+                    <p>My journey spans from junior developer to senior software architect, working with companies across Brazil and Portugal. I'm passionate about clean architecture, domain-driven design, and helping teams deliver high-quality software solutions.</p>
+                    <p>When I'm not coding, you'll find me exploring nature, hiking mountains, and capturing moments through photography. I believe the best solutions come from a clear mind and fresh perspective.</p>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🔧 Technologies</h3>
+                    <p>.NET Core/8, C#, Azure, Docker, Kubernetes</p>
+                </div>
+                <div class="skill-card">
+                    <h3>☁️ Cloud Expertise</h3>
+                    <p>Azure Functions, DevOps, Infrastructure as Code</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🏗️ Architecture</h3>
+                    <p>Clean Architecture, DDD, TDD, Microservices</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Now Section -->
+    <section class="section" id="now">
+        <div class="container">
+            <h2>What I'm Doing Now</h2>
+            <div class="now-content">
+                <div class="current-item">
+                    <div class="icon">🏢</div>
+                    <div>
+                        <h3>Senior Software Engineer at Siemens Portugal</h3>
+                        <p>Leading cloud-native development in Smart Infrastructure, focusing on Azure services, DevOps practices, and technical leadership since December 2024.</p>
+                    </div>
+                </div>
+                
+                <div class="current-item">
+                    <div class="icon">📚</div>
+                    <div>
+                        <h3>Continuous Learning</h3>
+                        <p>Recently completed my Bachelor's in Computer Science at ETEP University. Always exploring new technologies and best practices in software architecture.</p>
+                    </div>
+                </div>
+                
+                <div class="current-item">
+                    <div class="icon">🌱</div>
+                    <div>
+                        <h3>Open Source Contribution</h3>
+                        <p>Maintaining "Aprenda GO" - an open source knowledge center for the Go programming language, helping developers learn and grow.</p>
+                    </div>
+                </div>
+                
+                <div class="current-item">
+                    <div class="icon">🏔️</div>
+                    <div>
+                        <h3>Exploring Portugal</h3>
+                        <p>Discovering the beautiful landscapes of Portugal, from mountain trails to coastal paths, always with my camera ready for the perfect shot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="section" id="photos">
+        <div class="container">
+            <h2>Photography</h2>
+            <div class="photos-grid">
+                <div class="photo-card">
+                    <div class="photo-placeholder">📸</div>
+                    <div class="photo-info">
+                        <h3>Mountain Sunrise</h3>
+                        <p>Early morning hike to catch the first light hitting the peaks. There's something magical about being above the clouds as the world wakes up.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-placeholder">🌲</div>
+                    <div class="photo-info">
+                        <h3>Forest Path</h3>
+                        <p>A peaceful trail through the Portuguese countryside. Sometimes the best debugging happens while walking through nature.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-placeholder">🌅</div>
+                    <div class="photo-info">
+                        <h3>Coastal View</h3>
+                        <p>The Atlantic coast of Portugal offers stunning vistas. This spot has become my go-to place for reflection and inspiration.</p>
+                    </div>
+                </div>
+                
+                <div class="photo-card">
+                    <div class="photo-placeholder">🏰</div>
+                    <div class="photo-info">
+                        <h3>Historic Architecture</h3>
+                        <p>Exploring Lisbon's rich history through its architecture. Every building tells a story, much like every line of code has a purpose.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <h2>Blog & Thoughts</h2>
+            <div class="blog-content">
+                <h3>Technical Insights & Experiences</h3>
+                <p>I share my thoughts on software architecture, cloud development, and lessons learned from years in the industry. From technical deep-dives to career reflections, you'll find authentic insights from a developer's journey.</p>
+                <p>Topics include .NET best practices, Azure cloud solutions, clean architecture principles, and the intersection of technology with nature and mindfulness.</p>
+                <a href="#" class="blog-link">Visit My Blog →</a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                    <em>Blog link will redirect to your external blog platform</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>geilton@live.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+351 910 702 889</span>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <span>www.geiltonxavier.dev</span>
+                </div>
+            </div>
+            <a href="#" class="download-cv">Download CV</a>
+            <p style="margin-top: 2rem; opacity: 0.8;">
+                © 2024 Geilton Xavier. Made with ❤️ and ☕
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Background style switcher
+        const bgControls = document.querySelectorAll('.bg-option');
+        const heroSection = document.getElementById('home');
+
+        bgControls.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                bgControls.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Remove all background classes
+                heroSection.classList.remove('bg-image', 'bg-svg', 'bg-gradient', 'bg-css');
+                
+                // Add selected background class
+                const bgClass = button.getAttribute('data-bg');
+                heroSection.classList.add(bgClass);
+            });
+        });
+
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+        const navbar = document.getElementById('navbar');
+        const hero = document.getElementById('home');
+
+        // Handle navigation clicks
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                
+                // Remove active class from all links and sections
+                navLinks.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked link
+                link.classList.add('active');
+                
+                // Show target section or hero
+                if (targetId === 'home') {
+                    hero.style.display = 'flex';
+                } else {
+                    hero.style.display = 'none';
+                    document.getElementById(targetId).classList.add('active');
+                }
+            });
+        });
+
+        // Handle CTA button click
+        document.querySelector('.cta-button').addEventListener('click', (e) => {
+            e.preventDefault();
+            hero.style.display = 'none';
+            document.getElementById('about').classList.add('active');
+            
+            // Update navigation
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector('a[href="#about"]').classList.add('active');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize - show home section
+        hero.style.display = 'flex';
+    </script>
+</body>
 </html>
