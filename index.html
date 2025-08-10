@@ -6,6 +6,7 @@
     <title>Geilton Xavier - Senior Software Engineer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/photos.css">
+    <link rel="stylesheet" href="css/photos-modal.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -115,6 +116,12 @@
             <h2>Photography</h2>
             <div class="photos-grid" id="photosGrid"></div>
         </div>
+        <!-- Modal for expanded photo -->
+        <div id="photoModal" class="photo-modal" style="display:none;">
+            <span class="photo-modal-close" id="photoModalClose">&times;</span>
+            <img class="photo-modal-img" id="photoModalImg" src="" alt="">
+            <div class="photo-modal-caption" id="photoModalCaption"></div>
+        </div>
     </section>
 
     <!-- Blog Section -->
@@ -177,16 +184,37 @@
           card.className = 'photo-card';
           card.innerHTML = `
             <div class="photo-img-wrapper">
-              <img src="${photo.url}" alt="${photo.title}" class="photo-img" onerror="this.style.display='none';this.parentNode.innerHTML='📷';">
+              <img src="${photo.url}" alt="${photo.title}" class="photo-img" data-title="${photo.title.replace(/"/g, '&quot;')}" data-description="${photo.description.replace(/"/g, '&quot;')}" onerror="this.style.display='none';this.parentNode.innerHTML='📷';" style="cursor:zoom-in;">
             </div>
             <div class="photo-info">
               <h3>${photo.title}</h3>
               <p>${photo.description}</p>
             </div>
           `;
+          // Add click event to expand image
+          card.querySelector('.photo-img').addEventListener('click', function() {
+            const modal = document.getElementById('photoModal');
+            const modalImg = document.getElementById('photoModalImg');
+            const modalCaption = document.getElementById('photoModalCaption');
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            // Fix: getAttribute('data-title') may be null if not set, fallback to alt
+            const title = this.getAttribute('data-title') || this.alt || '';
+            const desc = this.getAttribute('data-description') || '';
+            modalCaption.textContent = title + (desc ? ' — ' + desc : '');
+          });
           grid.appendChild(card);
         });
       });
+    // Modal close logic
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('photoModal');
+      const closeBtn = document.getElementById('photoModalClose');
+      closeBtn.onclick = function() { modal.style.display = 'none'; };
+      modal.onclick = function(e) { if(e.target === modal) modal.style.display = 'none'; };
+      document.addEventListener('keydown', function(e) { if(e.key === 'Escape') modal.style.display = 'none'; });
+    });
     </script>
 </body>
 </html>
