@@ -27,23 +27,37 @@ const sections = document.querySelectorAll('.section');
 const navbar = document.getElementById('navbar');
 const hero = document.getElementById('home');
 
-// Handle navigation clicks
+
+// SPA Routing using hash
+function showSectionFromHash() {
+    let hash = window.location.hash || '#home';
+    let targetId = hash.replace('#', '');
+    // Remove active class from all links and sections
+    navLinks.forEach(l => l.classList.remove('active'));
+    sections.forEach(s => s.classList.remove('active'));
+    // Show target section or hero
+    if (targetId === 'home' || !document.getElementById(targetId)) {
+        hero.style.display = 'flex';
+        document.querySelector('a[href="#home"]').classList.add('active');
+    } else {
+        hero.style.display = 'none';
+        document.getElementById(targetId).classList.add('active');
+        let nav = document.querySelector('a[href="#' + targetId + '"]');
+        if (nav) nav.classList.add('active');
+    }
+}
+
+// Listen to hash changes
+window.addEventListener('hashchange', showSectionFromHash);
+// On page load
+document.addEventListener('DOMContentLoaded', showSectionFromHash);
+
+// Handle navigation clicks (update hash)
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        // Remove active class from all links and sections
-        navLinks.forEach(l => l.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('active'));
-        // Add active class to clicked link
-        link.classList.add('active');
-        // Show target section or hero
-        if (targetId === 'home') {
-            hero.style.display = 'flex';
-        } else {
-            hero.style.display = 'none';
-            document.getElementById(targetId).classList.add('active');
-        }
+        const targetId = link.getAttribute('href');
+        window.location.hash = targetId;
     });
 });
 
@@ -52,11 +66,7 @@ const ctaButton = document.querySelector('.cta-button');
 if (ctaButton) {
     ctaButton.addEventListener('click', (e) => {
         e.preventDefault();
-        hero.style.display = 'none';
-        document.getElementById('about').classList.add('active');
-        // Update navigation
-        navLinks.forEach(l => l.classList.remove('active'));
-        document.querySelector('a[href="#about"]').classList.add('active');
+        window.location.hash = '#about';
     });
 }
 

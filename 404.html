@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/?redirected=1#" />
+  <script>
+    // Redireciona para index.html mantendo o path original na hash
+    (function() {
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var newUrl = '/?redirected=1#' + path + (search ? search : '') + (hash ? hash : '');
+      window.location.replace(newUrl);
+    })();
+  </script>
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecionando...</p>
+</body>
+</html>
