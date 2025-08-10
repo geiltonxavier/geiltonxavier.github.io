@@ -1,3 +1,34 @@
+/* SVG de montanhas no topo do footer */
+.footer {
+    position: relative;
+    background: transparent;
+    color: white;
+    padding: 0 0 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+.footer-mountains {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+.footer .container {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    padding-top: 60px;
+}
+
+/* Remove espaço extra da última seção antes do footer */
+.section:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
 /*
   Main Stylesheet for Geilton Xavier Portfolio
   Author: Geilton Xavier
