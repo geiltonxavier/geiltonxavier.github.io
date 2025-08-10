@@ -8,19 +8,22 @@ const bgThemeToggle = document.getElementById('bgThemeToggle');
 const heroSection = document.getElementById('home');
 
 if (bgThemeToggle && heroSection) {
+    // Inicializa o estado visual do toggle
+    function updateToggleState() {
+        const isDark = heroSection.classList.contains('bg-dark');
+        if (isDark) {
+            bgThemeToggle.classList.add('active');
+        } else {
+            bgThemeToggle.classList.remove('active');
+        }
+    }
+
+    // Atualiza o estado visual ao carregar
+    updateToggleState();
+
     bgThemeToggle.addEventListener('click', () => {
         const isDark = heroSection.classList.contains('bg-dark');
         heroSection.classList.remove('bg-image', 'bg-dark');
-        // Inicializa o estado do botão
-        function updateToggleState() {
-            const isDark = document.body.classList.contains('dark-theme');
-            if (isDark) {
-                bgThemeToggle.classList.add('active');
-            } else {
-                bgThemeToggle.classList.remove('active');
-            }
-        }
-        updateToggleState();
         if (isDark) {
             heroSection.classList.add('bg-image');
         } else {
