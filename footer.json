@@ -1,0 +1,29 @@
+{
+  "contact": [
+    { "icon": "📧", "value": "geilton@live.com" },
+    { "icon": "📱", "value": "+351 910 702 889" },
+    { "icon": "🌐", "value": "www.geiltonxavier.dev" }
+  ],
+  "cv": {
+    "url": "#",
+    "label": "Download CV"
+  },
+  "social": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/geiltonxavier",
+      "icon": "fab fa-github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/geiltonxavier",
+      "icon": "fab fa-linkedin"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/geiltonxavier",
+      "icon": "fab fa-instagram"
+    }
+  ],
+  "text": "© 2025 Geilton Xavier. Made with ❤️ and ☕"
+}

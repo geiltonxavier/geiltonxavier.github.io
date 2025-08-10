@@ -1,3 +1,38 @@
+// Render footer from footer.json (garante que o container existe)
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('footer.json')
+    .then(response => response.json())
+    .then(footer => {
+      const container = document.getElementById('footerContainer');
+      if (!container) return;
+      let html = '';
+      // Contact info (if present)
+      if (footer.contact && Array.isArray(footer.contact)) {
+        html += '<div class="contact-info">';
+        footer.contact.forEach(item => {
+          html += `<div class="contact-item"><span>${item.icon || ''}</span><span>${item.value}</span></div>`;
+        });
+        html += '</div>';
+      }
+      // Download CV (if present)
+      if (footer.cv) {
+        html += `<a href="${footer.cv.url}" class="download-cv" target="_blank">${footer.cv.label || 'Download CV'}</a>`;
+      }
+      // Social links
+      if (footer.social && Array.isArray(footer.social)) {
+        html += '<div class="footer-social" style="margin:2rem 0;">';
+        footer.social.forEach(social => {
+          html += `<a href="${social.url}" class="footer-social-link" target="_blank" title="${social.name}" style="margin:0 10px;font-size:1.5rem;"><i class="${social.icon}"></i></a>`;
+        });
+        html += '</div>';
+      }
+      // Footer text
+      if (footer.text) {
+        html += `<p style="margin-top: 2rem; opacity: 0.8;">${footer.text}</p>`;
+      }
+      container.innerHTML = html;
+    });
+});
 // Main JavaScript for Geilton Xavier Portfolio
 // Author: Geilton Xavier
 // Date: 2025-08-10
