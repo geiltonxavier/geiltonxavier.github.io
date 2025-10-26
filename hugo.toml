@@ -1,0 +1,101 @@
+baseURL = 'https://geiltonxavier.dev'
+languageCode = 'en-us'
+title = 'Geilton Xavier'
+theme = 'typo'
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Home meta description
+description = "A tech-oriented personal blog curated by Geilton Xavier."
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content in markdown
+homeIntroTitle = 'Hi!'
+homeIntroContent = """
+I am a Brazilian Software Engineer with a solid background in computer science and over a decade of experience designing and building scalable systems. I am passionate about solving complex problems and exploring topics such as algorithms, distributed systems, databases, and information retrieval. \\
+Feel free to read [about myself](/about) or to look at my [posts](/posts).
+"""
+
+singleDateFormat = '2 Jan 2006'
+
+# Collection to display on home
+# homeCollectionTitle = 'Posts'
+# homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '02 Jan 2006'
+
+# Footer
+showFooter = false
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "~"
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/geiltonxavier/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/geiltonxavier"
+
+# Main menu pages
+# [[params.menu]]
+# name = "home"
+# url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# [[params.menu]]
+# name = "tags"
+# url = "/tags"
+
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'bw'
+
+# Deploy settings
+
+[[deployment.matchers]]
+pattern = "^.+\\.(js|css|svg|ttf|woff2)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg|gif|webp)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+# [params.giscus]
+# enable = false
+# repo = "tomfran/blog"
+# repoid = "R_kgDOLtSszw"
+# category = "General"
+# categoryid = "DIC_kwDOLtSsz84CfLm4"
+# mapping = "pathname"
+# theme = "preferred_color_scheme"
+
+[params.umami]
+enable = true
+websiteId = "ed412433-9163-4adc-8128-854b6b91f003"
+jsLocation = "https://cloud.umami.is/script.js"
