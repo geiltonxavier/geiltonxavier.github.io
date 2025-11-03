@@ -64,6 +64,11 @@ url = "/posts"
 name = "about"
 url = "/about"
 
+[[params.menu]]
+name = "cv"
+url = "https://github.com/geiltonxavier/resume/blob/master/geilton_xavier_resume.pdf"
+
+
 # [[params.menu]]
 # name = "tags"
 # url = "/tags"
