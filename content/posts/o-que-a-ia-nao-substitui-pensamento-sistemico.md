@@ -4,7 +4,6 @@ draft = false
 title = 'O Que a IA Nao Substitui: Pensamento Sistemico'
 +++
 
-# O que a IA não substitui: pensamento sistêmico
 
 Tenho pensado muito sobre como a gente está usando inteligência artificial. Parece que virou obrigação: todo projeto novo precisa ter "alguma coisa de IA", mesmo que não faça o menor sentido.
 
