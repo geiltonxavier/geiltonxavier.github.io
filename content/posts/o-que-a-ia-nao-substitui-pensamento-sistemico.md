@@ -13,7 +13,7 @@ Usar IA como ferramenta é ótimo. Ela ajuda, acelera, resolve problemas. Mas qu
 
 Tem projeto por aí que nasceu "inteligente" e morreu "caro".
 
-O ponto é que estamos entrando numa fase em que nem todo mundo vai ter conhecimento técnico profundo. As ferramentas já pensam por nós — e isso é bom, até certo ponto. Mas alguém ainda precisa entender o sistema. Alguém precisa enxergar o todo, prever o impacto de uma escolha, saber quando uma automação vale o custo.
+O ponto é que estamos entrando numa fase em que nem todo mundo vai ter conhecimento técnico profundo. As ferramentas já pensam por nós - e isso é bom, até certo ponto. Mas alguém ainda precisa entender o sistema. Alguém precisa enxergar o todo, prever o impacto de uma escolha, saber quando uma automação vale o custo.
 
 É aí que entra o pensamento sistêmico. Não é sobre saber tudo, mas sobre enxergar as conexões. Ver como uma decisão técnica mexe no negócio, no usuário, no time, no orçamento. 
 
