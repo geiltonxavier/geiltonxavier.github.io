@@ -20,7 +20,7 @@ Comecei a pesquisar. Entrei no grupo [TI Bratuga](https://www.facebook.com/group
 
 **E funcionou.**
 
-Consegui entrevistas com uma consultoria. O processo foi relativamente simples: conversa com manager, entrevista técnica, e a mais difícil—uma conversa com um brasileiro que já trabalhava lá. Ele estava genuinamente preocupado em trazer alguém com dois filhos pequenos para o outro lado do Atlântico. E ele tinha razão em se preocupar. Mudança internacional já é difícil sozinho; com família, se der errado, todo mundo paga o preço.
+Consegui entrevistas com uma consultoria. O processo foi relativamente simples: conversa com manager, entrevista técnica, e a mais difícil, uma conversa com um brasileiro que já trabalhava lá. Ele estava genuinamente preocupado em trazer alguém com dois filhos pequenos para o outro lado do Atlântico. E ele tinha razão em se preocupar. Mudança internacional já é difícil sozinho; com família, se der errado, todo mundo paga o preço.
 
 Seis meses de papelada, documentos apostilados, idas ao consulado em São Paulo, e cartas de promessa de trabalho depois, eu tinha o visto na mão.
 
@@ -36,7 +36,7 @@ Vou ser honesto: profissionalmente, Portugal foi excelente para minha carreira.
 
 ### O Mercado de Tech
 
-- **Oportunidades diversas**: Trabalhei na SoftFinanca (fintech), Fidelidade, e hoje na Siemens. Projetos interessantes, mas nem tudo foi o "tech de ponta" que eu imaginava.
+- **Oportunidades diversas**: Trabalhei na [SoftFinanca](https://www.softfinanca.com/en-us/) (fintech), [Fidelidade](https://www.fidelidade.pt/), e hoje na [Siemens](https://www.siemens.com/pt/pt.html). Projetos interessantes, mas nem tudo foi o "tech de ponta" que eu imaginava.
 - **A realidade da stack**: Aqui vai uma surpresa—na SoftFinanca comecei construindo marketplaces com stack bem mais simples do que eu usava no Brasil. Nada de cloud, nada daquele buzz todo. Na Fidelidade, a situação foi diferente: lá sim pude trabalhar (e apresentar para os times) stacks mais modernas como .NET Core, cloud, CI/CD. Acabei treinando muita gente em práticas que, ironicamente, eu já aplicava no Brasil. Spoiler: **o Brasil em 2019/2020 estava muito bem tecnicamente**, pelo menos no meu contexto. A ideia de que "Europa = tech avançado, Brasil = atrasado" não é sempre verdade.
 - **Networking internacional**: Trabalhar com times de diferentes países te força a melhorar inglês, comunicação assíncrona, e te dá uma perspectiva global que não teria ficado só no Brasil. Isso sim foi valioso.
 
