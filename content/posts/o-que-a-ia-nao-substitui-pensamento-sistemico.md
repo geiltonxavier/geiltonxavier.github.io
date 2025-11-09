@@ -1,7 +1,7 @@
 +++
 date = '2025-11-09T18:50:55Z'
 draft = false
-title = 'O Que a IA Nao Substitui: Pensamento Sistemico'
+title = 'O que a IA não substitui: pensamento sistêmico'
 +++
 
 
