@@ -5,10 +5,14 @@ hideBackToTop: true
 hidePagination: true
 ---
 
-Hi all, I’m a Brazilian Software Engineer and Technical Lead currently working at Siemens in Portugal, where I focus on designing and delivering scalable, cloud-native solutions. Over the years, I have led projects that modernized enterprise systems and helped teams adopt solid engineering practices around DevOps, microservices, and distributed architectures.
+Hi! I'm a Brazilian Software Engineer with 15 years of experience, currently working as a Technical Lead at Siemens in Portugal.
 
-I started my career in 2010 and hold a strong foundation in computer science, with a deep interest in algorithms, distributed systems, databases, and system design. I enjoy exploring how complex systems work under the hood and how to make them more efficient, reliable, and maintainable.
+I've spent my career designing cloud-native solutions, leading engineering teams, and helping organizations modernize their tech stack. Before Siemens, I worked with companies like Edenred, Fidelidade, and Prodesp, focusing on DevOps transformation, microservices adoption, and distributed systems architecture.
 
-Before joining Siemens, I worked on large-scale digital transformation projects in companies like Edenred, Fidelidade Seguros, and Prodesp, improving architecture, CI/CD, and engineering standards across teams.
+I'm deeply curious about how complex systems work at scale—databases, distributed architectures, performance optimization, and the engineering principles that make software reliable and maintainable. I also enjoy mentoring engineers and sharing lessons learned from building systems that actually need to work.
 
-Outside of work, I like learning new languages, playing guitar, and exploring how technology and AI are shaping the future of work and creativity.
+Outside of work, I'm learning new languages (both human and programming ones), playing guitar, and exploring how AI is reshaping software development and creativity.
+
+I occasionally write about [engineering/career/life as a Brazilian dev abroad] here. If you moved to Portugal as a developer (or are thinking about it), you might find [this post](/posts/5-anos-em-portugal) interesting.
+
+Feel free to reach out if you want to chat about distributed systems, career transitions, or anything in between.
