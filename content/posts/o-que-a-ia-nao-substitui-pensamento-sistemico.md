@@ -7,7 +7,7 @@ title = 'O que a IA não substitui: pensamento sistêmico'
 
 Tenho pensado muito sobre como a gente está usando inteligência artificial. Parece que virou obrigação: todo projeto novo precisa ter "alguma coisa de IA", mesmo que não faça o menor sentido.
 
-Só que tem uma diferença enorme entre usar IA pra construir e construir com IA dentro. E muita gente não percebe isso.
+Mas existe uma diferença fundamental: usar IA como ferramenta de desenvolvimento versus integrar IA como funcionalidade do produto. E muita gente não percebe isso.
 
 Usar IA como ferramenta é ótimo. Ela ajuda, acelera, resolve problemas. Mas quando ela passa a ser parte do software, muda tudo: muda arquitetura, muda custo, muda a responsabilidade que você assume. A inferência de um modelo não é de graça. O token que você gasta hoje vira a fatura de amanhã. E se o projeto for mal pensado, o custo cresce mais rápido do que o aprendizado do time.
 
