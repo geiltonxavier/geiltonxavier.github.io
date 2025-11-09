@@ -7,7 +7,7 @@ hidePagination: true
 
 Hi! I'm a Brazilian Software Engineer with 15 years of experience, currently working as a Technical Lead at Siemens in Portugal.
 
-I've spent my career designing cloud-native solutions, leading engineering teams, and helping organizations modernize their tech stack. Before Siemens, I worked with companies like Edenred, Fidelidade, and Prodesp, focusing on DevOps transformation, microservices adoption, and distributed systems architecture.
+I've spent my career designing cloud-native solutions, leading engineering teams, and helping organizations modernize their tech stack. Before [Siemens](https://www.siemens.com/pt/pt.html), I worked with companies like [Edenred](https://www.edenred.com.br/), [Fidelidade](https://www.fidelidade.pt/), and [Prodesp](https://www.prodesp.sp.gov.br/), focusing on DevOps transformation, microservices adoption, and distributed systems architecture.
 
 I'm deeply curious about how complex systems work at scale databases, distributed architectures, performance optimization, and the engineering principles that make software reliable and maintainable. I also enjoy mentoring engineers and sharing lessons learned from building systems that actually need to work.
 
