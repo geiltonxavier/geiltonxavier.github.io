@@ -1,8 +1,9 @@
-+++
-date = '2025-11-03T14:47:29Z'
-draft = false
-title = 'AI Browsers. The cost of convenience'
-+++
+---
+date : '2025-11-03T14:47:29Z'
+draft : false
+title : 'AI Browsers. The cost of convenience'
+readTime: true
+---
 
 
 Have you ever wondered about the scope of having a browser with artificial intelligence inside?

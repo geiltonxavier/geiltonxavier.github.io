@@ -1,0 +1,24 @@
+<div class="post-line">
+
+    {{ $dateFormat := .Site.Params.listDateFormat | default "2 Jan 2006" }}
+
+    {{ if .Parent.Param "showListDate" | default true }}
+        <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
+    {{ end }}
+
+    <div>
+        <p class="line-title">
+            <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+            </a>
+        </p>
+
+        {{ if .Site.Params.listSummaries }}
+            {{ $summaryLength := default 220 .Site.Params.listSummaryLength }}
+            {{ $plainSummary := .Summary | plainify | strings.TrimSpace }}
+            {{ if $plainSummary }}
+                <p class="line-summary"> {{ truncate $summaryLength $plainSummary }} </p>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

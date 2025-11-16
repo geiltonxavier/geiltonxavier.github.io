@@ -6,9 +6,8 @@ tags: ["portugal", "carreira", "expatriado", "brasil", "tech", "mudança"]
 categories: ["Carreira", "Vida"]
 description: "Reflexões honestas sobre 5 anos trabalhando como Software Engineer em Portugal e por que decidi voltar ao Brasil"
 slug: "5-anos-em-portugal"
+readTime: true
 ---
-
-*Tempo de leitura: ~12 minutos*
 
 ## Como Tudo Começou
 

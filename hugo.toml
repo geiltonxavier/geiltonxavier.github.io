@@ -32,6 +32,7 @@ singleDateFormat = '2 Jan 2006'
 paginationSize = 100
 listSummaries = true
 listDateFormat = '02 Jan 2006'
+listSummaryLength = 220
 
 # Footer
 showFooter = false

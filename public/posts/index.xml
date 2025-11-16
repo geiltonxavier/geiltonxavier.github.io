@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Geilton Xavier</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Home on Geilton Xavier</description>
+    <title>Posts on Geilton Xavier</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Nov 2025 22:35:40 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Produtividade com Codex: o que tem funcionado para mim</title>
       <link>http://localhost:1313/posts/produtividade-com-codex/</link>
@@ -28,13 +28,6 @@
       <pubDate>Mon, 03 Nov 2025 14:47:29 +0000</pubDate>
       <guid>http://localhost:1313/posts/ai-browsers-the-cost-of-convenience/</guid>
       <description>&lt;p&gt;Have you ever wondered about the scope of having a browser with artificial intelligence inside?&lt;/p&gt;&#xA;&lt;p&gt;From the outside, it sounds absolutely fantastic. An assistant always present, able to sum up pages, answer questions about what you are reading, help you formulate a well-crafted email, pull information here and there – all that, without closing your browser.&lt;/p&gt;&#xA;&lt;p&gt;No effort, instant gratification. A perfect future, where everything is possible.&lt;/p&gt;&#xA;&lt;p&gt;But there is a catch with that form of thinking that you are likely not considering.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Hi! I&amp;rsquo;m a Brazilian Software Engineer with 15 years of experience, currently working as a Technical Lead at Siemens in Portugal.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve spent my career designing cloud-native solutions, leading engineering teams, and helping organizations modernize their tech stack. Before &lt;a href=&#34;https://www.siemens.com/pt/pt.html&#34;&gt;Siemens&lt;/a&gt;, I worked with companies like &lt;a href=&#34;https://www.edenred.com.br/&#34;&gt;Edenred&lt;/a&gt;, &lt;a href=&#34;https://www.fidelidade.pt/&#34;&gt;Fidelidade&lt;/a&gt;, and &lt;a href=&#34;https://www.prodesp.sp.gov.br/&#34;&gt;Prodesp&lt;/a&gt;, focusing on DevOps transformation, microservices adoption, and distributed systems architecture.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m deeply curious about how complex systems work at scale databases, distributed architectures, performance optimization, and the engineering principles that make software reliable and maintainable. I also enjoy mentoring engineers and sharing lessons learned from building systems that actually need to work.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
