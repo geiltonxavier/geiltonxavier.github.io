@@ -1,8 +1,8 @@
-+++
-date = '2025-11-09T18:50:55Z'
-draft = false
-title = 'O que a IA não substitui: pensamento sistêmico'
-+++
+---
+date: '2025-11-09T18:50:55Z'
+draft: false
+title: 'O que a IA não substitui: pensamento sistêmico'
+----
 
 
 Tenho pensado muito sobre como a gente está usando inteligência artificial. Parece que virou obrigação: todo projeto novo precisa ter "alguma coisa de IA", mesmo que não faça o menor sentido.

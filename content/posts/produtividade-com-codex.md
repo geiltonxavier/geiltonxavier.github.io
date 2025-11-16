@@ -1,8 +1,8 @@
-+++
-date = '2025-11-16T22:35:40Z'
-draft = false
-title = 'Produtividade com Codex: o que tem funcionado para mim'
-+++
+---
+date: '2025-11-16T22:35:40Z'
+draft: false
+title: 'Produtividade com Codex: o que tem funcionado para mim'
+---
 
 Tenho usado o Codex como se fosse um parceiro silencioso. Não espero milagres e não fico cobrando respostas perfeitas. O que tem dado certo é tratar a ferramenta como alguém do time: eu conto o contexto, explico o objetivo e deixo que ela proponha caminhos. Quando faço isso, economizo tempo e evito aqueles loops de refazer o mesmo código.
 
