@@ -1,5 +1,5 @@
 ---
-date: '2025-11-16T22:35:40Z'
+date: '2025-11-19T21:42:40Z'
 draft: false
 title: 'IA como extensão do pensamento: produtividade com propósito'
 ---
