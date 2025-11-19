@@ -19,4 +19,4 @@ O segredo? Saber o que perguntar. Tecnologia sempre foi sobre fazer melhores per
 
 Reflexão:
 
-Produtividade não é fazer mais. É ter espaço mental pra pensar melhor. A IA pode ser o empurrão que faltava pra sair do piloto automático.
+A IA entrega respostas prontas, mas isso não quer dizer que estão certas. O valor não está na rapidez, está no discernimento de quem lê. A tecnologia amplia caminhos, mas continua dependendo do nosso olhar para separar o que faz sentido do que só parece convincente. No fim, o progresso real nasce desse espaço mental que ela libera, onde a gente consegue pensar com mais clareza e escolher com mais intenção.
