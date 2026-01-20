@@ -2,10 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Geilton Xavier</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:1314/tags/</link>
     <description>Recent content in Tags on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concorrencia</title>
+      <link>http://localhost:1314/tags/concorrencia/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/concorrencia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed-Systems</title>
+      <link>http://localhost:1314/tags/distributed-systems/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engenharia</title>
+      <link>http://localhost:1314/tags/engenharia/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/engenharia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Filas</title>
+      <link>http://localhost:1314/tags/filas/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/filas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>http://localhost:1314/tags/go/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workers</title>
+      <link>http://localhost:1314/tags/workers/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/workers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brasil</title>
+      <link>http://localhost:1314/tags/brasil/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/brasil/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Carreira</title>
+      <link>http://localhost:1314/tags/carreira/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/carreira/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Expatriado</title>
+      <link>http://localhost:1314/tags/expatriado/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/expatriado/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mudança</title>
+      <link>http://localhost:1314/tags/mudan%C3%A7a/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/mudan%C3%A7a/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Portugal</title>
+      <link>http://localhost:1314/tags/portugal/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/portugal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>http://localhost:1314/tags/tech/</link>
+      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/tags/tech/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

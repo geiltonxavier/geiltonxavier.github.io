@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engenharia on Geilton Xavier</title>
+    <link>http://localhost:1314/tags/engenharia/</link>
+    <description>Recent content in Engenharia on Geilton Xavier</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1314/tags/engenharia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Construindo uma Fila Distribuída em Go</title>
+      <link>http://localhost:1314/posts/fila-distribuida-go-estudo/</link>
+      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/posts/fila-distribuida-go-estudo/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;repo&#34;&gt;&#xA;  Repo&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#repo&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Código: &lt;a href=&#34;https://github.com/geiltonxavier/distributed-queue&#34;&gt;https://github.com/geiltonxavier/distributed-queue&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;por-que-esse-projeto&#34;&gt;&#xA;  Por que esse projeto&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#por-que-esse-projeto&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Quis demonstrar senioridade sem precisar de um produto completo: pegar um problema&#xA;simples (fila de tarefas + workers concorrentes) e tratá-lo com disciplina de&#xA;engenharia — cancelamento, backpressure, testes, roadmap explícito, e clareza de trade-&#xA;offs. É estudo, não produção, mas com as mesmas perguntas que faço em sistemas reais.&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;escopo-atual&#34;&gt;&#xA;  Escopo atual&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#escopo-atual&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Broker em memória (channel bufferizado) com Enqueue, Dequeue, Close, respeitando&#xA;context.&lt;/li&gt;&#xA;&lt;li&gt;Worker pool fixo com Start/Stop, cancelamento e shutdown limpo.&lt;/li&gt;&#xA;&lt;li&gt;Demo CLI (cmd/demo) que instancia broker, pool, publica tarefas e loga tempos de&#xA;processamento.&lt;/li&gt;&#xA;&lt;li&gt;Testes cobrindo fila (cancelamento/fechamento) e pool (processamento/parada). Uso de&#xA;cache local para rodar go test em ambientes restritos.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;decisões-de-engenharia&#34;&gt;&#xA;  Decisões de engenharia&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#decis%c3%b5es-de-engenharia&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Cancelamento/shutdown: tudo passa context.Context; Stop espera handlers terminarem.&lt;/li&gt;&#xA;&lt;li&gt;Backpressure: capacidade do broker configurável; Enqueue bloqueia e respeita&#xA;contexto.&lt;/li&gt;&#xA;&lt;li&gt;Simplicidade intencional: channel como broker para focar no fluxo; API permite trocar&#xA;por backend real depois.&lt;/li&gt;&#xA;&lt;li&gt;Testabilidade: funções pequenas, dependências injetadas (handler, broker), testes&#xA;isolando casos de falha.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;como-rodar&#34;&gt;&#xA;  Como rodar&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#como-rodar&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;GOCACHE=$(pwd)/.cache/go-build go test ./&amp;hellip;&#xA;WORKERS=3 TASKS=10 go run ./cmd/demo&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

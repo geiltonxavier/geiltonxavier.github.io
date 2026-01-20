@@ -1,1 +1,68 @@
-/* Place custom css here */
+/* Apple-inspired minimalist styling overrides. */
+:root {
+  --font-body: "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, sans-serif;
+  --font-mono: "SF Mono", "Monaspace", ui-monospace, monospace;
+  --main-width: 820px;
+  --p-font-size: 1.02em;
+  --p-line-height: 1.7em;
+  --h1-font-size: 2.4em;
+  --h2-font-size: 1.8em;
+  --hx-font-size: 1.25em;
+  --code-border-radius: 12px;
+  --copy-code-button-border-radius: 10px;
+}
+
+:root,
+.light {
+  --content-primary: rgb(29, 29, 31);
+  --content-secondary: rgb(110, 110, 115);
+  --background: rgb(245, 245, 247);
+  --code-background: rgb(255, 255, 255);
+  --code-border: rgb(218, 218, 220);
+}
+
+.dark {
+  --content-primary: rgb(235, 235, 237);
+  --content-secondary: rgb(170, 170, 175);
+  --background: rgb(18, 18, 20);
+  --code-background: rgb(28, 28, 30);
+  --code-border: rgb(58, 58, 60);
+}
+
+body {
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: rgb(0, 102, 204);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.header-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.line-date,
+footer a,
+.breadcrumbs,
+.header p {
+  color: var(--content-secondary);
+}
+
+pre,
+table {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.dark pre,
+.dark table {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
