@@ -2,12 +2,12 @@
 :root {
   --font-body: "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, sans-serif;
   --font-mono: "SF Mono", "Monaspace", ui-monospace, monospace;
-  --main-width: 820px;
+  --main-width: 860px;
   --p-font-size: 1.02em;
-  --p-line-height: 1.7em;
+  --p-line-height: 1.75em;
   --h1-font-size: 2.4em;
-  --h2-font-size: 1.8em;
-  --hx-font-size: 1.25em;
+  --h2-font-size: 1.7em;
+  --hx-font-size: 1.2em;
   --code-border-radius: 12px;
   --copy-code-button-border-radius: 10px;
 }
@@ -42,27 +42,216 @@ a {
 
 a:hover {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .header-title {
   font-weight: 600;
   letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.single-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.01em;
+}
+
+.single-subsummary,
+.line-summary {
+  line-height: 1.4em;
+}
+
+.post-line,
+.tag-line {
+  gap: 0.6rem;
+  align-items: flex-start;
 }
 
 .line-date,
 footer a,
 .breadcrumbs,
 .header p {
-  color: var(--content-secondary);
+  color: rgb(120, 120, 125);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.header-menu {
+  gap: 0.75rem;
+  row-gap: 0.35rem;
+  align-items: baseline;
+}
+
+.header-menu p {
+  margin: 0;
+}
+
+.line-date {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.line-title {
+  line-height: 1.4em;
+}
+
+.breadcrumbs {
+  margin-bottom: 0.4rem;
+}
+
+.single-title {
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.single-subsummary {
+  margin-top: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.single-date {
+  margin-top: 0.15rem;
+}
+
+.line-title a {
+  text-decoration: none;
+}
+
+.line-title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.line-summary {
+  margin-bottom: 0.2rem !important;
+}
+
+.line-summary {
+  margin-top: 0.25rem !important;
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-left: 0;
+  padding-left: 0.2rem;
+}
+
+blockquote {
+  border-left-width: 1px;
+  border-left-color: rgba(0, 0, 0, 0.18);
+  padding-left: 0.9rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dark blockquote {
+  border-left-color: rgba(255, 255, 255, 0.18);
+}
+
+hr {
+  opacity: 0.65;
+}
+
+figure {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  line-height: 1.4em;
+}
+
+h2 {
+  margin-top: 2.2rem;
+  margin-bottom: 0.9rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.7rem;
+}
+
+pre {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+table {
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+th,
+td {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+}
+
+.header {
+  padding-top: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.header-menu p a {
+  letter-spacing: -0.01em;
+}
+
+.post-line {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --main-width: 880px;
+  }
+}
+
+.dark .line-date,
+.dark footer a,
+.dark .breadcrumbs,
+.dark .header p {
+  color: rgb(155, 155, 160);
 }
 
 pre,
 table {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
 }
 
 .dark pre,
 .dark table {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+pre {
+  border-width: 1px;
+}
+
+table {
+  border-width: 1px;
+}
+
+p + p {
+  margin-top: calc(var(--p-margin-top) * 1.15);
 }
