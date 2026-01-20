@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jan 2026 12:41:12 +0000</lastBuildDate>
     <atom:link href="http://localhost:1314/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software, código e o lugar onde o prazer mudou</title>
+      <link>http://localhost:1314/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</link>
+      <pubDate>Tue, 20 Jan 2026 12:41:12 +0000</pubDate>
+      <guid>http://localhost:1314/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</guid>
+      <description>&lt;p&gt;Software e código sempre caminharam juntos.&#xA;Não como sinônimos, mas como partes inseparáveis do mesmo processo.&lt;/p&gt;&#xA;&lt;p&gt;Código nunca foi apenas execução. Código bem escrito carrega intenção, comunica decisões e molda todo o ecossistema que nasce ao redor de um sistema. Ele influencia manutenção, evolução, cultura de time e até a forma como problemas futuros serão pensados.&lt;/p&gt;&#xA;&lt;p&gt;Por muito tempo, escrever código foi também a principal forma de pensar software. Pensar, escrever, errar e refatorar eram praticamente o mesmo ato. A compreensão profunda surgia no atrito: no bug difícil, na abstração mal escolhida, na refatoração que doía, mas ensinava.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Construindo uma Fila Distribuída em Go</title>
       <link>http://localhost:1314/posts/fila-distribuida-go-estudo/</link>
