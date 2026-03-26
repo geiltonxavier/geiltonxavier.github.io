@@ -10,7 +10,7 @@ E o que ficou claro pra mim é que o ganho de produtividade não vem da IA em si
 
 Eu tenho muitos anos de desenvolvimento antes dessa onda toda de IA. Passei por problemas reais em produção, lidei com código ruim, aprendi da forma difícil o que funciona e o que não funciona. Hoje, quando olho para um código gerado por IA, eu não aceito na primeira leitura. Eu avalio. Questiono. Comparo com padrões que já tenho internalizados. Esse repertório é o que faz a diferença.
 
-![Fluxo de trabalho: pensar, especificar, implementar](/img/ssd.png)
+![Fluxo de trabalho: pensar, especificar, implementar](/img/sdd.png)
 
 O que tem funcionado pra mim é trabalhar orientado por especificação antes de qualquer linha de código. Antes de abrir o editor, eu paro e penso no problema. Quais são as regras? Quais os cenários? Quais as limitações? Isso nem sempre vira documento formal, mas precisa estar claro na minha cabeça.
 
