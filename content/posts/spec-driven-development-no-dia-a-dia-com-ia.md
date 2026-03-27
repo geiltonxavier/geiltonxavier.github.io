@@ -8,7 +8,7 @@ Nos últimos meses tenho incorporado inteligência artificial no meu fluxo de tr
 
 E o que ficou claro pra mim é que o ganho de produtividade não vem da IA em si. Vem de como você usa.
 
-Eu tenho muitos anos de desenvolvimento antes dessa onda toda de IA. Passei por problemas reais em produção, lidei com código ruim, aprendi da forma difícil o que funciona e o que não funciona. Hoje, quando olho para um código gerado por IA, eu não aceito na primeira leitura. Eu avalio. Questiono. Comparo com padrões que já tenho internalizados. Esse repertório é o que faz a diferença.
+Já herdei código que ninguém queria tocar. Já vi arquitetura boa virar bagunça por falta de critério. Já aprendi o que não funciona antes de aprender o que funciona. Esse histórico é o que muda como eu uso IA hoje.
 
 ![Fluxo de trabalho: pensar, especificar, implementar](/img/sdd.png)
 
