@@ -1,7 +1,7 @@
 ---
 title: “Nada de Novo Debaixo do Sol”
 date: 2026-04-05
-draft: true
+draft: false
 tags: [“filosofia”, “inteligência artificial”, “tecnologia”, “engenharia de software”, “reflexão”]
 categories: [“Tecnologia”, “Reflexão”]
 description: “A IA não cria — ela recombina. E ao devolver padrões humanos em escala, acaba reforçando aquilo que já somos.”
