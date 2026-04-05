@@ -9,6 +9,8 @@ slug: “nada-de-novo-debaixo-do-sol”
 readTime: true
 ---
 
+![Nada de Novo Debaixo do Sol](https://images.unsplash.com/photo-1542245111-f953bcdb377c?q=80&w=1721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
 Existe uma frase antiga, atribuída ao rei Salomão, registrada no livro de Eclesiastes, que insiste em atravessar os séculos como uma provocação silenciosa: não há nada de novo debaixo do sol.
 
 À primeira vista, ela soa quase ofensiva para o nosso tempo. Vivemos cercados por promessas de ruptura. A cada ano, uma nova tecnologia, um novo paradigma, uma nova linguagem que supostamente redefine tudo o que veio antes. Hoje chamamos isso de inteligência artificial. Ontem chamávamos de internet. Antes, de eletricidade. Sempre há um nome novo para aquilo que acreditamos ser um recomeço.
