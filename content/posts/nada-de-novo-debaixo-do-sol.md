@@ -1,3 +1,4 @@
+---
 title: “Nada de Novo Debaixo do Sol”
 date: 2026-04-05
 draft: true
@@ -6,6 +7,7 @@ categories: [“Tecnologia”, “Reflexão”]
 description: “A IA não cria — ela recombina. E ao devolver padrões humanos em escala, acaba reforçando aquilo que já somos.”
 slug: “nada-de-novo-debaixo-do-sol”
 readTime: true
+---
 
 Existe uma frase antiga, atribuída ao rei Salomão, registrada no livro de Eclesiastes, que insiste em atravessar os séculos como uma provocação silenciosa: não há nada de novo debaixo do sol.
 
