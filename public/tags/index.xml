@@ -2,94 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Geilton Xavier</title>
-    <link>http://localhost:1314/tags/</link>
+    <link>https://geiltonxavier.com.br/tags/</link>
     <description>Recent content in Tags on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1314/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://geiltonxavier.com.br/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Concorrencia</title>
-      <link>http://localhost:1314/tags/concorrencia/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/concorrencia/</guid>
+      <title>“Engenharia De Software”</title>
+      <link>https://geiltonxavier.com.br/tags/engenharia-de-software/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/tags/engenharia-de-software/</guid>
       <description></description>
     </item>
     <item>
-      <title>Distributed-Systems</title>
-      <link>http://localhost:1314/tags/distributed-systems/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/distributed-systems/</guid>
+      <title>“Filosofia”</title>
+      <link>https://geiltonxavier.com.br/tags/filosofia/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/tags/filosofia/</guid>
       <description></description>
     </item>
     <item>
-      <title>Engenharia</title>
-      <link>http://localhost:1314/tags/engenharia/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/engenharia/</guid>
+      <title>“Inteligência Artificial”</title>
+      <link>https://geiltonxavier.com.br/tags/intelig%C3%AAncia-artificial/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/tags/intelig%C3%AAncia-artificial/</guid>
       <description></description>
     </item>
     <item>
-      <title>Filas</title>
-      <link>http://localhost:1314/tags/filas/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/filas/</guid>
+      <title>“Reflexão”</title>
+      <link>https://geiltonxavier.com.br/tags/reflex%C3%A3o/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/tags/reflex%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
-      <title>Go</title>
-      <link>http://localhost:1314/tags/go/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Workers</title>
-      <link>http://localhost:1314/tags/workers/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/workers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Brasil</title>
-      <link>http://localhost:1314/tags/brasil/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/brasil/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Carreira</title>
-      <link>http://localhost:1314/tags/carreira/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/carreira/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Expatriado</title>
-      <link>http://localhost:1314/tags/expatriado/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/expatriado/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mudança</title>
-      <link>http://localhost:1314/tags/mudan%C3%A7a/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/mudan%C3%A7a/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Portugal</title>
-      <link>http://localhost:1314/tags/portugal/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/portugal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech</title>
-      <link>http://localhost:1314/tags/tech/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/tags/tech/</guid>
+      <title>“Tecnologia”</title>
+      <link>https://geiltonxavier.com.br/tags/tecnologia/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/tags/tecnologia/</guid>
       <description></description>
     </item>
   </channel>

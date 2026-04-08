@@ -2,69 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1314/tags/concorrencia/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/tags/engenharia-de-software/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/fila-distribuida-go-estudo/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/tags/filosofia/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/distributed-systems/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/tags/intelig%C3%AAncia-artificial/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/engenharia/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/posts/nada-de-novo-debaixo-do-sol/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/filas/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/tags/reflex%C3%A3o/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/go/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/tags/tecnologia/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/posts/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/tags/</loc>
+    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/tags/workers/</loc>
-    <lastmod>2025-12-05T00:00:00+00:00</lastmod>
+    <loc>https://geiltonxavier.com.br/posts/system-design-nao-tem-resposta-certa-e-ninguem-assume-isso/</loc>
+    <lastmod>2026-03-31T18:41:48+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/pensamento-associativo-e-conexoes-nao-obvias/</loc>
+    <loc>https://geiltonxavier.com.br/posts/spec-driven-development-no-dia-a-dia-com-ia/</loc>
+    <lastmod>2026-03-26T23:01:14+00:00</lastmod>
+  </url><url>
+    <loc>https://geiltonxavier.com.br/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</loc>
+    <lastmod>2026-01-20T12:41:12+00:00</lastmod>
+  </url><url>
+    <loc>https://geiltonxavier.com.br/posts/pensamento-associativo-e-conexoes-nao-obvias/</loc>
     <lastmod>2025-11-25T20:31:56+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</loc>
+    <loc>https://geiltonxavier.com.br/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</loc>
     <lastmod>2025-11-19T21:42:40+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</loc>
+    <loc>https://geiltonxavier.com.br/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</loc>
     <lastmod>2025-11-09T18:50:55+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/ai-browsers-the-cost-of-convenience/</loc>
+    <loc>https://geiltonxavier.com.br/posts/ai-browsers-the-cost-of-convenience/</loc>
     <lastmod>2025-11-03T14:47:29+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1314/posts/5-anos-em-portugal/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/tags/brasil/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/tags/carreira/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/tags/expatriado/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/tags/mudan%C3%A7a/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/tags/portugal/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/tags/tech/</loc>
-    <lastmod>2024-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1314/about/</loc>
+    <loc>https://geiltonxavier.com.br/about/</loc>
   </url>
 </urlset>

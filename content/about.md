@@ -5,6 +5,14 @@ hideBackToTop: true
 hidePagination: true
 ---
 
+{{< rawhtml >}}
+<figure class="img-about-portrait">
+  <div class="img-container">
+    <img src="/img/geilton-avatar.jpeg" alt="Geilton Xavier" loading="lazy">
+  </div>
+</figure>
+{{< /rawhtml >}}
+
 Hi! I'm a Brazilian Software Engineer with 15 years of experience, currently working as a Technical Lead at Siemens in Portugal.
 
 I've spent my career designing cloud-native solutions, leading engineering teams, and helping organizations modernize their tech stack. Before [Siemens](https://www.siemens.com/pt/pt.html), I worked with companies like [Edenred](https://www.edenred.com.br/), [Fidelidade](https://www.fidelidade.pt/), and [Prodesp](https://www.prodesp.sp.gov.br/), focusing on DevOps transformation, microservices adoption, and distributed systems architecture.

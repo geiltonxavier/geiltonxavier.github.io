@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="https://geiltonxavier.com.br/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://geiltonxavier.com.br/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://geiltonxavier.com.br/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://geiltonxavier.com.br/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://geiltonxavier.com.br/apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    Spec-driven development no dia a dia com IA | Geilton Xavier
+    
+</title>
+
+<link rel="canonical" href="https://geiltonxavier.com.br/posts/spec-driven-development-no-dia-a-dia-com-ia/"/>
+
+<meta property="og:url" content="https://geiltonxavier.com.br/posts/spec-driven-development-no-dia-a-dia-com-ia/">
+  <meta property="og:site_name" content="Geilton Xavier">
+  <meta property="og:title" content="Spec-driven development no dia a dia com IA">
+  <meta property="og:description" content="Nos últimos meses tenho incorporado inteligência artificial no meu fluxo de trabalho de desenvolvimento. Não no sentido de “delegar tudo pra IA e ver o que sai”, mas de usar como ferramenta dentro de um processo que já funciona.
+E o que ficou claro pra mim é que o ganho de produtividade não vem da IA em si. Vem de como você usa.
+Já herdei código que ninguém queria tocar. Já vi arquitetura boa virar bagunça por falta de critério. Já aprendi o que não funciona antes de aprender o que funciona. Esse histórico é o que muda como eu uso IA hoje.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-26T23:01:14+00:00">
+    <meta property="article:modified_time" content="2026-03-26T23:01:14+00:00">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.efeaf20e435cceed610a832e70279a4b07380037aeb0874646a2bbc0b0568c42.css" media="all">
+
+
+
+
+
+
+<script
+  async
+  defer
+  data-website-id="ed412433-9163-4adc-8128-854b6b91f003"
+  src="https://cloud.umami.is/script.js"
+></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="https://geiltonxavier.com.br/">Geilton Xavier</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+
+        <p
+            class="small ">
+            <a href="https://github.com/geiltonxavier/cv/blob/main/geilton-xavier-resume-en.pdf" >
+                /cv
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">~</a><span class="breadcrumbs-separator">/</span><a href="/posts/">Posts</a><span class="breadcrumbs-separator">/</span>
+        <a href="/posts/spec-driven-development-no-dia-a-dia-com-ia/">Spec-driven development no dia a dia com IA</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">Spec-driven development no dia a dia com IA</h1>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="single-date">
+              <time datetime="2026-03-26T23:01:14&#43;00:00">26 Mar 2026</time>
+            </p>
+          </div>
+        </div>
+        
+    </header>
+    
+    <div class="single-content">
+      <p>Nos últimos meses tenho incorporado inteligência artificial no meu fluxo de trabalho de desenvolvimento. Não no sentido de &ldquo;delegar tudo pra IA e ver o que sai&rdquo;, mas de usar como ferramenta dentro de um processo que já funciona.</p>
+<p>E o que ficou claro pra mim é que o ganho de produtividade não vem da IA em si. Vem de como você usa.</p>
+<p>Já herdei código que ninguém queria tocar. Já vi arquitetura boa virar bagunça por falta de critério. Já aprendi o que não funciona antes de aprender o que funciona. Esse histórico é o que muda como eu uso IA hoje.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="Fluxo de trabalho: pensar, especificar, implementar" src="/img/sdd.png" >
+    </div>
+
+    
+</figure>
+</p>
+<p>O que tem funcionado pra mim é trabalhar orientado por especificação antes de qualquer linha de código. Antes de abrir o editor, eu paro e penso no problema. Quais são as regras? Quais os cenários? Quais as limitações? Isso nem sempre vira documento formal, mas precisa estar claro na minha cabeça.</p>
+<p>Quando essa parte está resolvida, a IA entra como suporte à execução, não como tomadora de decisão.</p>
+<p>Todo código que eu produzo, com ou sem IA, segue algumas premissas que pra mim não são negociáveis: segurança, simplicidade, baixo acoplamento, extensibilidade, reutilização. Quando a complexidade precisa existir, ela precisa estar controlada. Essas coisas não vêm da IA. Vêm de anos trabalhando com engenharia de software.</p>
+<p>Isso ficou bem claro numa situação no meu próprio time.</p>
+<p>Eu tinha uma tarefa que envolvia criar Azure Functions em C#. Passei para um developer que já tinha boa base técnica — não era júnior, eu diria mid-level — mas sem experiência com C# e com a stack em questão.</p>
+<p>Dei uma direção inicial sobre arquitetura, falei sobre organização, responsabilidades. E aí cometi um erro que hoje reconheço como ingênuo: achei que, com ajuda da IA, ele conseguiria chegar num resultado de qualidade mesmo sem experiência na stack.</p>
+<p>Depois de uma semana, o código existia. Mas não tinha estrutura. Não tinha consistência. As decisões não se sustentavam. Era o tipo de coisa que funciona em cenário simples, mas não aguenta evolução.</p>
+<p>Ficou evidente: a IA não resolve falta de experiência. Ela ajuda a produzir alguma coisa, mas não garante que essa coisa seja bem feita.</p>
+<p>Esse é o ponto que eu acho mais importante. A IA é muito boa em gerar algo que parece correto. Parecer correto e ser bem feito são coisas diferentes. Se você não tem repertório para avaliar o output, você não consegue filtrar. O que acontece então é que você produz código rápido com baixa qualidade. No longo prazo, isso vira dívida técnica.</p>
+<p>Olhando pra trás, eu faria diferente. Investiria mais tempo na especificação junto com essa pessoa. Garantiria que a base arquitetural estivesse muito clara antes de qualquer código. Faria checkpoints mais próximos no início. Deixaria explícito o que é esperado em termos de qualidade.</p>
+<p>No meu dia a dia, o que funciona é exatamente isso: entender bem o problema, especificar antes de codar, usar a IA como apoio e revisar tudo com senso crítico.</p>
+<p>A IA amplifica o que você já é como engenheiro. Se você tem base, ela te deixa mais rápido. Se não tem, ela só acelera o caminho errado.</p>
+<p>A produtividade não vem de escrever código mais rápido. Vem de tomar decisões melhores desde o começo.</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/">
+                        Software, código e o lugar onde o prazer mudou
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+            <div class="single-pagination-container-next">
+                <div class="single-pagination-text">
+                    <a href="/posts/system-design-nao-tem-resposta-certa-e-ninguem-assume-isso/">
+                        System Design não tem resposta certa. E ninguém assume isso.
+                    </a>
+                </div>
+                <div class="single-pagination-text">→</div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+
+  </footer>
+
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

@@ -2,60 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Geilton Xavier</title>
-    <link>http://localhost:1314/posts/</link>
+    <link>https://geiltonxavier.com.br/posts/</link>
     <description>Recent content in Posts on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jan 2026 12:41:12 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1314/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://geiltonxavier.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>“Nada de Novo Debaixo do Sol”</title>
+      <link>https://geiltonxavier.com.br/posts/nada-de-novo-debaixo-do-sol/</link>
+      <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/posts/nada-de-novo-debaixo-do-sol/</guid>
+      <description>&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;figure class=&#34;&#34;&gt;&#xA;&#xA;    &lt;div class=&#34;img-container&#34; &gt;&#xA;        &lt;img loading=&#34;lazy&#34; alt=&#34;Nada de Novo Debaixo do Sol&#34; src=&#34;https://images.unsplash.com/photo-1542245111-f953bcdb377c?q=80&amp;amp;w=1721&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;ixlib=rb-4.1.0&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&#34; &gt;&#xA;    &lt;/div&gt;&#xA;&#xA;    &#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Existe uma frase antiga, atribuída ao rei Salomão, registrada no livro de Eclesiastes, que insiste em atravessar os séculos como uma provocação silenciosa: não há nada de novo debaixo do sol.&lt;/p&gt;&#xA;&lt;p&gt;À primeira vista, ela soa quase ofensiva para o nosso tempo. Vivemos cercados por promessas de ruptura. A cada ano, uma nova tecnologia, um novo paradigma, uma nova linguagem que supostamente redefine tudo o que veio antes. Hoje chamamos isso de inteligência artificial. Ontem chamávamos de internet. Antes, de eletricidade. Sempre há um nome novo para aquilo que acreditamos ser um recomeço.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>System Design não tem resposta certa. E ninguém assume isso.</title>
+      <link>https://geiltonxavier.com.br/posts/system-design-nao-tem-resposta-certa-e-ninguem-assume-isso/</link>
+      <pubDate>Tue, 31 Mar 2026 18:41:48 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/posts/system-design-nao-tem-resposta-certa-e-ninguem-assume-isso/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Uma reflexão sobre ambiguidade, critério invisível e o que a gente realmente avalia numa entrevista.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Já participei de entrevistas de system design dos dois lados. E o que me incomoda não é a dificuldade, é que ninguém na sala sabe exatamente o que está sendo medido. O candidato não sabe. O entrevistador, na maioria das vezes, também não. E mesmo assim a conversa acontece como se existisse um destino certo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spec-driven development no dia a dia com IA</title>
+      <link>https://geiltonxavier.com.br/posts/spec-driven-development-no-dia-a-dia-com-ia/</link>
+      <pubDate>Thu, 26 Mar 2026 23:01:14 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/posts/spec-driven-development-no-dia-a-dia-com-ia/</guid>
+      <description>&lt;p&gt;Nos últimos meses tenho incorporado inteligência artificial no meu fluxo de trabalho de desenvolvimento. Não no sentido de &amp;ldquo;delegar tudo pra IA e ver o que sai&amp;rdquo;, mas de usar como ferramenta dentro de um processo que já funciona.&lt;/p&gt;&#xA;&lt;p&gt;E o que ficou claro pra mim é que o ganho de produtividade não vem da IA em si. Vem de como você usa.&lt;/p&gt;&#xA;&lt;p&gt;Já herdei código que ninguém queria tocar. Já vi arquitetura boa virar bagunça por falta de critério. Já aprendi o que não funciona antes de aprender o que funciona. Esse histórico é o que muda como eu uso IA hoje.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Software, código e o lugar onde o prazer mudou</title>
-      <link>http://localhost:1314/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</link>
+      <link>https://geiltonxavier.com.br/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</link>
       <pubDate>Tue, 20 Jan 2026 12:41:12 +0000</pubDate>
-      <guid>http://localhost:1314/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</guid>
+      <guid>https://geiltonxavier.com.br/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</guid>
       <description>&lt;p&gt;Software e código sempre caminharam juntos.&#xA;Não como sinônimos, mas como partes inseparáveis do mesmo processo.&lt;/p&gt;&#xA;&lt;p&gt;Código nunca foi apenas execução. Código bem escrito carrega intenção, comunica decisões e molda todo o ecossistema que nasce ao redor de um sistema. Ele influencia manutenção, evolução, cultura de time e até a forma como problemas futuros serão pensados.&lt;/p&gt;&#xA;&lt;p&gt;Por muito tempo, escrever código foi também a principal forma de pensar software. Pensar, escrever, errar e refatorar eram praticamente o mesmo ato. A compreensão profunda surgia no atrito: no bug difícil, na abstração mal escolhida, na refatoração que doía, mas ensinava.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Construindo uma Fila Distribuída em Go</title>
-      <link>http://localhost:1314/posts/fila-distribuida-go-estudo/</link>
-      <pubDate>Fri, 05 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/fila-distribuida-go-estudo/</guid>
-      <description>&lt;h2 class=&#34;heading&#34; id=&#34;repo&#34;&gt;&#xA;  Repo&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#repo&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Código: &lt;a href=&#34;https://github.com/geiltonxavier/distributed-queue&#34;&gt;https://github.com/geiltonxavier/distributed-queue&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;por-que-esse-projeto&#34;&gt;&#xA;  Por que esse projeto&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#por-que-esse-projeto&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Quis demonstrar senioridade sem precisar de um produto completo: pegar um problema&#xA;simples (fila de tarefas + workers concorrentes) e tratá-lo com disciplina de&#xA;engenharia — cancelamento, backpressure, testes, roadmap explícito, e clareza de trade-&#xA;offs. É estudo, não produção, mas com as mesmas perguntas que faço em sistemas reais.&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;escopo-atual&#34;&gt;&#xA;  Escopo atual&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#escopo-atual&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Broker em memória (channel bufferizado) com Enqueue, Dequeue, Close, respeitando&#xA;context.&lt;/li&gt;&#xA;&lt;li&gt;Worker pool fixo com Start/Stop, cancelamento e shutdown limpo.&lt;/li&gt;&#xA;&lt;li&gt;Demo CLI (cmd/demo) que instancia broker, pool, publica tarefas e loga tempos de&#xA;processamento.&lt;/li&gt;&#xA;&lt;li&gt;Testes cobrindo fila (cancelamento/fechamento) e pool (processamento/parada). Uso de&#xA;cache local para rodar go test em ambientes restritos.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;decisões-de-engenharia&#34;&gt;&#xA;  Decisões de engenharia&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#decis%c3%b5es-de-engenharia&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Cancelamento/shutdown: tudo passa context.Context; Stop espera handlers terminarem.&lt;/li&gt;&#xA;&lt;li&gt;Backpressure: capacidade do broker configurável; Enqueue bloqueia e respeita&#xA;contexto.&lt;/li&gt;&#xA;&lt;li&gt;Simplicidade intencional: channel como broker para focar no fluxo; API permite trocar&#xA;por backend real depois.&lt;/li&gt;&#xA;&lt;li&gt;Testabilidade: funções pequenas, dependências injetadas (handler, broker), testes&#xA;isolando casos de falha.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;como-rodar&#34;&gt;&#xA;  Como rodar&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#como-rodar&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;GOCACHE=$(pwd)/.cache/go-build go test ./&amp;hellip;&#xA;WORKERS=3 TASKS=10 go run ./cmd/demo&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Pensamento associativo e conexões não óbvias</title>
-      <link>http://localhost:1314/posts/pensamento-associativo-e-conexoes-nao-obvias/</link>
+      <link>https://geiltonxavier.com.br/posts/pensamento-associativo-e-conexoes-nao-obvias/</link>
       <pubDate>Tue, 25 Nov 2025 20:31:56 +0000</pubDate>
-      <guid>http://localhost:1314/posts/pensamento-associativo-e-conexoes-nao-obvias/</guid>
+      <guid>https://geiltonxavier.com.br/posts/pensamento-associativo-e-conexoes-nao-obvias/</guid>
       <description>&lt;p&gt;Sabe quando você está explicando algo e de repente faz uma comparação completamente inesperada, e as pessoas te olham com aquela cara de &amp;ldquo;o quê?&amp;rdquo;? Mas na sua cabeça, aquilo faz &lt;strong&gt;todo sentido&lt;/strong&gt;?&lt;/p&gt;&#xA;&lt;p&gt;Pois é. Bem-vindo ao clube do pensamento associativo.&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;o-que-acontece-na-minha-cabeça&#34;&gt;&#xA;  O que acontece na minha cabeça&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#o-que-acontece-na-minha-cabe%c3%a7a&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Minha mente funciona como uma teia de aranha gigante onde tudo pode se conectar com tudo. Posso estar lendo sobre arquitetura de sistemas distribuídos e, do nada, fazer uma ponte com ecossistemas naturais. Ou comparar a forma como neurônios se comunicam com padrões de mensageria em microsserviços. Para mim, essas conexões são cristalinas. Para quem está do lado de fora da minha mente? Nem tanto.&lt;/p&gt;</description>
     </item>
     <item>
       <title>IA como extensão do pensamento: produtividade com propósito</title>
-      <link>http://localhost:1314/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</link>
+      <link>https://geiltonxavier.com.br/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</link>
       <pubDate>Wed, 19 Nov 2025 21:42:40 +0000</pubDate>
-      <guid>http://localhost:1314/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</guid>
+      <guid>https://geiltonxavier.com.br/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</guid>
       <description>&lt;p&gt;A inteligência artificial virou ferramenta do cotidiano, mas poucos param pra pensar: como ela muda nossa relação com o trabalho e com as ideias?&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;na-prática&#34;&gt;&#xA;  Na prática&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#na-pr%c3%a1tica&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Delegar tarefas repetitivas libera tempo pra o que realmente importa.&lt;/li&gt;&#xA;&lt;li&gt;Organizar informação vira conversa, não caça ao tesouro em abas abertas.&lt;/li&gt;&#xA;&lt;li&gt;Rascunhos nascem mais rápido, a edição fica mais humana.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;na-filosofia&#34;&gt;&#xA;  Na filosofia&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#na-filosofia&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Sócrates tinha medo da escrita. Achava que ela enfraqueceria a memória. Hoje vemos que ela expandiu o pensamento. A IA é parecida: não substitui raciocínio, amplifica possibilidades. O segredo? Saber o que perguntar. Tecnologia sempre foi sobre fazer melhores perguntas.&lt;/p&gt;</description>
     </item>
     <item>
       <title>O que a IA não substitui: pensamento sistêmico</title>
-      <link>http://localhost:1314/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</link>
+      <link>https://geiltonxavier.com.br/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</link>
       <pubDate>Sun, 09 Nov 2025 18:50:55 +0000</pubDate>
-      <guid>http://localhost:1314/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</guid>
+      <guid>https://geiltonxavier.com.br/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Tenho pensado muito sobre como a gente está usando inteligência artificial. Parece que virou obrigação: todo projeto novo precisa ter &amp;ldquo;alguma coisa de IA&amp;rdquo;, mesmo que não faça o menor sentido.&lt;/p&gt;&#xA;&lt;p&gt;Mas existe uma diferença fundamental: usar IA como ferramenta de desenvolvimento versus integrar IA como funcionalidade do produto. E muita gente não percebe isso.&lt;/p&gt;&#xA;&lt;p&gt;Usar IA como ferramenta é ótimo. Ela ajuda, acelera, resolve problemas. Mas quando ela passa a ser parte do software, muda tudo: muda arquitetura, muda custo, muda a responsabilidade que você assume. A inferência de um modelo não é de graça. O token que você gasta hoje vira a fatura de amanhã. E se o projeto for mal pensado, o custo cresce mais rápido do que o aprendizado do time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Browsers. The cost of convenience</title>
-      <link>http://localhost:1314/posts/ai-browsers-the-cost-of-convenience/</link>
+      <link>https://geiltonxavier.com.br/posts/ai-browsers-the-cost-of-convenience/</link>
       <pubDate>Mon, 03 Nov 2025 14:47:29 +0000</pubDate>
-      <guid>http://localhost:1314/posts/ai-browsers-the-cost-of-convenience/</guid>
+      <guid>https://geiltonxavier.com.br/posts/ai-browsers-the-cost-of-convenience/</guid>
       <description>&lt;p&gt;Have you ever wondered about the scope of having a browser with artificial intelligence inside?&lt;/p&gt;&#xA;&lt;p&gt;From the outside, it sounds absolutely fantastic. An assistant always present, able to sum up pages, answer questions about what you are reading, help you formulate a well-crafted email, pull information here and there – all that, without closing your browser.&lt;/p&gt;&#xA;&lt;p&gt;No effort, instant gratification. A perfect future, where everything is possible.&lt;/p&gt;&#xA;&lt;p&gt;But there is a catch with that form of thinking that you are likely not considering.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>5 Anos em Portugal: O Que Aprendi (e Por Que Estou Voltando)</title>
-      <link>http://localhost:1314/posts/5-anos-em-portugal/</link>
-      <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/posts/5-anos-em-portugal/</guid>
-      <description>&lt;h2 class=&#34;heading&#34; id=&#34;como-tudo-começou&#34;&gt;&#xA;  Como Tudo Começou&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#como-tudo-come%c3%a7ou&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Era 2019, e eu estava naquele loop clássico de dev brasileiro querendo sair do país: aplicando para vagas no Canadá, Estados Unidos, Inglaterra&amp;hellip; você conhece a história. Os processos demoravam eternidades, meu inglês não estava afiado o suficiente, e empresas simplesmente sumiam após as primeiras entrevistas.&lt;/p&gt;&#xA;&lt;p&gt;Até que, numa call qualquer com amigos, alguém mencionou Portugal. E eu, honestamente? Nunca tinha pensado em Portugal. Não sabia quase nada sobre o país além do óbvio: falam português, tem bacalhau, e&amp;hellip; era isso.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
