@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+  <style>
+    body {
+      margin: 0;
+      max-width: none;
+      width: 100%;
+      padding: 0;
+      background: #efefeb;
+      color: rgb(29, 29, 31);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    main {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .cv-page {
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .cv-header {
+      margin-bottom: 3rem;
+    }
+
+    .cv-header h1 {
+      margin: 0 0 0.75rem;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .cv-roleline,
+    .cv-contact,
+    .cv-section p,
+    .cv-section li {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .cv-roleline {
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-contact {
+      color: rgb(110, 110, 115);
+      font-size: 1rem;
+    }
+
+    .cv-section {
+      margin-top: 2.75rem;
+    }
+
+    .cv-section h2 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .cv-entry + .cv-entry {
+      margin-top: 2rem;
+    }
+
+    .cv-entry h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .cv-meta {
+      margin-top: 0.2rem;
+      color: rgb(110, 110, 115);
+      font-size: 0.96rem;
+    }
+
+    .cv-entry ul,
+    .cv-skill-list,
+    .cv-education-list {
+      margin: 0.85rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    .cv-entry li + li,
+    .cv-skill-list li + li,
+    .cv-education-list li + li {
+      margin-top: 0.35rem;
+    }
+
+    .cv-stack {
+      margin-top: 0.9rem !important;
+      font-family: "SF Mono", "Monaspace", ui-monospace, monospace;
+      font-size: 0.95rem !important;
+      line-height: 1.7 !important;
+      color: rgb(110, 110, 115);
+    }
+
+    .cv-page strong {
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .cv-header h1 strong,
+    .cv-page .cv-roleline strong,
+    .cv-page .cv-contact strong {
+      text-decoration: none;
+    }
+
+    @media (max-width: 640px) {
+      .cv-page {
+        padding: 2.5rem 1.25rem 4rem;
+      }
+
+      .cv-header h1 {
+        font-size: 1.75rem;
+      }
+
+      .cv-roleline,
+      .cv-contact,
+      .cv-section p,
+      .cv-section li {
+        font-size: 1.02rem;
+      }
+
+      .cv-contact span {
+        display: none;
+      }
+
+      .cv-contact a,
+      .cv-contact .cv-contact-item {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body class="{{ .Param `theme` | default `auto` }}">
+  <main>
+    {{ .Content }}
+  </main>
+
+  {{ partial "functions/get_hook.html" (dict "hook" "body_end" "context" .) }}
+
+  {{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
+  {{ end }}
+</body>
+</html>

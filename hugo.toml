@@ -76,7 +76,7 @@ url = "/about"
 
 [[params.menu]]
 name = "cv"
-url = "https://github.com/geiltonxavier/cv/blob/main/geilton-xavier-resume-en.pdf"
+url = "/cv"
 
 
 # [[params.menu]]
