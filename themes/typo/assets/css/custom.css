@@ -16,7 +16,7 @@
 .light {
   --content-primary: rgb(29, 29, 31);
   --content-secondary: rgb(110, 110, 115);
-  --background: rgb(245, 245, 247);
+  --background: #efefeb;
   --code-background: rgb(255, 255, 255);
   --code-border: rgb(218, 218, 220);
 }
@@ -31,6 +31,7 @@
 
 body {
   background: var(--background);
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -84,16 +85,43 @@ footer a,
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.header-title,
+.social-icons {
+  display: none;
 }
 
 .header-menu {
   gap: 0.75rem;
   row-gap: 0.35rem;
   align-items: baseline;
+  display: none;
 }
 
 .header-menu p {
   margin: 0;
+}
+
+.content,
+.main,
+.intro,
+.list-container,
+.single-intro-container,
+.single-content,
+.breadcrumbs,
+article {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumbs,
+.single-intro-container,
+.single-content,
+.intro,
+.list-container {
+  max-width: 680px;
 }
 
 .line-date {
@@ -276,4 +304,102 @@ table {
 
 p + p {
   margin-top: calc(var(--p-margin-top) * 1.15);
+}
+
+.single-content .about-bio {
+  max-width: 680px;
+  padding: 2.5rem 2rem 3rem;
+  background: #efefeb;
+  color: #1f1f1c;
+}
+
+.single-content .about-bio p {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #1f1f1c;
+}
+
+.single-content .about-bio p + p {
+  margin-top: 1.4rem;
+}
+
+.single-content .about-bio strong,
+.single-content .about-bio a,
+.intro .home-bio strong,
+.intro .home-bio a {
+  font-weight: 500;
+  color: #1f1f1c;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.single-content .about-bio p strong:first-child,
+.intro .home-bio p strong:first-child {
+  text-decoration: none;
+}
+
+.single-content .about-bio a:hover,
+.intro .home-bio a:hover {
+  color: #1f1f1c;
+}
+
+.intro .home-bio {
+  max-width: 680px;
+  padding: 2.5rem 2rem 3rem;
+  background: #efefeb;
+  color: #1f1f1c;
+}
+
+.single-content .about-bio .bio-portrait,
+.intro .home-bio .bio-portrait {
+  margin: 0 0 1.5rem;
+}
+
+.single-content .about-bio .bio-portrait img,
+.intro .home-bio .bio-portrait img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(1) contrast(0.9) brightness(1.02);
+  opacity: 0.9;
+}
+
+.intro .home-bio p {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #1f1f1c;
+}
+
+.intro .home-bio p + p {
+  margin-top: 1.4rem;
+}
+
+@media screen and (max-width: 640px) {
+  .single-content .about-bio {
+    padding: 1.75rem 1.25rem 2rem;
+  }
+
+  .single-content .about-bio p,
+  .intro .home-bio p {
+    font-size: 1.08rem;
+  }
+
+  .intro .home-bio {
+    padding: 1.75rem 1.25rem 2rem;
+  }
+
+  .single-content .about-bio .bio-portrait img,
+  .intro .home-bio .bio-portrait img {
+    width: 80px;
+    height: 80px;
+  }
 }

@@ -6,21 +6,13 @@ hidePagination: true
 ---
 
 {{< rawhtml >}}
-<figure class="img-about-portrait">
-  <div class="img-container">
+<div class="about-bio">
+  <figure class="bio-portrait">
     <img src="/img/geilton-avatar.jpeg" alt="Geilton Xavier" loading="lazy">
-  </div>
-</figure>
+  </figure>
+  <p><strong>Geilton Xavier</strong> is a <strong>Software Engineer</strong> with a passion for <strong>distributed systems</strong> &amp; <strong>software architecture</strong>.</p>
+  <p>He specializes in designing scalable platforms, modernizing engineering practices, and building systems that remain reliable under real operational pressure.</p>
+  <p><strong>Geilton Xavier</strong> currently works at <a href="https://www.siemens.com/pt/pt.html"><strong>Siemens</strong></a>.</p>
+  <p>His most recent roles were at <a href="https://www.edenred.com.br/"><strong>Edenred</strong></a>, <a href="https://www.fidelidade.pt/"><strong>Fidelidade</strong></a> and <a href="https://www.prodesp.sp.gov.br/"><strong>Prodesp</strong></a>.</p>
+</div>
 {{< /rawhtml >}}
-
-Hi! I'm a Brazilian Software Engineer with 15 years of experience, currently working as a Technical Lead at Siemens in Portugal.
-
-I've spent my career designing cloud-native solutions, leading engineering teams, and helping organizations modernize their tech stack. Before [Siemens](https://www.siemens.com/pt/pt.html), I worked with companies like [Edenred](https://www.edenred.com.br/), [Fidelidade](https://www.fidelidade.pt/), and [Prodesp](https://www.prodesp.sp.gov.br/), focusing on DevOps transformation, microservices adoption, and distributed systems architecture.
-
-I'm deeply curious about how complex systems work at scale databases, distributed architectures, performance optimization, and the engineering principles that make software reliable and maintainable. I also enjoy mentoring engineers and sharing lessons learned from building systems that actually need to work.
-
-Outside of work, I'm learning new languages (both human and programming ones), exploring how AI is reshaping software development and creativity.
-
-I occasionally write about [engineering/career/life as a Brazilian dev abroad] here. If you moved to Portugal as a developer (or are thinking about it), you might find [this post](/posts/5-anos-em-portugal) interesting.
-
-Feel free to reach out if you want to chat about distributed systems, career transitions, or anything in between.
