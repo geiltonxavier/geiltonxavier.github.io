@@ -9,7 +9,7 @@ When you use AI as an assistant, a wrong answer is annoying. When AI is an actor
 
 That distinction matters more than most architectural discussions about AI acknowledge.
 
-![AI as Assistant vs AI as Actor](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/AI%20as%20Assistant%20vs%20AI%20as%20Actor.png)
+![AI as Assistant vs AI as Actor](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/ai-as-assistant-vs-ai-as-actor.png)
 
 ## The Two Modes of AI in Engineering Systems
 
@@ -39,7 +39,7 @@ An agent that drifts outside its operational context can be probed. If it respon
 
 The second issue was permission bypass through prompt injection. The agent was designed to always ask for confirmation before executing any action. Removing a license, modifying access, triggering an offboarding flow - all of it required explicit user approval. But confirmation gates are only as strong as the reasoning that evaluates whether to present them.
 
-![Prompt Injection Attack Surface in AI Agent Systems](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/Prompt%20Injection%20Attack%20Surface%20in%20AI%20Agent%20Systems.png)
+![Prompt Injection Attack Surface in AI Agent Systems](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/prompt-injection-attack-surface-in-ai-agent-systems.png)
 
 A sufficiently crafted prompt can reframe an action so the model evaluates it differently. "Remove access for users who haven't logged in for 90 days" is treated differently than a prompt engineered to make the model believe that confirmation was already given, or that a specific action is a routine system operation requiring no review.
 
@@ -47,7 +47,7 @@ A sufficiently crafted prompt can reframe an action so the model evaluates it di
 
 These are the approaches that moved the needle in UserX.
 
-![Defense in Depth for AI Agent Systems](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/Defense%20in%20Depth%20for%20AI%20Agent%20Systems.png)
+![Defense in Depth for AI Agent Systems](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/defense-in-depth-for-ai-agent-systems.png)
 
 **Strict system prompt boundaries.** The system prompt defines not just what the agent can do, but what it is. A narrow, explicit identity reduces the surface area for drift. Instead of "you are a helpful assistant for user management," the prompt specifies: you are an operator of this specific system, you have access to these specific operations, you respond only to requests within this scope, and you treat anything outside this scope as an invalid input.
 
