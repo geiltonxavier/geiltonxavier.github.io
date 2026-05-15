@@ -97,11 +97,25 @@ footer a,
   gap: 0.75rem;
   row-gap: 0.35rem;
   align-items: baseline;
-  display: none;
+  display: flex;
+  justify-content: center;
 }
 
 .header-menu p {
   margin: 0;
+}
+
+.header-menu p a {
+  color: var(--content-secondary);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.header-menu p a:hover {
+  color: var(--content-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 .content,

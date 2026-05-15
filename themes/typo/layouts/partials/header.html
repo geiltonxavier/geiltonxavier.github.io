@@ -11,6 +11,14 @@
     <div class="header-menu">
         {{ $currentPage := . }}
 
+        {{ if not .IsHome }}
+        <p class="small">
+            <a href="/">
+                /home
+            </a>
+        </p>
+        {{ end }}
+
         {{ with site.Params.menu }}
         {{ range . }}
 

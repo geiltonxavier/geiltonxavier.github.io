@@ -70,13 +70,13 @@ url = "https://github.com/geiltonxavier"
 name = "posts"
 url = "/posts"
 
-[[params.menu]]
-name = "about"
-url = "/about"
+# [[params.menu]]
+# name = "about"
+# url = "/about"
 
-[[params.menu]]
-name = "cv"
-url = "/cv"
+# [[params.menu]]
+# name = "cv"
+# url = "/cv"
 
 
 # [[params.menu]]
