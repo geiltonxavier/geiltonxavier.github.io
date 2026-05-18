@@ -45,7 +45,7 @@ A sufficiently crafted prompt can reframe an action so the model evaluates it di
 
 ## Mitigation Strategies That Actually Work
 
-These are the approaches that moved the needle in UserX.
+These are the approaches that moved the needle in the system.
 
 ![Defense in Depth for AI Agent Systems](/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/defense-in-depth-for-ai-agent-systems.png)
 
