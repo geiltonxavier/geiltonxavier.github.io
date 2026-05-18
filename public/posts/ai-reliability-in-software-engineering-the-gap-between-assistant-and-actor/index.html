@@ -2,7 +2,7 @@
 <html lang="en-us"
   dir="ltr">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
@@ -20,11 +20,11 @@
 
 
 
-<link rel="icon" type="image/ico" href="https://geiltonxavier.com.br/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://geiltonxavier.com.br/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://geiltonxavier.com.br/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://geiltonxavier.com.br/android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://geiltonxavier.com.br/apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
 
 <meta name="description" content=""/>
 
@@ -36,9 +36,9 @@
     
 </title>
 
-<link rel="canonical" href="https://geiltonxavier.com.br/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/"/>
+<link rel="canonical" href="http://localhost:1313/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/"/>
 
-<meta property="og:url" content="https://geiltonxavier.com.br/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/">
+<meta property="og:url" content="http://localhost:1313/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/">
   <meta property="og:site_name" content="Geilton Xavier">
   <meta property="og:title" content="AI Reliability in Software Engineering: The Gap Between Assistant and Actor">
   <meta property="og:description" content="When you use AI as an assistant, a wrong answer is annoying. When AI is an actor in your production system, a wrong answer has consequences.
@@ -55,7 +55,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
     <meta property="article:tag" content="Distributed-Systems">
     <meta property="article:tag" content="Security">
     <meta property="article:tag" content="Production">
-      <meta property="og:image" content="https://geiltonxavier.com.br/android-chrome-192x192.png">
+      <meta property="og:image" content="http://localhost:1313/android-chrome-192x192.png">
 
 
 
@@ -69,18 +69,6 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 
 
 <link rel="stylesheet" href="/assets/combined.min.7a200cf61f6d3d085a1923e2fcf729cc935b7382ddb4cb44e5ab6ef8f689eb30.css" media="all">
-
-
-
-
-
-
-<script
-  async
-  defer
-  data-website-id="ed412433-9163-4adc-8128-854b6b91f003"
-  src="https://cloud.umami.is/script.js"
-></script>
 
 
 
@@ -116,7 +104,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
     
 
     <h1 class="header-title">
-        <a href="https://geiltonxavier.com.br/">Geilton Xavier</a>
+        <a href="http://localhost:1313/">Geilton Xavier</a>
     </h1>
 
     <div class="header-menu">
@@ -213,8 +201,8 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
   A Concrete Example: Managing Identity at Scale
   <a class="anchor" href="#a-concrete-example-managing-identity-at-scale">#</a>
 </h2>
-<p>I built an internal system at Siemens called UserX, designed to handle global user lifecycle management across multiple enterprise applications. The core problem was real: thousands of users, dozens of systems, licenses being paid for users who had stopped using specific tools months ago. Onboarding and offboarding were manual, slow, and inconsistent.</p>
-<p>UserX addresses this through two interaction modes. The first is a standard web interface with structured workflows: import users, track system access, flag inactive licenses, trigger removal. The second is an AI agent accessed through a chat interface. Same capabilities, different surface. You describe what you want in natural language, and the agent executes it.</p>
+<p>I built an internal identity lifecycle management system, designed to handle global user lifecycle management across multiple enterprise applications. The core problem was real: thousands of users, dozens of systems, licenses being paid for users who had stopped using specific tools months ago. Onboarding and offboarding were manual, slow, and inconsistent.</p>
+<p>The system addresses this through two interaction modes. The first is a standard web interface with structured workflows: import users, track system access, flag inactive licenses, trigger removal. The second is an AI agent accessed through a chat interface. Same capabilities, different surface. You describe what you want in natural language, and the agent executes it.</p>
 <p>That second mode is where the engineering complexity lives.</p>
 <h2 class="heading" id="the-problem-with-natural-language-as-an-interface-to-real-actions">
   The Problem with Natural Language as an Interface to Real Actions

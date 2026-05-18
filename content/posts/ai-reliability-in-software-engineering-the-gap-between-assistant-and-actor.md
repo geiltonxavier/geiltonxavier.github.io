@@ -23,9 +23,9 @@ Most production safety thinking is still calibrated for the first mode. But syst
 
 ## A Concrete Example: Managing Identity at Scale
 
-I built an internal system at Siemens called UserX, designed to handle global user lifecycle management across multiple enterprise applications. The core problem was real: thousands of users, dozens of systems, licenses being paid for users who had stopped using specific tools months ago. Onboarding and offboarding were manual, slow, and inconsistent.
+I built an internal identity lifecycle management system, designed to handle global user lifecycle management across multiple enterprise applications. The core problem was real: thousands of users, dozens of systems, licenses being paid for users who had stopped using specific tools months ago. Onboarding and offboarding were manual, slow, and inconsistent.
 
-UserX addresses this through two interaction modes. The first is a standard web interface with structured workflows: import users, track system access, flag inactive licenses, trigger removal. The second is an AI agent accessed through a chat interface. Same capabilities, different surface. You describe what you want in natural language, and the agent executes it.
+The system addresses this through two interaction modes. The first is a standard web interface with structured workflows: import users, track system access, flag inactive licenses, trigger removal. The second is an AI agent accessed through a chat interface. Same capabilities, different surface. You describe what you want in natural language, and the agent executes it.
 
 That second mode is where the engineering complexity lives.
 
