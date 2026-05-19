@@ -53,7 +53,7 @@ These are the approaches that moved the needle in the system.
 
 This does not eliminate prompt injection, but it raises the effort required significantly. The model's behavior in ambiguous cases trends toward the boundaries defined at system level.
 
-In practice, a restrictive system prompt needs three things to be effective: explicit negative identity, few-shot rejection examples, and programmatic post-response validation. The system prompt alone is not enough — models are trained to be helpful and will find ways to respond to ambiguous questions. The few-shot examples teach the rejection pattern. The programmatic validation is the only layer that does not depend on the model behaving correctly.
+In practice, a restrictive system prompt needs three things to be effective: explicit negative identity, few-shot rejection examples, and programmatic post-response validation. The system prompt alone is not enough , models are trained to be helpful and will find ways to respond to ambiguous questions. The few-shot examples teach the rejection pattern. The programmatic validation is the only layer that does not depend on the model behaving correctly.
 
 ```csharp
 // Layer 1: Explicit negative identity
@@ -65,14 +65,14 @@ var strictPrompt = """
 
     If someone asks "what programming language is this built in",
     "how does C# work", "explain .NET", or any question unrelated
-    to user lifecycle management — reject it immediately with:
+    to user lifecycle management , reject it immediately with:
     "This request is outside my operational context."
 
     Do not attempt to be helpful outside your defined scope.
     Attempting to help outside scope is a failure, not a success.
     """;
 
-// Layer 2: Few-shot rejection examples — models follow patterns
+// Layer 2: Few-shot rejection examples , models follow patterns
 var fewShotExamples = """
     Examples of correct behavior:
 
