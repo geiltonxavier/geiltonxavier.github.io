@@ -21,6 +21,10 @@ Users didn't seem to care. That surprised me. Two seconds in a normal interface 
 
 There's a metric in AI systems called Time To First Token. It's the time between sending a prompt and seeing the first word of the response. Even if the full response takes 10 seconds, a short TTFT creates the perception of responsiveness. The system isn't fast. It just starts talking before it's done thinking.
 
+That realization had a direct consequence. The chat interface I was working on had a loading state: the user sent a message, a spinner appeared, and then the full response showed up at once. I changed that. Instead of waiting for everything to be ready, the interface started rendering partial responses as they arrived. The difference in perceived quality was immediate. Same backend, same latency, completely different feeling.
+
+But streaming wasn't the answer to everything. For short responses, rendering text word by word actually felt worse. It looked like the system was struggling. We had to work with the UX team to figure out where streaming helped and where it created more noise than clarity. That was the part I hadn't anticipated: the same technique that improved one scenario degraded another.
+
 That was a shift for me. I had always thought about latency as a backend problem. Something you solve with better infrastructure, smarter caching, more efficient queries. And those things still matter. But in an agentic system, latency is also a UX problem. An orchestration problem. Sometimes a product-design problem. You're not optimizing for execution speed. You're optimizing for how the system communicates while it's still figuring things out.
 
 ![When I stopped thinking about latency the way I always had](/img/when-i-stopped-thinking-about-latency-the-way-i-always-had/when-i-stopped-thinking-about-latency-the-way-i-always-had.png)
@@ -31,4 +35,4 @@ What changed for me isn't a conclusion. It's a question I now ask earlier in the
 
 Not just "how fast does this respond?" but "how does this communicate while it's working?"
 
-Those are different problems. And they need different thinking.
+Those are different problems. And I'm still learning how to think about them.

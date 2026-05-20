@@ -183,6 +183,8 @@ The platform handled the usual enterprise stuff: user provisioning, license mana
 <p>A traditional API executes predefined logic. It knows what to do before the request arrives. An agent has to figure that out. It has to read the prompt, figure out which tools matter, pull context, call APIs, reason about what comes next, and only then generate something. And that path isn&rsquo;t fixed. The same question tomorrow might take a completely different route.</p>
 <p>Users didn&rsquo;t seem to care. That surprised me. Two seconds in a normal interface and people assume something broke. The same two seconds in a chat interface, where text is streaming in progressively, feels like the system is thinking. The latency is identical. The experience is completely different.</p>
 <p>There&rsquo;s a metric in AI systems called Time To First Token. It&rsquo;s the time between sending a prompt and seeing the first word of the response. Even if the full response takes 10 seconds, a short TTFT creates the perception of responsiveness. The system isn&rsquo;t fast. It just starts talking before it&rsquo;s done thinking.</p>
+<p>That realization had a direct consequence. The chat interface I was working on had a loading state: the user sent a message, a spinner appeared, and then the full response showed up at once. I changed that. Instead of waiting for everything to be ready, the interface started rendering partial responses as they arrived. The difference in perceived quality was immediate. Same backend, same latency, completely different feeling.</p>
+<p>But streaming wasn&rsquo;t the answer to everything. For short responses, rendering text word by word actually felt worse. It looked like the system was struggling. We had to work with the UX team to figure out where streaming helped and where it created more noise than clarity. That was the part I hadn&rsquo;t anticipated: the same technique that improved one scenario degraded another.</p>
 <p>That was a shift for me. I had always thought about latency as a backend problem. Something you solve with better infrastructure, smarter caching, more efficient queries. And those things still matter. But in an agentic system, latency is also a UX problem. An orchestration problem. Sometimes a product-design problem. You&rsquo;re not optimizing for execution speed. You&rsquo;re optimizing for how the system communicates while it&rsquo;s still figuring things out.</p>
 <p>
 
@@ -208,7 +210,7 @@ The platform handled the usual enterprise stuff: user provisioning, license mana
 <p>I don&rsquo;t think traditional performance engineering goes away. It compounds. Every stage in an agentic pipeline, context retrieval, LLM reasoning, tool selection, API calls, response generation, adds its own latency. And unlike a standard request pipeline, those stages are non-deterministic. You can&rsquo;t fully profile them in advance. You learn to reason about them probabilistically.</p>
 <p>What changed for me isn&rsquo;t a conclusion. It&rsquo;s a question I now ask earlier in the process.</p>
 <p>Not just &ldquo;how fast does this respond?&rdquo; but &ldquo;how does this communicate while it&rsquo;s working?&rdquo;</p>
-<p>Those are different problems. And they need different thinking.</p>
+<p>Those are different problems. And I&rsquo;m still learning how to think about them.</p>
 
     </div>
   </article>
