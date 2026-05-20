@@ -6,8 +6,15 @@
     <description>Recent content in Production on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://geiltonxavier.com.br/tags/production/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When I stopped thinking about latency the way I always had</title>
+      <link>https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</link>
+      <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</guid>
+      <description>&lt;p&gt;For most of my career, latency was a number. You measured it, set a threshold, and if the number was too high you went to fix it. A request goes in, a response comes out. Either it&amp;rsquo;s within acceptable range or it isn&amp;rsquo;t.&lt;/p&gt;&#xA;&lt;p&gt;Then I started building AI into an internal operations platform.&lt;/p&gt;&#xA;&lt;p&gt;The platform handled the usual enterprise stuff: user provisioning, license management, access control, integrations with other systems. Real operational stuff, used by real people. At some point the idea came up to let users interact with it through a chat interface. Instead of navigating menus, they could just ask: who has this license? provision this user, revoke this access.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI Reliability in Software Engineering: The Gap Between Assistant and Actor</title>
       <link>https://geiltonxavier.com.br/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/</link>

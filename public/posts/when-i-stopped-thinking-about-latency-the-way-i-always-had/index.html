@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="https://geiltonxavier.com.br/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://geiltonxavier.com.br/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://geiltonxavier.com.br/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://geiltonxavier.com.br/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://geiltonxavier.com.br/apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    When I stopped thinking about latency the way I always had | Geilton Xavier
+    
+</title>
+
+<link rel="canonical" href="https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/"/>
+
+<meta property="og:url" content="https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/">
+  <meta property="og:site_name" content="Geilton Xavier">
+  <meta property="og:title" content="When I stopped thinking about latency the way I always had">
+  <meta property="og:description" content="For most of my career, latency was a number. You measured it, set a threshold, and if the number was too high you went to fix it. A request goes in, a response comes out. Either it’s within acceptable range or it isn’t.
+Then I started building AI into an internal operations platform.
+The platform handled the usual enterprise stuff: user provisioning, license management, access control, integrations with other systems. Real operational stuff, used by real people. At some point the idea came up to let users interact with it through a chat interface. Instead of navigating menus, they could just ask: who has this license? provision this user, revoke this access.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-20T00:00:00+00:00">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Software-Architecture">
+    <meta property="article:tag" content="Production">
+      <meta property="og:image" content="https://geiltonxavier.com.br/android-chrome-192x192.png">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.7a200cf61f6d3d085a1923e2fcf729cc935b7382ddb4cb44e5ab6ef8f689eb30.css" media="all">
+
+
+
+
+
+
+<script
+  async
+  defer
+  data-website-id="ed412433-9163-4adc-8128-854b6b91f003"
+  src="https://cloud.umami.is/script.js"
+></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">
+        <a href="https://geiltonxavier.com.br/">Geilton Xavier</a>
+    </h1>
+
+    <div class="header-menu">
+        
+
+        
+        <p class="small">
+            <a href="/">
+                /home
+            </a>
+        </p>
+        
+
+        
+        
+
+        <p
+            class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">~</a><span class="breadcrumbs-separator">/</span><a href="/posts/">Posts</a><span class="breadcrumbs-separator">/</span>
+        <a href="/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/">When I stopped thinking about latency the way I always had</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">When I stopped thinking about latency the way I always had</h1>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="single-date">
+              <time datetime="2026-05-20T00:00:00&#43;00:00">20 May 2026</time>
+            </p>
+          </div>
+        </div>
+        
+    </header>
+    
+    <div class="single-content">
+      <p>For most of my career, latency was a number. You measured it, set a threshold, and if the number was too high you went to fix it. A request goes in, a response comes out. Either it&rsquo;s within acceptable range or it isn&rsquo;t.</p>
+<p>Then I started building AI into an internal operations platform.</p>
+<p>The platform handled the usual enterprise stuff: user provisioning, license management, access control, integrations with other systems. Real operational stuff, used by real people. At some point the idea came up to let users interact with it through a chat interface. Instead of navigating menus, they could just ask: who has this license? provision this user, revoke this access.</p>
+<p>Simple idea. But building it changed how I think about performance.</p>
+<p>The first thing I noticed was that the system felt slower. And it was. But not because something was wrong.</p>
+<p>A traditional API executes predefined logic. It knows what to do before the request arrives. An agent has to figure that out. It has to read the prompt, figure out which tools matter, pull context, call APIs, reason about what comes next, and only then generate something. And that path isn&rsquo;t fixed. The same question tomorrow might take a completely different route.</p>
+<p>Users didn&rsquo;t seem to care. That surprised me. Two seconds in a normal interface and people assume something broke. The same two seconds in a chat interface, where text is streaming in progressively, feels like the system is thinking. The latency is identical. The experience is completely different.</p>
+<p>There&rsquo;s a metric in AI systems called Time To First Token. It&rsquo;s the time between sending a prompt and seeing the first word of the response. Even if the full response takes 10 seconds, a short TTFT creates the perception of responsiveness. The system isn&rsquo;t fast. It just starts talking before it&rsquo;s done thinking.</p>
+<p>That was a shift for me. I had always thought about latency as a backend problem. Something you solve with better infrastructure, smarter caching, more efficient queries. And those things still matter. But in an agentic system, latency is also a UX problem. An orchestration problem. Sometimes a product-design problem. You&rsquo;re not optimizing for execution speed. You&rsquo;re optimizing for how the system communicates while it&rsquo;s still figuring things out.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div class="img-container" >
+        <img loading="lazy" alt="When I stopped thinking about latency the way I always had" src="/img/when-i-stopped-thinking-about-latency-the-way-i-always-had/when-i-stopped-thinking-about-latency-the-way-i-always-had.png" >
+    </div>
+
+    
+</figure>
+</p>
+<p>I don&rsquo;t think traditional performance engineering goes away. It compounds. Every stage in an agentic pipeline, context retrieval, LLM reasoning, tool selection, API calls, response generation, adds its own latency. And unlike a standard request pipeline, those stages are non-deterministic. You can&rsquo;t fully profile them in advance. You learn to reason about them probabilistically.</p>
+<p>What changed for me isn&rsquo;t a conclusion. It&rsquo;s a question I now ask earlier in the process.</p>
+<p>Not just &ldquo;how fast does this respond?&rdquo; but &ldquo;how does this communicate while it&rsquo;s working?&rdquo;</p>
+<p>Those are different problems. And they need different thinking.</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/">
+                        AI Reliability in Software Engineering: The Gap Between Assistant and Actor
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+
+
+  <footer>
+    
+
+
+  </footer>
+
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>
