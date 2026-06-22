@@ -4,7 +4,7 @@ draft: false
 title: 'Diligência Como Engenharia de Antecipação'
 ---
 
-Em 2013, eu trabalhava na FCamara e fazia parte de um grupo chamado Equipe de Operações Críticas. De tempos em tempos a gente se reunia de um jeito diferente do normal, sem sala de reunião, sem slide, sem agenda. Era mais um encontro informal, tipo um squad com pizza.
+Em 2013, eu trabalhava na FCamara e fazia parte de um grupo chamado Equipe de Operações Críticas. De tempos em tempos a gente se reunia de um jeito diferente do normal, sem sala de reunião, sem slide, sem agenda. Era mais um encontro informal, tipo um scrum com pizza.
 
 A gente ia pra pizzaria, comia, conversava sobre o dia a dia e no meio disso surgiam umas palestras improvisadas. Nada formal, só alguém compartilhando experiência enquanto todo mundo comia.
 
