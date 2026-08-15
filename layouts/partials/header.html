@@ -1,0 +1,39 @@
+<div class="header">
+    {{ if or (not (.Param "hideHeader")) .IsHome }}
+    <h1 class="header-title">
+        <a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    </h1>
+
+    <div class="header-menu">
+        {{ $page := . }}
+        {{ if not .IsHome }}
+        <p class="small">
+            <a href="{{ site.Home.RelPermalink }}">/{{ if eq .Language.Lang "pt" }}início{{ else }}home{{ end }}</a>
+        </p>
+        {{ end }}
+
+        {{ range site.Menus.main }}
+        <p class="small {{ if eq .Identifier (lower $page.Section) }}bold{{ end }}">
+            <a href="{{ .URL }}">/{{ .Name }}</a>
+        </p>
+        {{ end }}
+
+           {{ if .Translations }}
+           {{ range .Translations }}
+           <p class="small language-switcher">
+               <a href="{{ .RelPermalink }}">{{ upper .Language.Lang }}</a>
+           </p>
+           {{ end }}
+           {{ else }}
+           {{ $currentLanguage := .Language.Lang }}
+           {{ range site.Sites }}
+           {{ if ne .Language.Lang $currentLanguage }}
+           <p class="small language-switcher">
+               <a href="{{ .Home.RelPermalink }}">{{ upper .Language.Lang }}</a>
+           </p>
+           {{ end }}
+           {{ end }}
+           {{ end }}
+    </div>
+    {{ end }}
+</div>

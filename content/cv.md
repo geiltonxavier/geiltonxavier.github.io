@@ -2,7 +2,8 @@
 title = "CV"
 description = "Curriculum vitae of Geilton Xavier."
 type = "cv"
-url = "/cv"
+slug = "cv"
+translationKey = "cv"
 +++
 
 {{< rawhtml >}}

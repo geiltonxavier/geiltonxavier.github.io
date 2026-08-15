@@ -394,6 +394,21 @@ p + p {
   opacity: 0.9;
 }
 
+/* The homepage bio is rendered from page content, outside the theme intro wrapper. */
+.home-bio .bio-portrait {
+  margin: 0 0 0.75rem;
+}
+
+.home-bio .bio-portrait img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(1) contrast(0.9) brightness(1.02);
+  opacity: 0.9;
+}
+
 .intro .home-bio p {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -425,5 +440,14 @@ p + p {
   .intro .home-bio .bio-portrait img {
     width: 80px;
     height: 80px;
+  }
+
+  .home-bio .bio-portrait img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .home-bio .bio-portrait {
+    margin-bottom: 0.5rem;
   }
 }

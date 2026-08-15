@@ -2,6 +2,7 @@
 date: '2026-06-22T00:00:00Z'
 draft: false
 title: 'Diligência Como Engenharia de Antecipação'
+translationKey: 'diligence-anticipation'
 ---
 
 Em 2013, eu trabalhava na FCamara e fazia parte de um grupo chamado Equipe de Operações Críticas. De tempos em tempos a gente se reunia de um jeito diferente do normal, sem sala de reunião, sem slide, sem agenda. Era mais um encontro informal, tipo um scrum com pizza.

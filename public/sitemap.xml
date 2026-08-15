@@ -1,78 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://geiltonxavier.com.br/tags/ai/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/production/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/software-architecture/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</loc>
-    <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/</loc>
-    <lastmod>2026-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/distributed-systems/</loc>
-    <lastmod>2026-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/security/</loc>
-    <lastmod>2026-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/engenharia-de-software/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/filosofia/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/intelig%C3%AAncia-artificial/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/nada-de-novo-debaixo-do-sol/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/reflex%C3%A3o/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/tags/tecnologia/</loc>
-    <lastmod>2026-04-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/system-design-nao-tem-resposta-certa-e-ninguem-assume-isso/</loc>
-    <lastmod>2026-03-31T18:41:48+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/spec-driven-development-no-dia-a-dia-com-ia/</loc>
-    <lastmod>2026-03-26T23:01:14+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/software-codigo-e-o-lugar-onde-o-prazer-mudou/</loc>
-    <lastmod>2026-01-20T12:41:12+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/pensamento-associativo-e-conexoes-nao-obvias/</loc>
-    <lastmod>2025-11-25T20:31:56+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/ia-como-extensao-do-pensamento-produtividade-com-proposito/</loc>
-    <lastmod>2025-11-19T21:42:40+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</loc>
-    <lastmod>2025-11-09T18:50:55+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/posts/ai-browsers-the-cost-of-convenience/</loc>
-    <lastmod>2025-11-03T14:47:29+00:00</lastmod>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/about/</loc>
-  </url><url>
-    <loc>https://geiltonxavier.com.br/cv/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://geiltonxavier.com.br/en/sitemap.xml</loc>
+    
+      <lastmod>2026-06-22T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://geiltonxavier.com.br/pt/sitemap.xml</loc>
+    
+      <lastmod>2026-06-22T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

@@ -1,6 +1,7 @@
 ---
 title: "About"
 description: "A description of Geilton Xavier, an Brazilian software engineer."
+translationKey: "about"
 hideBackToTop: true
 hidePagination: true
 ---

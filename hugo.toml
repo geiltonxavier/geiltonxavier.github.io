@@ -2,6 +2,62 @@ baseURL = 'https://geiltonxavier.com.br'
 languageCode = 'en-us'
 title = 'Geilton Xavier'
 theme = 'typo'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+
+[languages.en]
+label = 'English'
+locale = 'en-US'
+weight = 1
+title = 'Geilton Xavier'
+
+[languages.en.params]
+description = 'Geilton Xavier writes about software engineering, distributed systems, artificial intelligence, and reliable technology.'
+homeCollectionTitle = 'Writing'
+
+[languages.en.menus]
+[[languages.en.menus.main]]
+identifier = 'posts'
+name = 'Posts'
+pageRef = '/posts'
+weight = 10
+[[languages.en.menus.main]]
+identifier = 'about'
+name = 'About'
+pageRef = '/about'
+weight = 20
+[[languages.en.menus.main]]
+identifier = 'cv'
+name = 'CV'
+pageRef = '/cv'
+weight = 30
+
+[languages.pt]
+label = 'Português'
+locale = 'pt-BR'
+weight = 2
+title = 'Geilton Xavier'
+
+[languages.pt.params]
+description = 'Geilton Xavier escreve sobre engenharia de software, sistemas distribuídos, inteligência artificial e tecnologia confiável.'
+homeCollectionTitle = 'Textos'
+
+[languages.pt.menus]
+[[languages.pt.menus.main]]
+identifier = 'posts'
+name = 'Textos'
+pageRef = '/posts'
+weight = 10
+[[languages.pt.menus.main]]
+identifier = 'about'
+name = 'Sobre'
+pageRef = '/about'
+weight = 20
+[[languages.pt.menus.main]]
+identifier = 'cv'
+name = 'CV'
+pageRef = '/cv'
+weight = 30
 
 [taxonomies]
 tag = 'tags'
@@ -15,27 +71,10 @@ theme = 'auto'
 colorPalette = 'default'
 hideHeader = false
 
-# Intro on main page, content in markdown
-homeIntroTitle = ''
-homeIntroContent = """
-{{< rawhtml >}}
-<div class="home-bio">
-  <figure class="bio-portrait">
-    <img src="/img/geilton-avatar.jpeg" alt="Geilton Xavier" loading="lazy">
-  </figure>
-  <p><strong>Geilton Xavier</strong> is a <strong>Software Engineer</strong> with a passion for <strong>distributed systems</strong> &amp; <strong>software architecture</strong>.</p>
-  <p>He specializes in designing scalable platforms, modernizing engineering practices, and building systems that remain reliable under real operational pressure.</p>
-  <p><strong>Geilton Xavier</strong> currently works at <a href="https://www.siemens.com/pt/pt.html"><strong>Siemens</strong></a>.</p>
-  <p>His most recent roles were at <a href="https://www.edenred.com.br/"><strong>Edenred</strong></a>, <a href="https://www.fidelidade.pt/"><strong>Fidelidade</strong></a> and <a href="https://www.prodesp.sp.gov.br/"><strong>Prodesp</strong></a>.</p>
-</div>
-{{< /rawhtml >}}
-"""
-
 singleDateFormat = '2 Jan 2006'
 
 # Collection to display on home
-# homeCollectionTitle = 'Posts'
-# homeCollection = 'posts'
+homeCollection = 'posts'
 
 # Lists parameters
 paginationSize = 100
@@ -65,19 +104,6 @@ url = "https://github.com/geiltonxavier"
 # [[params.menu]]
 # name = "home"
 # url = "/"
-
-[[params.menu]]
-name = "posts"
-url = "/posts"
-
-# [[params.menu]]
-# name = "about"
-# url = "/about"
-
-# [[params.menu]]
-# name = "cv"
-# url = "/cv"
-
 
 # [[params.menu]]
 # name = "tags"

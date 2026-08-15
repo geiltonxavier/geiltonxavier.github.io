@@ -2,6 +2,7 @@
 date: '2026-06-22T00:00:00Z'
 draft: false
 title: 'Diligence as the Engineering of Anticipation'
+translationKey: 'diligence-anticipation'
 ---
 
 In 2013, I worked at FCamara and was part of a group called the Critical Operations Team. From time to time we'd meet in a way that broke from the usual routine. No meeting room, no slides, no rigid agenda. It was more of an informal gathering, something like a scrum with pizza.
