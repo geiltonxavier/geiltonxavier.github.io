@@ -14,7 +14,7 @@
       </a>
       {{ end }}
       <div class="memory-list-copy">
-        <p class="memory-kicker">{{ $note.Date | time.Format "Jan 2006" }}{{ with $note.Params.location }} · {{ . }}{{ end }}</p>
+        <p class="memory-kicker">{{ with $note.Params.dateLabel }}{{ . }}{{ else }}{{ $note.Date | time.Format "Jan 2006" }}{{ end }}{{ with $note.Params.location }} · {{ . }}{{ end }}</p>
         <h2><a href="{{ $note.RelPermalink }}">{{ $note.Title }}</a></h2>
         {{ with $note.Params.summary }}<p>{{ . }}</p>{{ end }}
       </div>
