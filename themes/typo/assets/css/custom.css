@@ -399,6 +399,25 @@ p + p {
   margin: 0 0 0.75rem;
 }
 
+.home-memory {
+  max-width: 680px;
+  margin: 3rem 0 0;
+}
+
+.home-memory img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-memory figcaption {
+  margin-top: 0.65rem;
+  color: #6e6e73;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 .home-bio .bio-portrait img {
   display: block;
   width: 96px;
@@ -449,5 +468,9 @@ p + p {
 
   .home-bio .bio-portrait {
     margin-bottom: 0.5rem;
+  }
+
+  .home-memory {
+    margin-top: 2.25rem;
   }
 }
