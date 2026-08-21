@@ -90,6 +90,32 @@
     <loc>https://geiltonxavier.com.br/pt/posts/o-que-a-ia-nao-substitui-pensamento-sistemico/</loc>
     <lastmod>2025-11-09T18:50:55+00:00</lastmod>
   </url><url>
+    <loc>https://geiltonxavier.com.br/pt/memory-notes/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://geiltonxavier.com.br/memory-notes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://geiltonxavier.com.br/pt/memory-notes/"
+                />
+  </url><url>
+    <loc>https://geiltonxavier.com.br/pt/memory-notes/toronto-will/</loc>
+    <lastmod>2023-05-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://geiltonxavier.com.br/memory-notes/toronto-will/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://geiltonxavier.com.br/pt/memory-notes/toronto-will/"
+                />
+  </url><url>
     <loc>https://geiltonxavier.com.br/pt/cv/</loc>
     <xhtml:link
                 rel="alternate"
@@ -100,6 +126,18 @@
                 rel="alternate"
                 hreflang="pt"
                 href="https://geiltonxavier.com.br/pt/cv/"
+                />
+  </url><url>
+    <loc>https://geiltonxavier.com.br/pt/now/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://geiltonxavier.com.br/now/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://geiltonxavier.com.br/pt/now/"
                 />
   </url><url>
     <loc>https://geiltonxavier.com.br/pt/about/</loc>

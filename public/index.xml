@@ -37,6 +37,13 @@
       <description>&lt;p&gt;Have you ever wondered about the scope of having a browser with artificial intelligence inside?&lt;/p&gt;&#xA;&lt;p&gt;From the outside, it sounds absolutely fantastic. An assistant always present, able to sum up pages, answer questions about what you are reading, help you formulate a well-crafted email, pull information here and there – all that, without closing your browser.&lt;/p&gt;&#xA;&lt;p&gt;No effort, instant gratification. A perfect future, where everything is possible.&lt;/p&gt;&#xA;&lt;p&gt;But there is a catch with that form of thinking that you are likely not considering.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Toronto, from Will&#39;s balcony</title>
+      <link>https://geiltonxavier.com.br/memory-notes/toronto-will/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/memory-notes/toronto-will/</guid>
+      <description>My first visit to Canada, seen from the balcony of my friend Will&amp;rsquo;s apartment.</description>
+    </item>
+    <item>
       <title>About</title>
       <link>https://geiltonxavier.com.br/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,6 +56,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://geiltonxavier.com.br/cv/</guid>
       <description>&lt;div class=&#34;cv-page&#34;&gt;&#xA;  &lt;section class=&#34;cv-header&#34;&gt;&#xA;    &lt;h1&gt;Geilton Xavier&lt;/h1&gt;&#xA;    &lt;p class=&#34;cv-roleline&#34;&gt;Solutions Architect · Staff Engineer · Technical Lead · .NET · Azure · Distributed Systems&lt;/p&gt;&#xA;    &lt;p class=&#34;cv-contact&#34;&gt;&#xA;      &lt;a href=&#34;mailto:geilton@live.com&#34;&gt;geilton@live.com&lt;/a&gt;&#xA;      &lt;span&gt;|&lt;/span&gt;&#xA;      &lt;span&gt;+351 910 702 889&lt;/span&gt;&#xA;      &lt;span&gt;|&lt;/span&gt;&#xA;      &lt;a href=&#34;https://www.linkedin.com/in/geiltonxavier/&#34;&gt;linkedin.com/in/geiltonxavier&lt;/a&gt;&#xA;    &lt;/p&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section class=&#34;cv-section&#34;&gt;&#xA;    &lt;h2&gt;Summary&lt;/h2&gt;&#xA;    &lt;p&gt;Software engineer with 10+ years building high-scale distributed systems on .NET and Azure. Currently at &lt;strong&gt;Siemens&lt;/strong&gt; as a hands-on &lt;strong&gt;Solutions Architect&lt;/strong&gt; and &lt;strong&gt;Technical Lead&lt;/strong&gt;, designing enterprise platforms that integrate &lt;strong&gt;Dynamics CRM&lt;/strong&gt;, &lt;strong&gt;SAP&lt;/strong&gt;, &lt;strong&gt;Salesforce&lt;/strong&gt;, and &lt;strong&gt;ServiceNow&lt;/strong&gt; — with a projected $1M+ in annual operational savings.&lt;/p&gt;&#xA;    &lt;p&gt;I operate as a force multiplier: led technical standardization across 300+ engineers, designed &lt;strong&gt;Internal Developer Platforms&lt;/strong&gt; adopted by 70+ projects, and built cross-cutting influence in architecture decisions beyond my immediate team.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Now</title>
+      <link>https://geiltonxavier.com.br/now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/now/</guid>
+      <description>&lt;div class=&#34;now-page&#34;&gt;&#xA;  &lt;p class=&#34;now-kicker&#34;&gt;A living page · updated August 2026&lt;/p&gt;&#xA;  &lt;p class=&#34;now-intro&#34;&gt;A short record of what currently has my attention.&lt;/p&gt;&#xA;&#xA;  &lt;section&gt;&#xA;    &lt;h2&gt;At work&lt;/h2&gt;&#xA;    &lt;p&gt;I&#39;m a Solutions Architect and hands-on technical lead at Siemens, designing distributed systems on .NET and Azure.&lt;/p&gt;&#xA;    &lt;p&gt;Most of my work sits between architecture and hands-on engineering: building platforms, identity systems, and developer tooling that help hundreds of engineers move faster without sacrificing reliability.&lt;/p&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section&gt;&#xA;    &lt;h2&gt;Thinking about&lt;/h2&gt;&#xA;    &lt;p&gt;Platform engineering, event-driven architecture, cloud infrastructure, AI-assisted software development, and the craft of making complex systems feel simple.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

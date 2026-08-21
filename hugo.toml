@@ -21,15 +21,25 @@ name = 'Posts'
 pageRef = '/posts'
 weight = 10
 [[languages.en.menus.main]]
+identifier = 'memory-notes'
+name = 'Memory Notes'
+pageRef = '/memory-notes'
+weight = 20
+[[languages.en.menus.main]]
+identifier = 'now'
+name = 'Now'
+pageRef = '/now'
+weight = 30
+[[languages.en.menus.main]]
 identifier = 'about'
 name = 'About'
 pageRef = '/about'
-weight = 20
+weight = 40
 [[languages.en.menus.main]]
 identifier = 'cv'
 name = 'CV'
 pageRef = '/cv'
-weight = 30
+weight = 50
 
 [languages.pt]
 label = 'Português'
@@ -47,15 +57,25 @@ name = 'Posts'
 pageRef = '/posts'
 weight = 10
 [[languages.pt.menus.main]]
+identifier = 'memory-notes'
+name = 'Memory Notes'
+pageRef = '/memory-notes'
+weight = 20
+[[languages.pt.menus.main]]
+identifier = 'now'
+name = 'Now'
+pageRef = '/now'
+weight = 30
+[[languages.pt.menus.main]]
 identifier = 'about'
 name = 'Sobre'
 pageRef = '/about'
-weight = 20
+weight = 40
 [[languages.pt.menus.main]]
 identifier = 'cv'
 name = 'CV'
 pageRef = '/cv'
-weight = 30
+weight = 50
 
 [taxonomies]
 tag = 'tags'

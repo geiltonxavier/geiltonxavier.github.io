@@ -65,11 +65,25 @@
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Tenho pensado muito sobre como a gente está usando inteligência artificial. Parece que virou obrigação: todo projeto novo precisa ter &amp;ldquo;alguma coisa de IA&amp;rdquo;, mesmo que não faça o menor sentido.&lt;/p&gt;&#xA;&lt;p&gt;Mas existe uma diferença fundamental: usar IA como ferramenta de desenvolvimento versus integrar IA como funcionalidade do produto. E muita gente não percebe isso.&lt;/p&gt;&#xA;&lt;p&gt;Usar IA como ferramenta é ótimo. Ela ajuda, acelera, resolve problemas. Mas quando ela passa a ser parte do software, muda tudo: muda arquitetura, muda custo, muda a responsabilidade que você assume. A inferência de um modelo não é de graça. O token que você gasta hoje vira a fatura de amanhã. E se o projeto for mal pensado, o custo cresce mais rápido do que o aprendizado do time.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Toronto, da sacada do Will</title>
+      <link>https://geiltonxavier.com.br/pt/memory-notes/toronto-will/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/pt/memory-notes/toronto-will/</guid>
+      <description>Minha primeira visita ao Canadá, vista da sacada do apartamento do meu amigo Will.</description>
+    </item>
+    <item>
       <title>CV</title>
       <link>https://geiltonxavier.com.br/pt/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://geiltonxavier.com.br/pt/cv/</guid>
       <description>&lt;div class=&#34;cv-page&#34;&gt;&#xA;  &lt;section class=&#34;cv-header&#34;&gt;&#xA;    &lt;h1&gt;Geilton Xavier&lt;/h1&gt;&#xA;    &lt;p class=&#34;cv-roleline&#34;&gt;Solutions Architect · Staff Engineer · Technical Lead · .NET · Azure · Sistemas Distribuídos&lt;/p&gt;&#xA;    &lt;p class=&#34;cv-contact&#34;&gt;&#xA;      &lt;a href=&#34;mailto:geilton@live.com&#34;&gt;geilton@live.com&lt;/a&gt;&#xA;      &lt;span&gt;|&lt;/span&gt;&#xA;      &lt;span&gt;+351 910 702 889&lt;/span&gt;&#xA;      &lt;span&gt;|&lt;/span&gt;&#xA;      &lt;a href=&#34;https://www.linkedin.com/in/geiltonxavier/&#34;&gt;linkedin.com/in/geiltonxavier&lt;/a&gt;&#xA;    &lt;/p&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section class=&#34;cv-section&#34;&gt;&#xA;    &lt;h2&gt;Resumo&lt;/h2&gt;&#xA;    &lt;p&gt;Engenheiro de software com mais de 10 anos construindo sistemas distribuídos de alta escala em .NET e Azure. Atualmente trabalha na &lt;strong&gt;Siemens&lt;/strong&gt; como &lt;strong&gt;Solutions Architect&lt;/strong&gt; e &lt;strong&gt;Technical Lead&lt;/strong&gt;, projetando plataformas empresariais que integram &lt;strong&gt;Dynamics CRM&lt;/strong&gt;, &lt;strong&gt;SAP&lt;/strong&gt;, &lt;strong&gt;Salesforce&lt;/strong&gt; e &lt;strong&gt;ServiceNow&lt;/strong&gt;, com economia operacional anual projetada superior a US$ 1 milhão.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Now</title>
+      <link>https://geiltonxavier.com.br/pt/now/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://geiltonxavier.com.br/pt/now/</guid>
+      <description>&lt;div class=&#34;now-page&#34;&gt;&#xA;  &lt;p class=&#34;now-kicker&#34;&gt;Uma página viva · atualizada em agosto de 2026&lt;/p&gt;&#xA;  &lt;p class=&#34;now-intro&#34;&gt;Um registro curto do que está ocupando minha atenção neste momento.&lt;/p&gt;&#xA;&#xA;  &lt;section&gt;&#xA;    &lt;h2&gt;No trabalho&lt;/h2&gt;&#xA;    &lt;p&gt;Sou Solutions Architect e technical lead na Siemens, projetando sistemas distribuídos em .NET e Azure.&lt;/p&gt;&#xA;    &lt;p&gt;Grande parte do meu trabalho acontece entre arquitetura e engenharia prática: construindo plataformas, sistemas de identidade e ferramentas para desenvolvedores que ajudam centenas de engenheiros a avançar mais rápido sem sacrificar a confiabilidade.&lt;/p&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section&gt;&#xA;    &lt;h2&gt;Pensando sobre&lt;/h2&gt;&#xA;    &lt;p&gt;Platform engineering, arquitetura orientada a eventos, infraestrutura em nuvem, desenvolvimento de software assistido por IA e a arte de fazer sistemas complexos parecerem simples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sobre</title>

@@ -98,6 +98,7 @@ footer a,
   row-gap: 0.35rem;
   align-items: baseline;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -418,6 +419,109 @@ p + p {
   line-height: 1.55;
 }
 
+.now-page,
+.memory-note,
+.memory-index {
+  max-width: 680px;
+}
+
+.now-kicker,
+.memory-kicker {
+  margin: 0 0 0.7rem;
+  color: var(--content-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.now-intro,
+.memory-index-intro {
+  color: var(--content-secondary);
+  font-size: 1.16rem;
+  line-height: 1.7;
+}
+
+.now-page section {
+  margin-top: 2.7rem;
+}
+
+.now-page section h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.now-page section p {
+  margin-top: 0;
+}
+
+.now-page section p + p {
+  margin-top: 1.15rem;
+}
+
+.memory-index-content {
+  margin-bottom: 2.75rem;
+}
+
+.memory-list {
+  display: grid;
+  gap: 2.75rem;
+}
+
+.memory-list-entry {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.42fr) 1fr;
+  gap: 1.35rem;
+  align-items: start;
+}
+
+.memory-list-image {
+  display: block;
+}
+
+.memory-list-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.memory-list-copy h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1.35rem;
+}
+
+.memory-list-copy h2 a {
+  color: var(--content-primary);
+}
+
+.memory-list-copy > p:last-child {
+  margin: 0;
+  color: var(--content-secondary);
+  line-height: 1.6;
+}
+
+.single-content .memory-note {
+  margin-top: 1.75rem;
+}
+
+.single-content .memory-note figure {
+  margin: 2rem 0 2.25rem;
+}
+
+.single-content .memory-note img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.single-content .memory-note figcaption {
+  color: var(--content-secondary);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+
 .home-bio .bio-portrait img {
   display: block;
   width: 96px;
@@ -472,5 +576,14 @@ p + p {
 
   .home-memory {
     margin-top: 2.25rem;
+  }
+
+  .memory-list-entry {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .memory-list-image img {
+    aspect-ratio: 16 / 9;
   }
 }
