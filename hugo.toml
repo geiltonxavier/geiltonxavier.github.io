@@ -13,7 +13,6 @@ title = 'Geilton Xavier'
 
 [languages.en.params]
 description = 'Geilton Xavier writes about software engineering, distributed systems, artificial intelligence, and reliable technology.'
-homeCollectionTitle = 'Writing'
 
 [languages.en.menus]
 [[languages.en.menus.main]]
@@ -40,12 +39,11 @@ title = 'Geilton Xavier'
 
 [languages.pt.params]
 description = 'Geilton Xavier escreve sobre engenharia de software, sistemas distribuídos, inteligência artificial e tecnologia confiável.'
-homeCollectionTitle = 'Textos'
 
 [languages.pt.menus]
 [[languages.pt.menus.main]]
 identifier = 'posts'
-name = 'Textos'
+name = 'Posts'
 pageRef = '/posts'
 weight = 10
 [[languages.pt.menus.main]]
@@ -72,9 +70,6 @@ colorPalette = 'default'
 hideHeader = false
 
 singleDateFormat = '2 Jan 2006'
-
-# Collection to display on home
-homeCollection = 'posts'
 
 # Lists parameters
 paginationSize = 100
