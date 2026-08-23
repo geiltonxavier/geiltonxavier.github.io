@@ -13,6 +13,15 @@ translationKey: "home"
   <p>He works at the intersection of architecture and hands-on engineering, with a focus on .NET, Azure, and reliable software at scale.</p>
   <p>Currently at Siemens. Previously at Fidelidade, Edenred, and Prodesp.</p>
 </div>
+<section class="home-radio" aria-labelledby="radio-title">
+  <p class="radio-label" id="radio-title">Listening now</p>
+  <iframe
+    title="Pinguin Radio on Mixcloud"
+    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&hide_artwork=1&feed=%2Fpinguinradio%2F"
+    loading="lazy"
+    allow="autoplay">
+  </iframe>
+</section>
 <figure class="home-memory">
   <img src="/img/toronto-will.jpeg" alt="Toronto skyline at sunset, photographed from Will's apartment balcony in May 2023" loading="lazy">
   <figcaption>Toronto, May 2023. My first visit to Canada, from the balcony of my friend Will's apartment.</figcaption>
