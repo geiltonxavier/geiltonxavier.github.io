@@ -13,14 +13,26 @@ translationKey: "home"
   <p>He works at the intersection of architecture and hands-on engineering, with a focus on .NET, Azure, and reliable software at scale.</p>
   <p>Currently at Siemens. Previously at Fidelidade, Edenred, and Prodesp.</p>
 </div>
-<section class="home-radio" aria-labelledby="radio-title">
-  <p class="radio-label" id="radio-title">Listening now</p>
-  <iframe
-    title="Pinguin Radio on Mixcloud"
-    src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&hide_artwork=1&feed=%2Fpinguinradio%2F"
-    loading="lazy"
-    allow="autoplay">
-  </iframe>
+<section class="home-radio" data-home-radio
+  data-play-label="Play indie radio"
+  data-pause-label="Pause indie radio"
+  data-unavailable-label="The radio is temporarily unavailable."
+  aria-labelledby="radio-title">
+  <div class="home-radio-copy">
+    <p class="radio-label" id="radio-title">INDIE RADIO</p>
+    <p class="radio-title">Up for some music?</p>
+    <p class="radio-description">Let the radio choose.</p>
+  </div>
+  <div class="home-radio-control">
+    <button class="radio-toggle" type="button" data-radio-toggle
+      aria-label="Play indie radio" aria-pressed="false">
+      <span class="radio-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <span class="radio-state" data-radio-state>Play</span>
+  </div>
+  <audio data-radio-audio preload="none"
+    src="https://ice2.somafm.com/indiepop-128-mp3"></audio>
+  <p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
 </section>
 <figure class="home-memory">
   <img src="/img/toronto-will.jpeg" alt="Toronto skyline at sunset, photographed from Will's apartment balcony in May 2023" loading="lazy">

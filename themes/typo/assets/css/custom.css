@@ -548,24 +548,121 @@ p + p {
 .home-radio {
   max-width: 680px;
   margin: 2.75rem 0 0;
-  padding-top: 1.25rem;
-  border-top: 1px solid #d8d8d2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--code-border);
+  border-bottom: 1px solid var(--code-border);
+}
+
+.home-radio-copy {
+  min-width: 0;
+}
+
+.home-radio .radio-label,
+.home-radio .radio-title,
+.home-radio .radio-description,
+.home-radio .radio-state,
+.home-radio .radio-error {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .home-radio .radio-label {
   margin: 0 0 0.75rem;
-  color: #6e6e73;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--content-secondary);
   font-size: 0.78rem;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.home-radio iframe {
+.home-radio .radio-title {
+  margin: 0;
+  color: var(--content-primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.home-radio .radio-description {
+  margin: 0.2rem 0 0;
+  color: var(--content-secondary);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.home-radio-control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.radio-toggle {
+  display: inline-grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--content-primary);
+  border-radius: 50%;
+  background: var(--content-primary);
+  color: var(--background);
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.radio-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgb(29 29 31 / 16%);
+}
+
+.radio-toggle:active {
+  transform: scale(0.94);
+  box-shadow: none;
+}
+
+.radio-toggle:focus-visible {
+  outline: 3px solid var(--content-secondary);
+  outline-offset: 4px;
+}
+
+.radio-toggle-icon {
   display: block;
-  width: 100%;
-  height: 180px;
+  width: 0;
+  height: 0;
+  margin-left: 0.18rem;
+  border-top: 0.42rem solid transparent;
+  border-bottom: 0.42rem solid transparent;
+  border-left: 0.62rem solid currentColor;
+}
+
+.radio-toggle[data-state="playing"] .radio-toggle-icon {
+  width: 0.68rem;
+  height: 0.86rem;
+  margin-left: 0;
   border: 0;
+  background: linear-gradient(to right, currentColor 0 35%, transparent 35% 65%, currentColor 65% 100%);
+}
+
+.home-radio .radio-state {
+  color: var(--content-secondary);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-radio .radio-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--content-secondary);
+  font-size: 0.82rem;
+}
+
+.home-radio[data-state="playing"] .radio-label {
+  color: var(--content-primary);
 }
 
 @media screen and (max-width: 640px) {
@@ -603,6 +700,7 @@ p + p {
 
   .home-radio {
     margin-top: 2.25rem;
+    gap: 1rem;
   }
 
   .memory-list-entry {
