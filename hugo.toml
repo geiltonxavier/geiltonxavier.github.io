@@ -12,7 +12,7 @@ weight = 1
 title = 'Geilton Xavier'
 
 [languages.en.params]
-description = 'Geilton Xavier writes about software engineering, distributed systems, artificial intelligence, and reliable technology.'
+description = 'Geilton Xavier is a Software Engineer and Solutions Architect who brings order to fragmented, multi-team systems.'
 
 [languages.en.menus]
 [[languages.en.menus.main]]
@@ -48,7 +48,7 @@ weight = 2
 title = 'Geilton Xavier'
 
 [languages.pt.params]
-description = 'Geilton Xavier escreve sobre engenharia de software, sistemas distribuídos, inteligência artificial e tecnologia confiável.'
+description = 'Geilton Xavier é Engenheiro de Software e Arquiteto de Soluções, que traz ordem a sistemas fragmentados e multi-times.'
 
 [languages.pt.menus]
 [[languages.pt.menus.main]]
@@ -82,7 +82,7 @@ tag = 'tags'
 
 [params]
 # Home meta description
-description = "A tech-oriented personal blog curated by Geilton Xavier."
+description = "Geilton Xavier is a Software Engineer and Solutions Architect who brings order to fragmented, multi-team systems."
 
 # Appearance settings
 theme = 'auto'
