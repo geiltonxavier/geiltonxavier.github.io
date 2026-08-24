@@ -12,9 +12,6 @@ hidePagination: true
   <figcaption>Anmore, BC, 3 de junho de 2023. Um dia na estrada com amigos do curso de inglês, descobrindo as paisagens tranquilas nos arredores de Vancouver.</figcaption>
 </figure>
 <div class="about-bio">
-  <figure class="bio-portrait">
-    <img src="/img/geilton-avatar.jpeg" alt="Geilton Xavier" loading="lazy">
-  </figure>
   <p>Eu sou o Geilton.</p>
   <p>Nasci em Ilhéus, no litoral sul da Bahia, e me mudei para São Paulo aos oito anos de idade.</p>
   <p>Não entrei em tecnologia pela arquitetura. Comecei em suporte, implementações de ERP, correções de SQL, treinamento de usuários, e o tipo de trabalho operacional onde todo bug tem uma pessoa esperando do outro lado. Essa experiência me ensinou que software raramente é o problema real. Fricção é.</p>
