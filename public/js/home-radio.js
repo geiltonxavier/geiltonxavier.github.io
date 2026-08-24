@@ -62,7 +62,7 @@
     document.querySelectorAll("[data-home-radio]").forEach(initRadio);
 
     document.addEventListener("click", function (event) {
-      const link = event.target.closest("a");
+      const link = event.target instanceof Element ? event.target.closest("a") : null;
       if (!link || !isInternalPageLink(link)) return;
 
       event.preventDefault();
@@ -80,7 +80,9 @@
         && !link.hash
         && link.target !== "_blank"
         && link.hasAttribute("href")
-        && !link.href.startsWith("mailto:");
+        && !link.href.startsWith("mailto:")
+        && !link.hasAttribute("download")
+        && !link.closest("[data-no-spa]");
     }
 
     async function navigate(url, addHistoryEntry) {
@@ -88,7 +90,10 @@
       navigationInProgress = true;
 
       try {
-        const response = await fetch(url, { headers: { "X-Requested-With": "partial-navigation" } });
+        const response = await fetch(url, {
+          credentials: "same-origin",
+          headers: { "X-Requested-With": "partial-navigation" }
+        });
         if (!response.ok) throw new Error("Navigation failed");
 
         const nextDocument = new DOMParser().parseFromString(await response.text(), "text/html");
