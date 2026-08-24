@@ -717,7 +717,7 @@ p + p {
   display: block;
   max-width: 12rem;
   width: 100%;
-  padding: 0;
+  padding: 0 0.25rem;
   border: 0;
   background: transparent;
   color: var(--content-primary);
@@ -725,6 +725,7 @@ p + p {
   letter-spacing: 0;
   position: relative;
   text-align: left;
+  text-overflow: clip;
   text-transform: none;
   cursor: pointer;
 }
@@ -749,12 +750,13 @@ p + p {
   display: block;
   width: max-content;
   min-width: 100%;
-  overflow: visible;
+  overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
 }
 
 .radio-copy-feedback {
+  display: none;
   position: absolute;
   right: 0.2rem;
   top: 50%;
@@ -766,6 +768,10 @@ p + p {
   line-height: 1.2;
   white-space: nowrap;
   transform: translateY(-50%);
+}
+
+.radio-copy-feedback:not(:empty) {
+  display: block;
 }
 
 .radio-wave {
@@ -795,7 +801,7 @@ p + p {
   animation-delay: -700ms;
 }
 
-.global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > span {
+.global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > [data-radio-track] {
   animation: radio-track-drift 8s ease-in-out infinite alternate;
 }
 
@@ -811,7 +817,7 @@ p + p {
 
 @media (prefers-reduced-motion: reduce) {
   .global-radio[data-state="playing"] .radio-wave i,
-  .global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > span {
+  .global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > [data-radio-track] {
     animation: none;
   }
 }
