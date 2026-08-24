@@ -8,9 +8,12 @@
 		<span class="radio-toggle-icon" aria-hidden="true"></span>
 	</button>
 	<div class="global-radio-info">
-		<span class="radio-label">INDIE RADIO</span>
+		<span class="global-radio-heading">
+			<span class="radio-label">INDIE RADIO</span>
+			<span class="radio-wave" aria-hidden="true"><i></i><i></i><i></i></span>
+		</span>
 		<span class="radio-state" data-radio-state>{{ if eq .Language.Lang "pt" }}Parada{{ else }}Stopped{{ end }}</span>
-		<span class="radio-track" data-radio-track aria-live="polite">{{ if eq .Language.Lang "pt" }}Carregando faixa...{{ else }}Loading track...{{ end }}</span>
+		<span class="radio-track"><span data-radio-track aria-live="polite">{{ if eq .Language.Lang "pt" }}Carregando faixa...{{ else }}Loading track...{{ end }}</span></span>
 	</div>
 	<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
 	<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
