@@ -1,6 +1,6 @@
 ---
 title: "Geilton Xavier"
-description: "Geilton Xavier é Engenheiro de Software e Arquiteto de Soluções, que traz ordem a sistemas fragmentados e multi-times."
+description: "Geilton Xavier traz ordem a sistemas fragmentados, construídos por múltiplas equipes, priorizando convenção sobre configuração e modernização gradual em vez de reescritas."
 translationKey: "home"
 ---
 
@@ -9,8 +9,7 @@ translationKey: "home"
   <figure class="bio-portrait">
     <img src="/img/geilton-avatar.jpeg" alt="Geilton Xavier" loading="lazy">
   </figure>
-  <p>Geilton Xavier é Engenheiro de Software e Arquiteto de Soluções, que traz ordem a sistemas fragmentados e multi-times, através de convenção sobre configuração e modernização gradual em vez de reescritas.</p>
-  <p>Atua na interseção entre arquitetura e engenharia prática, com foco em .NET, Azure e software confiável em escala.</p>
+  <p>Geilton Xavier traz ordem a sistemas fragmentados, construídos por múltiplas equipes, priorizando convenção sobre configuração e modernização gradual em vez de reescritas. O foco é .NET, Azure, e sistemas que aguentam carga real de produção.</p>
   <p>Atualmente na Siemens. Anteriormente na Fidelidade, Edenred e Prodesp.</p>
 </div>
 <figure class="home-memory">
