@@ -724,8 +724,10 @@ p + p {
 
 .global-radio .radio-track > span {
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: max-content;
+  min-width: 100%;
+  overflow: visible;
+  text-overflow: clip;
   white-space: nowrap;
 }
 
