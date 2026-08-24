@@ -756,7 +756,7 @@ p + p {
   animation-delay: -700ms;
 }
 
-.global-radio[data-state="playing"] .radio-track > span {
+.global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > span {
   animation: radio-track-drift 8s ease-in-out infinite alternate;
 }
 
@@ -767,12 +767,12 @@ p + p {
 
 @keyframes radio-track-drift {
   from { transform: translateX(0); }
-  to { transform: translateX(-0.4rem); }
+  to { transform: translateX(var(--track-shift)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .global-radio[data-state="playing"] .radio-wave i,
-  .global-radio[data-state="playing"] .radio-track > span {
+  .global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > span {
     animation: none;
   }
 }
