@@ -74,49 +74,49 @@
     });
   }
 
-    function isInternalPageLink(link) {
-      return link.origin === window.location.origin
-        && link.pathname !== window.location.pathname
-        && !link.hash
-        && link.target !== "_blank"
-        && link.hasAttribute("href")
-        && !link.href.startsWith("mailto:")
-        && !link.hasAttribute("download")
-        && !link.closest("[data-no-spa]");
+  function isInternalPageLink(link) {
+    return link.origin === window.location.origin
+      && link.pathname !== window.location.pathname
+      && !link.hash
+      && link.target !== "_blank"
+      && link.hasAttribute("href")
+      && !link.href.startsWith("mailto:")
+      && !link.hasAttribute("download")
+      && !link.closest("[data-no-spa]");
+  }
+
+  async function navigate(url, addHistoryEntry) {
+    if (navigationInProgress) return;
+    navigationInProgress = true;
+
+    try {
+      const response = await fetch(url, {
+        credentials: "same-origin",
+        headers: { "X-Requested-With": "partial-navigation" }
+      });
+      if (!response.ok) throw new Error("Navigation failed");
+
+      const nextDocument = new DOMParser().parseFromString(await response.text(), "text/html");
+      const currentMain = document.querySelector("[data-page-content]");
+      const nextMain = nextDocument.querySelector("[data-page-content]");
+      if (!currentMain || !nextMain) throw new Error("Page content not found");
+
+      currentMain.replaceChildren(...nextMain.childNodes);
+      document.title = nextDocument.title;
+      document.documentElement.lang = nextDocument.documentElement.lang;
+
+      const currentHeader = document.querySelector("body > .content > header");
+      const nextHeader = nextDocument.querySelector("body > .content > header");
+      if (currentHeader && nextHeader) currentHeader.replaceChildren(...nextHeader.childNodes);
+
+      if (addHistoryEntry) window.history.pushState({}, "", url);
+      window.scrollTo(0, 0);
+      currentMain.focus({ preventScroll: true });
+    } catch (error) {
+      window.location.href = url;
+    } finally {
+      navigationInProgress = false;
     }
-
-    async function navigate(url, addHistoryEntry) {
-      if (navigationInProgress) return;
-      navigationInProgress = true;
-
-      try {
-        const response = await fetch(url, {
-          credentials: "same-origin",
-          headers: { "X-Requested-With": "partial-navigation" }
-        });
-        if (!response.ok) throw new Error("Navigation failed");
-
-        const nextDocument = new DOMParser().parseFromString(await response.text(), "text/html");
-        const currentMain = document.querySelector("[data-page-content]");
-        const nextMain = nextDocument.querySelector("[data-page-content]");
-        if (!currentMain || !nextMain) throw new Error("Page content not found");
-
-        currentMain.replaceChildren(...nextMain.childNodes);
-        document.title = nextDocument.title;
-        document.documentElement.lang = nextDocument.documentElement.lang;
-
-        const currentHeader = document.querySelector("body > .content > header");
-        const nextHeader = nextDocument.querySelector("body > .content > header");
-        if (currentHeader && nextHeader) currentHeader.replaceChildren(...nextHeader.childNodes);
-
-        if (addHistoryEntry) window.history.pushState({}, "", url);
-        window.scrollTo(0, 0);
-        currentMain.focus({ preventScroll: true });
-      } catch (error) {
-        window.location.href = url;
-      } finally {
-        navigationInProgress = false;
-      }
   }
 
   if (document.readyState === "loading") {
