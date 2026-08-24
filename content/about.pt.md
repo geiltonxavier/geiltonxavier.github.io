@@ -7,6 +7,10 @@ hidePagination: true
 ---
 
 {{< rawhtml >}}
+<figure class="about-memory">
+  <img src="/img/vancouver/geilton-xavier-anmore-bc-canada.png" alt="Paisagem de Anmore, British Columbia, fotografada em 3 de junho de 2023" loading="lazy">
+  <figcaption>Anmore, BC, 3 de junho de 2023. Um dia na estrada com amigos do curso de inglês, descobrindo as paisagens tranquilas nos arredores de Vancouver.</figcaption>
+</figure>
 <div class="about-bio">
   <figure class="bio-portrait">
     <img src="/img/geilton-avatar.jpeg" alt="Geilton Xavier" loading="lazy">

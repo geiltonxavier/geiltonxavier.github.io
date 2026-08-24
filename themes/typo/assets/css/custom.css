@@ -395,6 +395,25 @@ p + p {
   opacity: 0.9;
 }
 
+.about-memory {
+  max-width: 680px;
+  margin: 0 0 2.5rem;
+}
+
+.about-memory img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.about-memory figcaption {
+  margin-top: 0.65rem;
+  color: #6e6e73;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 /* The homepage bio is rendered from page content, outside the theme intro wrapper. */
 .home-bio .bio-portrait {
   margin: 0 0 0.75rem;
