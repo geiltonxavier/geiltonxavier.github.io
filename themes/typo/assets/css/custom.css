@@ -694,7 +694,8 @@ p + p {
 }
 
 .global-radio .radio-label,
-.global-radio .radio-state {
+.global-radio .radio-state,
+.global-radio .radio-track {
   overflow: hidden;
   color: var(--content-secondary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -704,6 +705,14 @@ p + p {
   text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.global-radio .radio-track {
+  max-width: 12rem;
+  color: var(--content-primary);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .global-radio[data-state="playing"] .radio-label {
