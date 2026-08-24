@@ -1,1 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Memory Notes on Geilton Xavier</title><link>https://geiltonxavier.com.br/memory-notes/</link><description>Recent content in Memory Notes on Geilton Xavier</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://geiltonxavier.com.br/memory-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>The Tim Hortons Test</title><link>https://geiltonxavier.com.br/memory-notes/tim-hortons/</link><pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate><guid>https://geiltonxavier.com.br/memory-notes/tim-hortons/</guid><description>I finally tried the coffee I had seen in so many Canada videos. It did not live up to the expectation, but the hot chocolate did.</description></item><item><title>Toronto, from Will's balcony</title><link>https://geiltonxavier.com.br/memory-notes/toronto-will/</link><pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate><guid>https://geiltonxavier.com.br/memory-notes/toronto-will/</guid><description>My first visit to Canada, seen from the balcony of my friend Will&amp;rsquo;s apartment.</description></item><item><title>A View Toward Pena Palace</title><link>https://geiltonxavier.com.br/memory-notes/mira-sintra/</link><pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate><guid>https://geiltonxavier.com.br/memory-notes/mira-sintra/</guid><description>A fourth-floor view toward the Pena Palace, with wires, hills, and beautiful late-afternoon light.</description></item><item><title>Great Code Starts With Amazing People</title><link>https://geiltonxavier.com.br/memory-notes/vizir-great-code/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://geiltonxavier.com.br/memory-notes/vizir-great-code/</guid><description>A Vizir Software Studio notebook, a team, and one of the most important chapters of my career.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memory Notes on Geilton Xavier</title>
+    <link>http://localhost:1313/memory-notes/</link>
+    <description>Recent content in Memory Notes on Geilton Xavier</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/memory-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Tim Hortons Test</title>
+      <link>http://localhost:1313/memory-notes/tim-hortons/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/memory-notes/tim-hortons/</guid>
+      <description>I finally tried the coffee I had seen in so many Canada videos. It did not live up to the expectation, but the hot chocolate did.</description>
+    </item>
+    <item>
+      <title>Toronto, from Will&#39;s balcony</title>
+      <link>http://localhost:1313/memory-notes/toronto-will/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/memory-notes/toronto-will/</guid>
+      <description>My first visit to Canada, seen from the balcony of my friend Will&amp;rsquo;s apartment.</description>
+    </item>
+    <item>
+      <title>A View Toward Pena Palace</title>
+      <link>http://localhost:1313/memory-notes/mira-sintra/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/memory-notes/mira-sintra/</guid>
+      <description>A fourth-floor view toward the Pena Palace, with wires, hills, and beautiful late-afternoon light.</description>
+    </item>
+    <item>
+      <title>Great Code Starts With Amazing People</title>
+      <link>http://localhost:1313/memory-notes/vizir-great-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/memory-notes/vizir-great-code/</guid>
+      <description>A Vizir Software Studio notebook, a team, and one of the most important chapters of my career.</description>
+    </item>
+  </channel>
+</rss>
