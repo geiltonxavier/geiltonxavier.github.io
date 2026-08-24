@@ -56,7 +56,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.151aee6f47873658ed2c55a989a1cb143e61c58c7f9729b4aa551b55193b5395.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.56acf22a02eddfb81bfef11ce976d42f08a6c0d4605ad32dd381179e259cacd7.css" media="all">
 
 
 
@@ -165,6 +165,8 @@
 	data-play-label="Reproduzir rádio indie"
 	data-pause-label="Pausar rádio indie"
 	data-unavailable-label="A rádio está temporariamente indisponível."
+	data-copy-label="Copiar faixa"
+	data-copied-label="Faixa copiada"
 	aria-label="Indie Radio">
 	<button class="radio-toggle" type="button" data-radio-toggle
 		aria-label="Reproduzir rádio indie" aria-pressed="false">
@@ -176,11 +178,14 @@
 			<span class="radio-wave" aria-hidden="true"><i></i><i></i><i></i></span>
 		</span>
 		<span class="radio-state" data-radio-state>Parada</span>
-		<span class="radio-track"><span data-radio-track aria-live="polite">Carregando faixa...</span></span>
+		<button class="radio-track" type="button" data-radio-copy data-copy-label="Copiar faixa" title="Copiar faixa" disabled>
+			<span data-radio-track aria-live="polite">Carregando faixa...</span>
+			<span class="radio-copy-feedback" data-radio-copy-feedback role="status" aria-live="polite"></span>
+		</button>
 	</div>
 	<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
 	<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
-</section><script defer src="/js/home-radio.5ddb8e290a83b34ce865eaac95cb31382ebf125f41d5767d30c7fe40b3a473ea.js" integrity="sha256-XduOKQqDs0zoZeqslcsxOC6/El9B1XZ9MMf&#43;QLOkc&#43;o=" crossorigin="anonymous"></script>
+</section><script defer src="/js/home-radio.693d104f925ed779ca8d0916f1698482c23abdeeee771db581749a406902371d.js" integrity="sha256-aT0QT5Je13nKjQkW8WmEgsI6ve7udx21gXSaQGkCNx0=" crossorigin="anonymous"></script>
 
 
 

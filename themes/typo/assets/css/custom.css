@@ -716,19 +716,56 @@ p + p {
 .global-radio .radio-track {
   display: block;
   max-width: 12rem;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--content-primary);
   font-size: 0.78rem;
   letter-spacing: 0;
+  position: relative;
+  text-align: left;
   text-transform: none;
+  cursor: pointer;
 }
 
-.global-radio .radio-track > span {
+.global-radio .radio-track:hover:not(:disabled),
+.global-radio .radio-track:focus-visible:not(:disabled) {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+}
+
+.global-radio .radio-track:focus-visible {
+  outline: 2px solid var(--content-secondary);
+  outline-offset: 2px;
+}
+
+.global-radio .radio-track:disabled {
+  cursor: default;
+}
+
+.global-radio .radio-track > [data-radio-track] {
   display: block;
   width: max-content;
   min-width: 100%;
   overflow: visible;
   text-overflow: clip;
   white-space: nowrap;
+}
+
+.radio-copy-feedback {
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  padding: 0.1rem 0.25rem;
+  background: var(--background);
+  color: var(--content-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  transform: translateY(-50%);
 }
 
 .radio-wave {
