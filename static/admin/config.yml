@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: geiltonxavier/geiltonxavier.github.io
+  branch: main
+  base_url: https://cms-oauth.geiltonxavier.workers.dev
+  auth_endpoint: auth
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images/posts"
+public_folder: "/images/posts"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
