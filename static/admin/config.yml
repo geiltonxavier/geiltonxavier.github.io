@@ -2,7 +2,7 @@ backend:
   name: github
   repo: geiltonxavier/geiltonxavier.github.io
   branch: main
-  base_url: https://cms-oauth.geiltonxavier.workers.dev
+  base_url: https://geiltonxavier.com.br
   auth_endpoint: auth
 
 publish_mode: editorial_workflow
