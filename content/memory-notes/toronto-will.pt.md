@@ -16,6 +16,7 @@ hideBackToTop: true
     <img src="/img/toronto-will.jpeg" alt="Vista de Toronto ao entardecer, fotografada da sacada do apartamento do Will em maio de 2023">
     <figcaption>Toronto, maio de 2023. Minha primeira visita ao Canadá, da sacada do apartamento do meu amigo Will.</figcaption>
   </figure>
-  <p>Eu nunca tinha estado no Canadá. Essa era a vista da sacada do apartamento do meu amigo Will e uma das primeiras imagens que guardo daquela viagem.</p>
+  <p>Eu nunca tinha estado no Canadá. Tinha perdido a conexão para outro voo e, no meio da confusão, lembrei que o Will morava em Toronto. Em vez de passar a noite no aeroporto, acabei indo para a casa dele.</p>
+  <p>Foi uma sorte enorme: ele tinha acabado de conseguir a habilitação naquele mesmo dia. Então fomos dirigir pela cidade e, de repente, Toronto ganhou um tom muito mais pessoal.</p>
 </article>
 {{< /rawhtml >}}

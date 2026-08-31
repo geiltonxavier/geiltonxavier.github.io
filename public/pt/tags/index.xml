@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Geilton Xavier</title>
-    <link>http://localhost:1313/pt/tags/</link>
+    <link>https://geiltonxavier.com.br/pt/tags/</link>
     <description>Recent content in Tags on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>pt</language>
     <lastBuildDate>Sun, 05 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/pt/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geiltonxavier.com.br/pt/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“Engenharia De Software”</title>
-      <link>http://localhost:1313/pt/tags/engenharia-de-software/</link>
+      <link>https://geiltonxavier.com.br/pt/tags/engenharia-de-software/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pt/tags/engenharia-de-software/</guid>
+      <guid>https://geiltonxavier.com.br/pt/tags/engenharia-de-software/</guid>
       <description></description>
     </item>
     <item>
       <title>“Filosofia”</title>
-      <link>http://localhost:1313/pt/tags/filosofia/</link>
+      <link>https://geiltonxavier.com.br/pt/tags/filosofia/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pt/tags/filosofia/</guid>
+      <guid>https://geiltonxavier.com.br/pt/tags/filosofia/</guid>
       <description></description>
     </item>
     <item>
       <title>“Inteligência Artificial”</title>
-      <link>http://localhost:1313/pt/tags/intelig%C3%AAncia-artificial/</link>
+      <link>https://geiltonxavier.com.br/pt/tags/intelig%C3%AAncia-artificial/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pt/tags/intelig%C3%AAncia-artificial/</guid>
+      <guid>https://geiltonxavier.com.br/pt/tags/intelig%C3%AAncia-artificial/</guid>
       <description></description>
     </item>
     <item>
       <title>“Reflexão”</title>
-      <link>http://localhost:1313/pt/tags/reflex%C3%A3o/</link>
+      <link>https://geiltonxavier.com.br/pt/tags/reflex%C3%A3o/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pt/tags/reflex%C3%A3o/</guid>
+      <guid>https://geiltonxavier.com.br/pt/tags/reflex%C3%A3o/</guid>
       <description></description>
     </item>
     <item>
       <title>“Tecnologia”</title>
-      <link>http://localhost:1313/pt/tags/tecnologia/</link>
+      <link>https://geiltonxavier.com.br/pt/tags/tecnologia/</link>
       <pubDate>Sun, 05 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pt/tags/tecnologia/</guid>
+      <guid>https://geiltonxavier.com.br/pt/tags/tecnologia/</guid>
       <description></description>
     </item>
   </channel>

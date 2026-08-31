@@ -16,6 +16,7 @@ hideBackToTop: true
     <img src="/img/toronto-will.jpeg" alt="Toronto skyline at sunset, photographed from Will's apartment balcony in May 2023">
     <figcaption>Toronto, May 2023. My first visit to Canada, from the balcony of my friend Will's apartment.</figcaption>
   </figure>
-  <p>I had never been to Canada before. This was the view from the balcony of my friend Will's apartment, and one of the first images I remember from that trip.</p>
+  <p>I had never been to Canada before. I had missed my connection on another flight and, in the middle of the chaos, remembered that Will lived in Toronto. Instead of spending the night at the airport, I ended up at his place.</p>
+  <p>It turned out to be a stroke of luck: he had just gotten his driver's license that same day. So we spent the evening driving around the city, taking the first real look at Toronto together.</p>
 </article>
 {{< /rawhtml >}}
