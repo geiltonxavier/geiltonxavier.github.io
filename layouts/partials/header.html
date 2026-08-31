@@ -18,6 +18,11 @@
         </p>
         {{ end }}
 
+        <p class="small header-local-time">
+            <span class="header-time-label">{{ if eq .Language.Lang "pt" }}Local{{ else }}Local{{ end }}</span>
+            <time class="header-time" data-local-time aria-live="polite"></time>
+        </p>
+
            {{ if .Translations }}
            {{ range .Translations }}
            <p class="small language-switcher">

@@ -1,4 +1,4 @@
-<aside class="global-pomodoro" data-pomodoro data-open="true">
+<aside class="global-pomodoro" data-pomodoro data-open="false">
 	<div class="pomodoro-header">
 		<span class="pomodoro-label" data-pomodoro-label>POMODORO</span>
 		<div class="pomodoro-actions">
@@ -51,5 +51,8 @@
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}
 {{- with resources.Get "js/pomodoro.js" | fingerprint -}}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}
+{{- with resources.Get "js/local-time.js" | fingerprint -}}
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}
