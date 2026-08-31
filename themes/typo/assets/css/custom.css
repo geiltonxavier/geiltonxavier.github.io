@@ -37,13 +37,13 @@ body {
   position: relative;
   background: var(--background);
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow-x: visible;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 body::before,
@@ -721,12 +721,16 @@ p + p {
 .home-bio {
   position: relative;
   margin-top: 0.4rem;
+  overflow: visible;
+  z-index: 1;
 }
 
 .home-name-wrap {
   position: relative;
   display: inline-block;
   margin-right: 0.08em;
+  overflow: visible;
+  z-index: 1;
 }
 
 .home-bio .bio-portrait {
@@ -739,7 +743,7 @@ p + p {
   transform: translateY(-50%) translateY(8px);
   transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
   pointer-events: none;
-  z-index: 2;
+  z-index: 20;
 }
 
 .home-bio .bio-portrait img {
@@ -775,11 +779,13 @@ p + p {
 
 .home-name-wrap:hover .bio-portrait,
 .home-name-wrap:focus-within .bio-portrait,
+.home-name-wrap.is-hovered .bio-portrait,
 .home-name-wrap:hover .home-name::after,
-.home-name-wrap:focus-within .home-name::after {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-50%) translateY(0);
+.home-name-wrap:focus-within .home-name::after,
+.home-name-wrap.is-hovered .home-name::after {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) translateY(0) !important;
 }
 
 .intro .home-bio p {
@@ -919,19 +925,18 @@ p + p {
 }
 
 .utility-stack {
-  position: static;
-  right: auto;
-  bottom: auto;
-  z-index: auto;
+  position: sticky;
+  bottom: 0.9rem;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.7rem;
-  width: min(100%, var(--main-width));
-  max-width: 100%;
-  margin: 3.5rem auto 1.25rem;
-  padding: 0 0.25rem;
+  gap: 0.3rem;
+  width: auto;
+  max-width: none;
+  margin: 3.5rem 0 1.25rem;
+  padding: 0;
 }
 
 .global-pomodoro,
@@ -941,7 +946,7 @@ p + p {
   bottom: auto;
   z-index: auto;
   width: auto;
-  max-width: 100%;
+  max-width: none;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -1084,6 +1089,7 @@ p + p {
   overflow: visible;
 }
 
+.global-radio .radio-track-artist,
 .global-radio .radio-track-title,
 .global-radio .radio-track > [data-radio-track] {
   display: inline-block;
@@ -1093,6 +1099,10 @@ p + p {
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+
+.global-radio .radio-track-artist {
+  color: rgba(31, 31, 28, 0.63);
 }
 
 .radio-live-status {
@@ -1108,9 +1118,12 @@ p + p {
 }
 
 .radio-live-status::before {
-  content: "—";
-  margin-right: 0.1rem;
-  color: rgba(31, 31, 28, 0.52);
+  content: "●";
+  margin-right: 0.12rem;
+  color: rgba(120, 32, 32, 0.82);
+  font-size: 8px;
+  line-height: 1;
+  transform: translateY(-0.04em);
 }
 
 .radio-live-dot {

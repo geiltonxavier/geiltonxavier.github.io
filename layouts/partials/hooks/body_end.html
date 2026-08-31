@@ -20,6 +20,7 @@
 				<span class="radio-toggle-icon" aria-hidden="true">▶</span>
 			</button>
 			<button class="radio-track" type="button" data-radio-copy data-copy-label="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" title="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" disabled>
+				<span class="radio-track-artist" data-radio-artist aria-live="polite"></span>
 				<span class="radio-track-title" data-radio-track aria-live="polite"></span>
 				<span class="radio-copy-feedback" data-radio-copy-feedback role="status" aria-live="polite"></span>
 			</button>
@@ -40,3 +41,31 @@
 {{- with resources.Get "js/local-time.js" | fingerprint -}}
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const wraps = document.querySelectorAll('.home-name-wrap');
+
+    wraps.forEach(function (wrap) {
+      const portrait = wrap.querySelector('.bio-portrait');
+      if (!portrait) return;
+
+      const activate = function () {
+        portrait.style.opacity = '1';
+        portrait.style.visibility = 'visible';
+        portrait.style.transform = 'translateY(-50%) translateY(0)';
+        wrap.classList.add('is-hovered');
+      };
+      const deactivate = function () {
+        portrait.style.opacity = '0';
+        portrait.style.visibility = 'hidden';
+        portrait.style.transform = 'translateY(-50%) translateY(8px)';
+        wrap.classList.remove('is-hovered');
+      };
+
+      wrap.addEventListener('mouseenter', activate);
+      wrap.addEventListener('mouseleave', deactivate);
+      wrap.addEventListener('focusin', activate);
+      wrap.addEventListener('focusout', deactivate);
+    });
+  });
+</script>
