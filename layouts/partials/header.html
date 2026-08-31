@@ -4,41 +4,45 @@
         <a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
     </h1>
 
-    <div class="header-menu">
-        {{ $page := . }}
-        {{ if not .IsHome }}
-        <p class="small">
-            <a href="{{ site.Home.RelPermalink }}">/{{ if eq .Language.Lang "pt" }}início{{ else }}home{{ end }}</a>
-        </p>
-        {{ end }}
+    <div class="header-nav-wrap">
+        <div class="header-menu">
+            {{ $page := . }}
+            {{ if not .IsHome }}
+            <p class="small">
+                <a href="{{ site.Home.RelPermalink }}">/{{ if eq .Language.Lang "pt" }}início{{ else }}home{{ end }}</a>
+            </p>
+            {{ end }}
 
-        {{ range site.Menus.main }}
-        <p class="small {{ if eq .Identifier (lower $page.Section) }}bold{{ end }}">
-            <a href="{{ .URL }}">/{{ .Name }}</a>
-        </p>
-        {{ end }}
+            {{ range site.Menus.main }}
+            <p class="small {{ if eq .Identifier (lower $page.Section) }}bold{{ end }}">
+                <a href="{{ .URL }}">/{{ .Name }}</a>
+            </p>
+            {{ end }}
+        </div>
 
-        <p class="small header-local-time">
-            <span class="header-time-label">{{ if eq .Language.Lang "pt" }}Local{{ else }}Local{{ end }}</span>
-            <time class="header-time" data-local-time aria-live="polite"></time>
-        </p>
+        <div class="header-meta">
+            <p class="small header-local-time">
+                <time class="header-time" data-local-time aria-live="polite"></time>
+                <span class="header-weather" data-local-weather aria-live="polite"></span>
+            </p>
 
-           {{ if .Translations }}
-           {{ range .Translations }}
-           <p class="small language-switcher">
-               <a href="{{ .RelPermalink }}">{{ upper .Language.Lang }}</a>
-           </p>
-           {{ end }}
-           {{ else }}
-           {{ $currentLanguage := .Language.Lang }}
-           {{ range site.Sites }}
-           {{ if ne .Language.Lang $currentLanguage }}
-           <p class="small language-switcher">
-               <a href="{{ .Home.RelPermalink }}">{{ upper .Language.Lang }}</a>
-           </p>
-           {{ end }}
-           {{ end }}
-           {{ end }}
+            {{ if .Translations }}
+            {{ range .Translations }}
+            <p class="small language-switcher">
+                <a href="{{ .RelPermalink }}">{{ upper .Language.Lang }}</a>
+            </p>
+            {{ end }}
+            {{ else }}
+            {{ $currentLanguage := .Language.Lang }}
+            {{ range site.Sites }}
+            {{ if ne .Language.Lang $currentLanguage }}
+            <p class="small language-switcher">
+                <a href="{{ .Home.RelPermalink }}">{{ upper .Language.Lang }}</a>
+            </p>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
     </div>
     {{ end }}
 </div>
