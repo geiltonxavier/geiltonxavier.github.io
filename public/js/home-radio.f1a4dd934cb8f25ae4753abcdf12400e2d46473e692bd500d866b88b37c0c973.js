@@ -12,7 +12,7 @@
     const cover = radio.querySelector("[data-radio-cover]");
     const error = radio.querySelector("[data-radio-error]");
 
-    if (!audio || !toggle || !track || !copy || !copyFeedback || !error) return;
+    if (!audio || !toggle || !artist || !track || !copy || !copyFeedback || !error) return;
 
     let currentArtist = "";
 
@@ -41,9 +41,8 @@
       }
 
       copy.disabled = !source;
-      if (copy && track) {
-        const labelText = [currentArtist, title].filter(Boolean).join(" - ");
-        copy.setAttribute("aria-label", labelText ? `${copyLabel}: ${labelText}` : copyLabel);
+      if (copy && artist && track) {
+        copy.setAttribute("aria-label", `${copyLabel}: ${currentArtist} - ${title}`.trim());
       }
     }
 

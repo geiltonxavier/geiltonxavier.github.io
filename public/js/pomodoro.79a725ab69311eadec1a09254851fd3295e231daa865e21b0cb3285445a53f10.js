@@ -10,9 +10,8 @@
 
   const display = widget.querySelector("[data-pomodoro-display]");
   const toggle = widget.querySelector("[data-pomodoro-toggle]");
-  const modeToggle = widget.querySelector("[data-pomodoro-mode-toggle]");
-
-  const modeSequence = ["pomodoro", "short", "long"];
+  const modeButtons = widget.querySelectorAll("[data-pomodoro-mode]");
+  const label = widget.querySelector("[data-pomodoro-label]");
 
   let currentMode = "pomodoro";
   let remainingSeconds = defaultDurations[currentMode];
@@ -25,22 +24,16 @@
     return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
   }
 
-  function updateModeText() {
-    if (modeToggle) {
-      modeToggle.textContent = currentMode;
-    }
-  }
+  function updateLabel() {
+    const labels = {
+      pomodoro: "POMODORO",
+      short: "SHORT BREAK",
+      long: "LONG BREAK",
+    };
 
-  function cycleMode() {
-    const currentIndex = modeSequence.indexOf(currentMode);
-    const nextIndex = (currentIndex + 1) % modeSequence.length;
-    currentMode = modeSequence[nextIndex];
-    remainingSeconds = defaultDurations[currentMode];
-    isRunning = false;
-    updateModeText();
-    updateToggleText();
-    updateDisplay();
-    updateWidgetState();
+    if (label) {
+      label.textContent = labels[currentMode];
+    }
   }
 
   function updateToggleText() {
@@ -62,12 +55,6 @@
     if (display) {
       display.textContent = formatTime(remainingSeconds);
     }
-  }
-
-  function updateWidgetState() {
-    widget.classList.toggle("is-running", isRunning);
-    widget.dataset.open = String(isRunning);
-    widget.setAttribute("data-open", String(isRunning));
   }
 
   function finishCycle() {
@@ -140,14 +127,26 @@
     });
   }
 
-  if (modeToggle) {
-    modeToggle.addEventListener("click", function (event) {
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
       event.stopPropagation();
-      cycleMode();
+      const nextMode = button.dataset.pomodoroMode;
+      if (!nextMode) return;
+      currentMode = nextMode;
+      remainingSeconds = defaultDurations[currentMode];
+      isRunning = false;
+      updateLabel();
+      modeButtons.forEach((item) => {
+        const active = item.dataset.pomodoroMode === currentMode;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      updateToggleText();
+      updateDisplay();
     });
-  }
+  });
 
-  updateModeText();
+  updateLabel();
   updateToggleText();
   updateWidgetState();
   updateDisplay();
