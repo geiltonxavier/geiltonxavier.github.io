@@ -9,13 +9,15 @@
   if (!widget) return;
 
   const display = widget.querySelector("[data-pomodoro-display]");
+  const collapsedTime = widget.querySelector("[data-pomodoro-collapsed-time]");
+  const collapsedState = widget.querySelector("[data-pomodoro-collapsed-state]");
   const toggle = widget.querySelector("[data-pomodoro-toggle]");
-  const modeButtons = widget.querySelectorAll("[data-pomodoro-mode]");
   const label = widget.querySelector("[data-pomodoro-label]");
 
   let currentMode = "pomodoro";
   let remainingSeconds = defaultDurations[currentMode];
   let isRunning = false;
+  let isOpen = widget.dataset.open === "true";
   let timerId = null;
 
   function formatTime(totalSeconds) {
@@ -38,23 +40,36 @@
 
   function updateToggleText() {
     if (!toggle) return;
-    if (isRunning) {
-      toggle.textContent = "Pause";
-      return;
+    toggle.textContent = isRunning ? "Pause" : "Start";
+  }
+
+  function updateCollapsedSummary() {
+    if (collapsedTime) {
+      collapsedTime.textContent = formatTime(remainingSeconds);
     }
 
-    if (remainingSeconds < defaultDurations[currentMode]) {
-      toggle.textContent = "Reset";
-      return;
+    if (collapsedState) {
+      if (isRunning) {
+        collapsedState.textContent = "Running";
+      } else if (remainingSeconds === defaultDurations[currentMode]) {
+        collapsedState.textContent = "Ready";
+      } else {
+        collapsedState.textContent = "Paused";
+      }
     }
-
-    toggle.textContent = "Start";
   }
 
   function updateDisplay() {
     if (display) {
       display.textContent = formatTime(remainingSeconds);
     }
+
+    updateCollapsedSummary();
+  }
+
+  function updateWidgetState() {
+    widget.classList.toggle("is-collapsed", !isOpen);
+    widget.dataset.open = String(isOpen);
   }
 
   function finishCycle() {
@@ -70,18 +85,6 @@
     if (navigator.vibrate) {
       navigator.vibrate([120, 80, 120]);
     }
-  }
-
-  function resetTimer() {
-    if (timerId) {
-      window.clearInterval(timerId);
-      timerId = null;
-    }
-
-    remainingSeconds = defaultDurations[currentMode];
-    isRunning = false;
-    updateToggleText();
-    updateDisplay();
   }
 
   function tick() {
@@ -114,36 +117,30 @@
     }
   }
 
+  function setMode(mode) {
+    currentMode = mode;
+    if (timerId) {
+      window.clearInterval(timerId);
+      timerId = null;
+    }
+
+    remainingSeconds = defaultDurations[currentMode];
+    isRunning = false;
+    updateLabel();
+    updateButtons();
+    updateToggleText();
+    updateDisplay();
+  }
+
   if (toggle) {
     toggle.addEventListener("click", function () {
       if (isRunning) {
         pauseTimer();
-      } else if (remainingSeconds < defaultDurations[currentMode]) {
-        resetTimer();
       } else {
         startTimer();
       }
     });
   }
-
-  modeButtons.forEach((button) => {
-    button.addEventListener("click", function (event) {
-      event.stopPropagation();
-      const nextMode = button.dataset.pomodoroMode;
-      if (!nextMode) return;
-      currentMode = nextMode;
-      remainingSeconds = defaultDurations[currentMode];
-      isRunning = false;
-      updateLabel();
-      modeButtons.forEach((item) => {
-        const active = item.dataset.pomodoroMode === currentMode;
-        item.classList.toggle("is-active", active);
-        item.setAttribute("aria-pressed", String(active));
-      });
-      updateToggleText();
-      updateDisplay();
-    });
-  });
 
   updateLabel();
   updateToggleText();

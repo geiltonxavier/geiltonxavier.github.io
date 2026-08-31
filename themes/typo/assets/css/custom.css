@@ -37,8 +37,13 @@ body {
   position: relative;
   background: var(--background);
   margin: 0 auto;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body::before,
@@ -919,10 +924,10 @@ p + p {
   bottom: max(0.75rem, env(safe-area-inset-bottom));
   z-index: 10;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.75rem;
-  width: min(12rem, calc(100vw - 1.5rem));
+  flex-direction: row;
+  align-items: stretch;
+  gap: 16px;
+  width: auto;
   max-width: calc(100vw - 1.5rem);
 }
 
@@ -932,42 +937,48 @@ p + p {
   right: auto;
   bottom: auto;
   z-index: auto;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1.25rem;
+  border: 1px solid rgba(31, 31, 28, 0.12);
+  border-radius: 16px;
+  background: rgba(250, 250, 247, 0.9);
+  color: var(--content-primary);
+  box-shadow: none;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
 .global-pomodoro {
-  margin-left: auto;
+  max-width: 260px;
+  min-width: 0;
 }
 
-.global-pomodoro {
-  display: grid;
-  gap: 0.5rem;
-  padding: 0.5rem 0.6rem;
-  border: 1px solid rgba(31, 31, 28, 0.1);
-  border-radius: 0.9rem;
-  background: rgba(239, 239, 235, 0.7);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 14px rgb(29 29 31 / 5%);
-  opacity: 0.82;
-  transition: opacity 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.global-pomodoro:hover,
-.global-pomodoro:focus-within {
-  opacity: 1;
-  box-shadow: 0 6px 18px rgb(29 29 31 / 8%);
+.global-radio {
+  max-width: 300px;
+  min-width: 0;
 }
 
 .global-pomodoro *,
+.global-radio *,
 .global-pomodoro *::before,
-.global-pomodoro *::after {
+.global-radio *::before,
+.global-pomodoro *::after,
+.global-radio *::after {
   box-sizing: border-box;
 }
 
-.global-pomodoro.is-collapsed {
-  width: 6.2rem;
-  padding: 0.42rem 0.48rem;
+.pomodoro-header,
+.pomodoro-body,
+.pomodoro-panel,
+.global-radio-header,
+.global-radio-main,
+.radio-bottom-row {
+  width: 100%;
 }
 
 .pomodoro-header {
@@ -977,61 +988,64 @@ p + p {
   gap: 0.5rem;
 }
 
-.pomodoro-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
+.pomodoro-header:empty {
+  display: none;
 }
 
 .pomodoro-label,
-.pomodoro-collapsed-label {
+.global-radio .radio-label {
   color: rgba(31, 31, 28, 0.62);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.62rem;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.pomodoro-toggle,
-.pomodoro-collapse,
-.pomodoro-expand {
-  border: 1px solid rgba(31, 31, 28, 0.18);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--content-primary);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.64rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0.22rem 0.45rem;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.pomodoro-collapse,
-.pomodoro-expand {
-  min-width: 1.7rem;
-  padding-inline: 0.4rem;
-}
 
 .pomodoro-body {
-  display: grid;
-  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 0.15rem;
+}
+
+.pomodoro-time,
+.global-radio .radio-track-title,
+.global-radio .radio-track > [data-radio-track] {
+  color: rgba(31, 31, 28, 0.9);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 .pomodoro-time {
-  color: rgba(31, 31, 28, 0.86);
-  font-size: 1.4rem;
+  min-height: 1.3em;
+}
+
+.pomodoro-toggle,
+.global-radio .radio-toggle {
+  border: 0;
+  background: var(--content-primary);
+  color: rgba(255, 255, 255, 0.96);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 600;
-  letter-spacing: -0.06em;
-  line-height: 1;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.pomodoro-toggle {
+  height: 36px;
+  border-radius: 999px;
+  font-size: 12px;
 }
 
 .pomodoro-modes {
   display: flex;
-  gap: 0.35rem;
   flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.15rem;
 }
 
 .pomodoro-mode {
@@ -1040,12 +1054,11 @@ p + p {
   background: transparent;
   color: var(--content-secondary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.58rem;
-  line-height: 1.1;
-  padding: 0.28rem 0.46rem;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.38rem 0.62rem;
   cursor: pointer;
-  white-space: nowrap;
-  transition: all 120ms ease;
 }
 
 .pomodoro-mode.is-active {
@@ -1054,72 +1067,10 @@ p + p {
   color: var(--background);
 }
 
-.pomodoro-collapsed {
-  display: none;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
-  gap: 0.12rem;
-}
-
-.pomodoro-collapsed-label,
-.pomodoro-collapsed-state,
-.pomodoro-collapsed-time,
-.pomodoro-expand {
-  white-space: nowrap;
-}
-
-.global-pomodoro.is-collapsed .pomodoro-header,
-.global-pomodoro.is-collapsed .pomodoro-body {
-  display: none;
-}
-
-.global-pomodoro.is-collapsed .pomodoro-collapsed {
-  display: grid;
-}
-
-.pomodoro-collapsed-label {
-  font-size: 0.52rem;
-  letter-spacing: 0.08em;
-}
-
-.pomodoro-collapsed-time {
-  color: var(--content-primary);
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-}
-
-.pomodoro-collapsed-state {
-  color: var(--content-secondary);
-  font-size: 0.46rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.pomodoro-expand {
-  margin-top: 0.08rem;
-  justify-self: center;
-  padding-inline: 0.45rem;
-}
-
 .global-radio {
-  display: grid;
-  gap: 0.5rem;
-  padding: 1.05rem 1rem 0.9rem;
-  border: 0.5px solid rgba(31, 31, 28, 0.1);
-  border-radius: 0.8rem;
-  background: rgba(239, 239, 235, 0.72);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 rgba(31, 31, 28, 0.04), 0 8px 24px rgb(29 29 31 / 4%);
-  opacity: 0.8;
-  transition: opacity 160ms ease, box-shadow 160ms ease, transform 160ms ease;
-}
-
-.global-radio:hover,
-.global-radio:focus-within {
-  opacity: 0.96;
-  box-shadow: 0 1px 0 rgba(31, 31, 28, 0.05), 0 10px 22px rgb(29 29 31 / 5%);
+  display: flex;
+  gap: 8px;
+  background: rgba(250, 250, 247, 0.9);
 }
 
 .global-radio-header {
@@ -1129,62 +1080,29 @@ p + p {
   gap: 0.25rem;
 }
 
-.global-radio-main {
-  display: grid;
-  gap: 0.42rem;
-  min-width: 0;
-}
-
-.radio-controls {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.radio-cover {
-  display: block;
-  width: 1.45rem;
-  height: 1.45rem;
-  object-fit: cover;
-  border-radius: 0.28rem;
-  background: rgba(31, 31, 28, 0.06);
-}
-
-.global-radio .radio-label,
-.global-radio .radio-track {
-  overflow: hidden;
-  color: rgba(31, 31, 28, 0.62);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.2;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .global-radio .radio-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.58rem;
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
-  color: rgba(31, 31, 28, 0.54);
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .radio-eq {
   display: inline-flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.12rem;
-  width: 0.9rem;
-  height: 0.9rem;
-  color: rgba(31, 31, 28, 0.52);
+  gap: 2px;
+  width: 12px;
+  height: 12px;
+  line-height: 0;
+  color: rgba(31, 31, 28, 0.62);
+  overflow: visible;
 }
 
 .radio-eq-bar {
   display: block;
-  width: 0.12rem;
-  height: 0.28rem;
+  width: 2px;
+  height: 5px;
   border-radius: 999px;
   background: currentColor;
   transform-origin: center bottom;
@@ -1194,12 +1112,12 @@ p + p {
 
 .radio-eq-bar:nth-child(2) {
   animation-duration: 0.72s;
-  animation-delay: 0.2s;
+  animation-delay: 0.15s;
 }
 
 .radio-eq-bar:nth-child(3) {
   animation-duration: 1s;
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 
 .global-radio[data-state="playing"] .radio-eq-bar {
@@ -1223,134 +1141,121 @@ p + p {
   }
 }
 
+.global-radio-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
 .global-radio .radio-track {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.12rem;
+  gap: 2px;
   width: 100%;
   min-width: 0;
-  height: auto;
   padding: 0;
   border: 0;
   background: transparent;
   color: rgba(31, 31, 28, 0.9);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0;
-  position: relative;
   text-align: left;
-  text-overflow: clip;
-  text-transform: none;
   cursor: pointer;
   white-space: normal;
-  word-wrap: break-word;
   overflow: visible;
-}
-
-.global-radio .radio-track > [data-radio-track],
-.global-radio .radio-track-artist,
-.global-radio .radio-track-title {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  overflow-wrap: anywhere;
-  word-wrap: break-word;
-  white-space: normal;
 }
 
 .global-radio .radio-track-artist {
-  color: rgba(31, 31, 28, 0.56);
-  font-size: 0.56rem;
+  display: block;
+  color: rgba(31, 31, 28, 0.62);
+  font-size: 13px;
   line-height: 1.3;
+  font-weight: 400;
 }
 
-.global-radio .radio-track-title {
-  color: rgba(31, 31, 28, 0.9);
-  font-size: 0.72rem;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-.global-radio .radio-progress {
-  position: relative;
-  height: 0.12rem;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(31, 31, 28, 0.12);
-}
-
-.global-radio .radio-progress-bar {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 0;
-  border-radius: inherit;
-  background: rgba(31, 31, 28, 0.82);
-  transition: width 140ms ease-out;
-}
-
-.global-radio .radio-toggle {
-  width: 2.1rem;
-  height: 2.1rem;
-  justify-self: center;
-  flex: 0 0 auto;
-  border: none;
-  border-radius: 999px;
-  background: rgba(31, 31, 28, 0.96);
-  color: rgba(255, 255, 255, 0.96);
-  box-shadow: none;
-}
-
-.global-radio .radio-toggle .radio-toggle-icon {
-  width: 0;
-  height: 0;
-  margin-left: 0.12rem;
-  border-top: 0.22rem solid transparent;
-  border-bottom: 0.22rem solid transparent;
-  border-left: 0.34rem solid currentColor;
-}
-
-.global-radio .radio-toggle[data-state="playing"] .radio-toggle-icon {
-  width: 0.4rem;
-  height: 0.52rem;
-  margin-left: 0;
-  border: 0;
-  background: linear-gradient(to right, currentColor 0 35%, transparent 35% 65%, currentColor 65% 100%);
-}
-
-.global-radio .radio-track:hover:not(:disabled),
-.global-radio .radio-track:focus-visible:not(:disabled) {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-underline-offset: 0.2em;
-}
-
-.global-radio .radio-track:focus-visible {
-  outline: 2px solid var(--content-secondary);
-  outline-offset: 2px;
-}
-
-.global-radio .radio-track:disabled {
-  cursor: default;
-}
-
+.global-radio .radio-track-title,
 .global-radio .radio-track > [data-radio-track] {
   display: block;
-  width: 100%;
-  min-width: 0;
-  overflow: visible;
-  text-overflow: clip;
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
+.global-radio .radio-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.radio-live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(31, 31, 28, 0.62);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.radio-live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(31, 31, 28, 0.62);
+  animation: radio-live-pulse 1.2s ease-out infinite;
+}
+
+@keyframes radio-live-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+}
+
+.global-radio .radio-toggle {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  box-shadow: none;
+  justify-self: end;
+}
+
+.global-radio .radio-toggle .radio-toggle-icon {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 0.15rem;
+  border-top: 0.2rem solid transparent;
+  border-bottom: 0.2rem solid transparent;
+  border-left: 0.3rem solid currentColor;
+}
+
+.global-radio .radio-toggle[data-state="playing"] .radio-toggle-icon {
+  width: 0.42rem;
+  height: 0.5rem;
+  margin-left: 0;
+  border: 0;
+  background: linear-gradient(to right, currentColor 0 35%, transparent 35% 65%, currentColor 65% 100%);
+}
+
 .radio-copy-feedback {
   display: none;
   position: absolute;
-  right: 0.2rem;
+  right: 0.1rem;
   top: 50%;
-  padding: 0.1rem 0.25rem;
+  padding: 0.1rem 0.26rem;
   background: var(--background);
   color: var(--content-primary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -1360,27 +1265,8 @@ p + p {
   transform: translateY(-50%);
 }
 
-.radio-copy-feedback:not(:empty) {
-  display: block;
-}
-
-.global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > [data-radio-track] {
-  animation: radio-track-drift 8s ease-in-out infinite alternate;
-}
-
-@keyframes radio-track-drift {
-  from { transform: translateX(0); }
-  to { transform: translateX(var(--track-shift)); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > [data-radio-track] {
-    animation: none;
-  }
-}
-
-.global-radio[data-state="playing"] .radio-label {
-  color: var(--content-primary);
+.global-radio .radio-track:disabled {
+  cursor: default;
 }
 
 .global-radio .radio-error {
@@ -1397,12 +1283,38 @@ p + p {
   font-size: 0.8rem;
 }
 
+@media screen and (min-width: 481px) {
+  .utility-stack {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    width: fit-content;
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .global-pomodoro,
+  .global-radio {
+    flex: 0 0 auto;
+    min-height: 100%;
+  }
+
+  .global-radio {
+    max-width: 300px;
+  }
+
+  .global-pomodoro {
+    max-width: 260px;
+  }
+}
+
 @media screen and (max-width: 480px) {
     .utility-stack {
       position: static;
       right: auto;
       bottom: auto;
       z-index: auto;
+      display: flex;
+      flex-direction: column;
       width: min(100%, 19rem);
       max-width: 100%;
       margin: 1.5rem auto 0;
@@ -1412,6 +1324,7 @@ p + p {
     .global-pomodoro,
     .global-radio {
       width: 100%;
+      flex: none;
     }
 
     .global-pomodoro {

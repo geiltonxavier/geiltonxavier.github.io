@@ -5,16 +5,13 @@
     const audio = radio.querySelector("[data-radio-audio]");
     const toggle = radio.querySelector("[data-radio-toggle]");
     const state = radio.querySelector("[data-radio-state]");
-    const artist = radio.querySelector("[data-radio-artist]");
     const track = radio.querySelector("[data-radio-track]");
     const copy = radio.querySelector("[data-radio-copy]");
     const copyFeedback = radio.querySelector("[data-radio-copy-feedback]");
     const cover = radio.querySelector("[data-radio-cover]");
     const error = radio.querySelector("[data-radio-error]");
 
-    if (!audio || !toggle || !artist || !track || !copy || !copyFeedback || !error) return;
-
-    let currentArtist = "";
+    if (!audio || !toggle || !track || !copy || !copyFeedback || !error) return;
 
     const playLabel = radio.dataset.playLabel || "Play indie radio";
     const pauseLabel = radio.dataset.pauseLabel || "Pause indie radio";
@@ -26,24 +23,30 @@
       const source = (rawText || "").trim();
       const separator = " - ";
       const hasSeparator = source.includes(separator);
-      const nextArtist = hasSeparator ? source.split(separator)[0].trim() : "";
+      const artist = hasSeparator ? source.split(separator)[0].trim() : "";
       const title = hasSeparator ? source.split(separator).slice(1).join(separator).trim() : source;
 
-      currentArtist = nextArtist;
-      console.log("[radio artist update]", currentArtist);
+      track.innerHTML = "";
 
       if (artist) {
-        artist.textContent = currentArtist;
+        const artistNode = document.createElement("span");
+        artistNode.className = "radio-track-artist";
+        artistNode.textContent = artist;
+        track.appendChild(artistNode);
       }
 
-      if (track) {
-        track.textContent = title;
+      if (title) {
+        const titleNode = document.createElement("span");
+        titleNode.className = "radio-track-title";
+        titleNode.textContent = title;
+        track.appendChild(titleNode);
+      }
+
+      if (!artist && !title) {
+        track.textContent = "";
       }
 
       copy.disabled = !source;
-      if (copy && artist && track) {
-        copy.setAttribute("aria-label", `${copyLabel}: ${currentArtist} - ${title}`.trim());
-      }
     }
 
     async function updateTrack() {
@@ -78,16 +81,14 @@
     }
 
     async function copyTrack() {
-      const artistText = (artist && artist.textContent || "").trim();
-      const trackText = (track && track.textContent || "").trim();
-      const finalText = [artistText, trackText].filter(Boolean).join(" - ");
-      if (!finalText) return;
+      const trackText = (track.textContent || "").trim();
+      if (!trackText) return;
 
       try {
-        await navigator.clipboard.writeText(finalText);
+        await navigator.clipboard.writeText(trackText);
       } catch (clipboardError) {
         const fallback = document.createElement("textarea");
-        fallback.value = finalText;
+        fallback.value = trackText;
         fallback.setAttribute("readonly", "");
         fallback.style.position = "fixed";
         fallback.style.opacity = "0";

@@ -1,25 +1,16 @@
 <div class="utility-stack" aria-label="Quick utilities">
-	<aside class="global-pomodoro" data-pomodoro data-open="false">
+	<aside class="global-pomodoro" data-pomodoro data-open="true">
 		<div class="pomodoro-header">
 			<span class="pomodoro-label" data-pomodoro-label>POMODORO</span>
-			<div class="pomodoro-actions">
-				<button class="pomodoro-toggle" type="button" data-pomodoro-toggle>{{ if eq .Language.Lang "pt" }}Iniciar{{ else }}Start{{ end }}</button>
-				<button class="pomodoro-collapse" type="button" data-pomodoro-collapse aria-label="Hide Pomodoro timer">−</button>
-			</div>
 		</div>
 		<div class="pomodoro-body">
 			<div class="pomodoro-time" data-pomodoro-display>25:00</div>
-			<div class="pomodoro-modes" aria-label="Select timer mode">
-				<button class="pomodoro-mode is-active" type="button" data-pomodoro-mode="pomodoro" aria-pressed="true">{{ if eq .Language.Lang "pt" }}Pomodoro{{ else }}Pomodoro{{ end }}</button>
-				<button class="pomodoro-mode" type="button" data-pomodoro-mode="short" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Pausa{{ else }}Short{{ end }}</button>
-				<button class="pomodoro-mode" type="button" data-pomodoro-mode="long" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Longa{{ else }}Long{{ end }}</button>
+			<div class="pomodoro-modes" role="tablist" aria-label="Select timer mode">
+				<button class="pomodoro-mode is-active" type="button" data-pomodoro-mode="pomodoro" aria-pressed="true">Pomodoro</button>
+				<button class="pomodoro-mode" type="button" data-pomodoro-mode="short" aria-pressed="false">Short</button>
+				<button class="pomodoro-mode" type="button" data-pomodoro-mode="long" aria-pressed="false">Long</button>
 			</div>
-		</div>
-		<div class="pomodoro-collapsed" data-pomodoro-collapsed>
-			<span class="pomodoro-collapsed-label">POMODORO</span>
-			<span class="pomodoro-collapsed-time" data-pomodoro-collapsed-time>25:00</span>
-			<span class="pomodoro-collapsed-state" data-pomodoro-collapsed-state>Ready</span>
-			<button class="pomodoro-expand" type="button" data-pomodoro-expand>{{ if eq .Language.Lang "pt" }}Abrir{{ else }}Open{{ end }}</button>
+			<button class="pomodoro-toggle" type="button" data-pomodoro-toggle>{{ if eq .Language.Lang "pt" }}Iniciar{{ else }}Start{{ end }}</button>
 		</div>
 	</aside>
 
@@ -42,12 +33,14 @@
 		</div>
 		<div class="global-radio-main">
 			<button class="radio-track" type="button" data-radio-copy data-copy-label="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" title="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" disabled>
-				<span data-radio-track aria-live="polite">{{ if eq .Language.Lang "pt" }}Carregando faixa...{{ else }}Loading track...{{ end }}</span>
+				<span class="radio-track-artist" data-radio-artist aria-live="polite"></span>
+				<span class="radio-track-title" data-radio-track aria-live="polite"></span>
 				<span class="radio-copy-feedback" data-radio-copy-feedback role="status" aria-live="polite"></span>
 			</button>
-			<div class="radio-controls">
-				<div class="radio-progress" aria-hidden="true">
-					<span class="radio-progress-bar" data-radio-progress-bar></span>
+			<div class="radio-bottom-row">
+				<div class="radio-live-status" aria-label="Live stream" title="Live stream">
+					<span class="radio-live-dot" aria-hidden="true"></span>
+					<span class="radio-live-text">LIVE</span>
 				</div>
 				<button class="radio-toggle" type="button" data-radio-toggle
 					aria-label="{{ if eq .Language.Lang "pt" }}Reproduzir rádio indie{{ else }}Play indie radio{{ end }}" aria-pressed="false">

@@ -10,12 +10,14 @@
 
   const display = widget.querySelector("[data-pomodoro-display]");
   const toggle = widget.querySelector("[data-pomodoro-toggle]");
+  const expandToggle = widget.querySelector("[data-pomodoro-expand-toggle]");
   const modeButtons = widget.querySelectorAll("[data-pomodoro-mode]");
   const label = widget.querySelector("[data-pomodoro-label]");
 
   let currentMode = "pomodoro";
   let remainingSeconds = defaultDurations[currentMode];
   let isRunning = false;
+  let isExpanded = false;
   let timerId = null;
 
   function formatTime(totalSeconds) {
@@ -54,6 +56,17 @@
   function updateDisplay() {
     if (display) {
       display.textContent = formatTime(remainingSeconds);
+    }
+  }
+
+  function updateWidgetState() {
+    widget.classList.toggle("is-expanded", isExpanded);
+    widget.dataset.open = String(isExpanded);
+    widget.setAttribute("data-open", String(isExpanded));
+
+    if (expandToggle) {
+      expandToggle.textContent = isExpanded ? "▴" : "▾";
+      expandToggle.setAttribute("aria-expanded", String(isExpanded));
     }
   }
 
@@ -125,6 +138,20 @@
       }
     });
   }
+
+  if (expandToggle) {
+    expandToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+      isExpanded = !isExpanded;
+      updateWidgetState();
+    });
+  }
+
+  widget.addEventListener("click", function (event) {
+    if (event.target.closest("button")) return;
+    isExpanded = !isExpanded;
+    updateWidgetState();
+  });
 
   modeButtons.forEach((button) => {
     button.addEventListener("click", function (event) {
