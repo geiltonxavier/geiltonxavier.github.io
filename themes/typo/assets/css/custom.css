@@ -802,6 +802,166 @@ p + p {
   color: var(--content-primary);
 }
 
+.global-pomodoro {
+  position: fixed;
+  right: 1.15rem;
+  bottom: 5.7rem;
+  z-index: 9;
+  display: grid;
+  gap: 0.5rem;
+  width: 12rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--code-border);
+  border-radius: 1rem;
+  background: rgba(239, 239, 235, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgb(29 29 31 / 10%);
+}
+
+.global-pomodoro *,
+.global-pomodoro *::before,
+.global-pomodoro *::after {
+  box-sizing: border-box;
+}
+
+.global-pomodoro.is-collapsed {
+  width: 6.6rem;
+  padding: 0.45rem 0.5rem;
+}
+
+.pomodoro-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pomodoro-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pomodoro-label,
+.pomodoro-collapsed-label {
+  color: var(--content-secondary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pomodoro-toggle,
+.pomodoro-collapse,
+.pomodoro-expand {
+  border: 1px solid rgba(31, 31, 28, 0.18);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--content-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.45rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pomodoro-collapse,
+.pomodoro-expand {
+  min-width: 1.7rem;
+  padding-inline: 0.4rem;
+}
+
+.pomodoro-body {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pomodoro-time {
+  color: var(--content-primary);
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.pomodoro-modes {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.pomodoro-mode {
+  border: 1px solid rgba(31, 31, 28, 0.12);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--content-secondary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.58rem;
+  line-height: 1.1;
+  padding: 0.28rem 0.46rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 120ms ease;
+}
+
+.pomodoro-mode.is-active {
+  background: var(--content-primary);
+  border-color: var(--content-primary);
+  color: var(--background);
+}
+
+.pomodoro-collapsed {
+  display: none;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 0.12rem;
+}
+
+.pomodoro-collapsed-label,
+.pomodoro-collapsed-state,
+.pomodoro-collapsed-time,
+.pomodoro-expand {
+  white-space: nowrap;
+}
+
+.global-pomodoro.is-collapsed .pomodoro-header,
+.global-pomodoro.is-collapsed .pomodoro-body {
+  display: none;
+}
+
+.global-pomodoro.is-collapsed .pomodoro-collapsed {
+  display: grid;
+}
+
+.pomodoro-collapsed-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+}
+
+.pomodoro-collapsed-time {
+  color: var(--content-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.pomodoro-collapsed-state {
+  color: var(--content-secondary);
+  font-size: 0.46rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pomodoro-expand {
+  margin-top: 0.08rem;
+  justify-self: center;
+  padding-inline: 0.45rem;
+}
+
 .global-radio {
   position: fixed;
   right: 1.25rem;
@@ -978,6 +1138,54 @@ p + p {
 }
 
 @media screen and (max-width: 640px) {
+    .global-pomodoro {
+      right: 0.75rem;
+      bottom: 5.15rem;
+      width: 10.75rem;
+      gap: 0.45rem;
+      padding: 0.5rem 0.55rem;
+    }
+
+    .global-pomodoro.is-collapsed {
+      width: 7.8rem;
+      padding: 0.42rem 0.5rem;
+    }
+
+    .pomodoro-header,
+    .pomodoro-actions,
+    .pomodoro-modes,
+    .pomodoro-collapsed {
+      min-width: 0;
+      flex-wrap: nowrap;
+    }
+
+    .pomodoro-label,
+    .pomodoro-collapsed-label {
+      letter-spacing: 0.08em;
+      font-size: 0.58rem;
+    }
+
+    .pomodoro-toggle,
+    .pomodoro-collapse,
+    .pomodoro-expand,
+    .pomodoro-mode {
+      font-size: 0.56rem;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .pomodoro-time {
+      font-size: 1.3rem;
+    }
+
+    .pomodoro-collapsed-time {
+      font-size: 0.8rem;
+    }
+
+    .pomodoro-collapsed-state {
+      font-size: 0.52rem;
+    }
+
     .global-radio {
       right: 0.75rem;
       bottom: 0.75rem;

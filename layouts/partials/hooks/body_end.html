@@ -1,3 +1,27 @@
+<aside class="global-pomodoro" data-pomodoro data-open="true">
+	<div class="pomodoro-header">
+		<span class="pomodoro-label" data-pomodoro-label>POMODORO</span>
+		<div class="pomodoro-actions">
+			<button class="pomodoro-toggle" type="button" data-pomodoro-toggle>{{ if eq .Language.Lang "pt" }}Iniciar{{ else }}Start{{ end }}</button>
+			<button class="pomodoro-collapse" type="button" data-pomodoro-collapse aria-label="Hide Pomodoro timer">−</button>
+		</div>
+	</div>
+	<div class="pomodoro-body">
+		<div class="pomodoro-time" data-pomodoro-display>25:00</div>
+		<div class="pomodoro-modes" aria-label="Select timer mode">
+			<button class="pomodoro-mode is-active" type="button" data-pomodoro-mode="pomodoro" aria-pressed="true">{{ if eq .Language.Lang "pt" }}Pomodoro{{ else }}Pomodoro{{ end }}</button>
+			<button class="pomodoro-mode" type="button" data-pomodoro-mode="short" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Pausa{{ else }}Short{{ end }}</button>
+			<button class="pomodoro-mode" type="button" data-pomodoro-mode="long" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Longa{{ else }}Long{{ end }}</button>
+		</div>
+	</div>
+	<div class="pomodoro-collapsed" data-pomodoro-collapsed>
+		<span class="pomodoro-collapsed-label">POMODORO</span>
+		<span class="pomodoro-collapsed-time" data-pomodoro-collapsed-time>25:00</span>
+		<span class="pomodoro-collapsed-state" data-pomodoro-collapsed-state>Ready</span>
+		<button class="pomodoro-expand" type="button" data-pomodoro-expand>{{ if eq .Language.Lang "pt" }}Abrir{{ else }}Open{{ end }}</button>
+	</div>
+</aside>
+
 <section class="global-radio" data-home-radio
 	data-play-label="{{ if eq .Language.Lang "pt" }}Reproduzir rádio indie{{ else }}Play indie radio{{ end }}"
 	data-pause-label="{{ if eq .Language.Lang "pt" }}Pausar rádio indie{{ else }}Pause indie radio{{ end }}"
@@ -24,5 +48,8 @@
 	<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
 </section>
 {{- with resources.Get "js/home-radio.js" | fingerprint -}}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end }}
+{{- with resources.Get "js/pomodoro.js" | fingerprint -}}
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}
