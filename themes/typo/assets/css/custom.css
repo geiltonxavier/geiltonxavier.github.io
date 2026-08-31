@@ -913,14 +913,36 @@ p + p {
   color: var(--content-primary);
 }
 
-.global-pomodoro {
+.utility-stack {
   position: fixed;
-  right: 1.15rem;
-  bottom: 7rem;
-  z-index: 9;
+  right: max(0.9rem, env(safe-area-inset-right));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  width: min(12rem, calc(100vw - 1.5rem));
+  max-width: calc(100vw - 1.5rem);
+}
+
+.global-pomodoro,
+.global-radio {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  z-index: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.global-pomodoro {
+  margin-left: auto;
+}
+
+.global-pomodoro {
   display: grid;
   gap: 0.5rem;
-  width: 12rem;
   padding: 0.5rem 0.6rem;
   border: 1px solid rgba(31, 31, 28, 0.1);
   border-radius: 0.9rem;
@@ -1082,27 +1104,22 @@ p + p {
 }
 
 .global-radio {
-  position: fixed;
-  right: 1rem;
-  bottom: 0.8rem;
-  z-index: 10;
   display: grid;
-  gap: 0.35rem;
-  width: 9.25rem;
-  padding: 0.42rem 0.46rem 0.38rem;
-  border: 1px solid rgba(31, 31, 28, 0.08);
+  gap: 0.5rem;
+  padding: 1.05rem 1rem 0.9rem;
+  border: 0.5px solid rgba(31, 31, 28, 0.1);
   border-radius: 0.8rem;
-  background: rgba(239, 239, 235, 0.64);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 3px 12px rgb(29 29 31 / 4%);
-  opacity: 0.78;
+  background: rgba(239, 239, 235, 0.72);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(31, 31, 28, 0.04), 0 8px 24px rgb(29 29 31 / 4%);
+  opacity: 0.8;
   transition: opacity 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 
 .global-radio:hover,
 .global-radio:focus-within {
   opacity: 0.96;
-  box-shadow: 0 5px 14px rgb(29 29 31 / 6%);
+  box-shadow: 0 1px 0 rgba(31, 31, 28, 0.05), 0 10px 22px rgb(29 29 31 / 5%);
 }
 
 .global-radio-header {
@@ -1112,12 +1129,17 @@ p + p {
   gap: 0.25rem;
 }
 
-.global-radio-track-wrap {
+.global-radio-main {
   display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 0.35rem;
+  gap: 0.42rem;
   min-width: 0;
+}
+
+.radio-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
 }
 
 .radio-cover {
@@ -1130,57 +1152,167 @@ p + p {
 }
 
 .global-radio .radio-label,
-.global-radio .radio-state,
 .global-radio .radio-track {
   overflow: hidden;
   color: rgba(31, 31, 28, 0.62);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 0.5rem;
-  letter-spacing: 0.08em;
   line-height: 1.2;
   text-overflow: ellipsis;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
-.global-radio .radio-track {
+.global-radio .radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: rgba(31, 31, 28, 0.54);
+}
+
+.radio-eq {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.12rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: rgba(31, 31, 28, 0.52);
+}
+
+.radio-eq-bar {
   display: block;
+  width: 0.12rem;
+  height: 0.28rem;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center bottom;
+  animation: radio-eq 0.9s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+
+.radio-eq-bar:nth-child(2) {
+  animation-duration: 0.72s;
+  animation-delay: 0.2s;
+}
+
+.radio-eq-bar:nth-child(3) {
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+}
+
+.global-radio[data-state="playing"] .radio-eq-bar {
+  animation-play-state: running;
+}
+
+.global-radio[data-state="paused"] .radio-eq-bar {
+  transform: scaleY(0.35);
+  animation-play-state: paused;
+}
+
+@keyframes radio-eq {
+  0% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.global-radio .radio-track {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.12rem;
   width: 100%;
   min-width: 0;
+  height: auto;
   padding: 0;
   border: 0;
   background: transparent;
-  color: rgba(31, 31, 28, 0.8);
-  font-size: 0.58rem;
+  color: rgba(31, 31, 28, 0.9);
+  font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0;
   position: relative;
   text-align: left;
   text-overflow: clip;
   text-transform: none;
   cursor: pointer;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: visible;
+}
+
+.global-radio .radio-track > [data-radio-track],
+.global-radio .radio-track-artist,
+.global-radio .radio-track-title {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.global-radio .radio-track-artist {
+  color: rgba(31, 31, 28, 0.56);
+  font-size: 0.56rem;
+  line-height: 1.3;
+}
+
+.global-radio .radio-track-title {
+  color: rgba(31, 31, 28, 0.9);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.global-radio .radio-progress {
+  position: relative;
+  height: 0.12rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(31, 31, 28, 0.12);
+}
+
+.global-radio .radio-progress-bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  border-radius: inherit;
+  background: rgba(31, 31, 28, 0.82);
+  transition: width 140ms ease-out;
 }
 
 .global-radio .radio-toggle {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 2.1rem;
+  height: 2.1rem;
   justify-self: center;
   flex: 0 0 auto;
-  border-color: rgba(31, 31, 28, 0.18);
-  background: rgba(31, 31, 28, 0.9);
+  border: none;
+  border-radius: 999px;
+  background: rgba(31, 31, 28, 0.96);
+  color: rgba(255, 255, 255, 0.96);
+  box-shadow: none;
 }
 
 .global-radio .radio-toggle .radio-toggle-icon {
   width: 0;
   height: 0;
   margin-left: 0.12rem;
-  border-top: 0.26rem solid transparent;
-  border-bottom: 0.26rem solid transparent;
-  border-left: 0.42rem solid currentColor;
+  border-top: 0.22rem solid transparent;
+  border-bottom: 0.22rem solid transparent;
+  border-left: 0.34rem solid currentColor;
 }
 
 .global-radio .radio-toggle[data-state="playing"] .radio-toggle-icon {
-  width: 0.48rem;
-  height: 0.62rem;
+  width: 0.4rem;
+  height: 0.52rem;
   margin-left: 0;
   border: 0;
   background: linear-gradient(to right, currentColor 0 35%, transparent 35% 65%, currentColor 65% 100%);
@@ -1204,11 +1336,13 @@ p + p {
 
 .global-radio .radio-track > [data-radio-track] {
   display: block;
-  width: max-content;
-  min-width: 100%;
-  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
   text-overflow: clip;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .radio-copy-feedback {
@@ -1230,40 +1364,8 @@ p + p {
   display: block;
 }
 
-.radio-wave {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  height: 0.8rem;
-}
-
-.radio-wave i {
-  display: block;
-  width: 2px;
-  height: 35%;
-  border-radius: 2px;
-  background: currentColor;
-}
-
-.global-radio[data-state="playing"] .radio-wave i {
-  animation: radio-wave 900ms ease-in-out infinite alternate;
-}
-
-.global-radio[data-state="playing"] .radio-wave i:nth-child(2) {
-  animation-delay: -450ms;
-}
-
-.global-radio[data-state="playing"] .radio-wave i:nth-child(3) {
-  animation-delay: -700ms;
-}
-
 .global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > [data-radio-track] {
   animation: radio-track-drift 8s ease-in-out infinite alternate;
-}
-
-@keyframes radio-wave {
-  from { height: 30%; }
-  to { height: 100%; }
 }
 
 @keyframes radio-track-drift {
@@ -1272,7 +1374,6 @@ p + p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .global-radio[data-state="playing"] .radio-wave i,
   .global-radio[data-state="playing"][data-track-overflow="true"] .radio-track > [data-radio-track] {
     animation: none;
   }
@@ -1296,17 +1397,30 @@ p + p {
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
+    .utility-stack {
+      position: static;
+      right: auto;
+      bottom: auto;
+      z-index: auto;
+      width: min(100%, 19rem);
+      max-width: 100%;
+      margin: 1.5rem auto 0;
+      gap: 0.75rem;
+    }
+
+    .global-pomodoro,
+    .global-radio {
+      width: 100%;
+    }
+
     .global-pomodoro {
-      right: 0.75rem;
-      bottom: 6.5rem;
-      width: 10.75rem;
       gap: 0.45rem;
       padding: 0.5rem 0.55rem;
     }
 
     .global-pomodoro.is-collapsed {
-      width: 7.8rem;
+      width: 100%;
       padding: 0.42rem 0.5rem;
     }
 
@@ -1343,11 +1457,6 @@ p + p {
 
     .pomodoro-collapsed-state {
       font-size: 0.52rem;
-    }
-
-    .global-radio {
-      right: 0.75rem;
-      bottom: 0.7rem;
     }
 
   .single-content .about-bio {

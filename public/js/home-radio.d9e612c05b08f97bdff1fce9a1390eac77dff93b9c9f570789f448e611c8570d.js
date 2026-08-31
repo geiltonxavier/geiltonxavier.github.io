@@ -20,36 +20,6 @@
     const copyLabel = radio.dataset.copyLabel || "Copy track";
     const copiedLabel = radio.dataset.copiedLabel || "Track copied";
 
-    function renderTrackText(rawText) {
-      const source = (rawText || "").trim();
-      const separator = " - ";
-      const hasSeparator = source.includes(separator);
-      const artist = hasSeparator ? source.split(separator)[0].trim() : "";
-      const title = hasSeparator ? source.split(separator).slice(1).join(separator).trim() : source;
-
-      track.innerHTML = "";
-
-      if (artist) {
-        const artistNode = document.createElement("span");
-        artistNode.className = "radio-track-artist";
-        artistNode.textContent = artist;
-        track.appendChild(artistNode);
-      }
-
-      if (title) {
-        const titleNode = document.createElement("span");
-        titleNode.className = "radio-track-title";
-        titleNode.textContent = title;
-        track.appendChild(titleNode);
-      }
-
-      if (!artist && !title) {
-        track.textContent = "";
-      }
-
-      copy.disabled = !source;
-    }
-
     async function updateTrack() {
       try {
         const response = await fetch("https://somafm.com/songs/indiepop.json");
@@ -58,7 +28,7 @@
         const data = await response.json();
         const currentSong = data.songs && data.songs[0];
         if (currentSong && currentSong.artist && currentSong.title) {
-          renderTrackText(`${currentSong.artist} - ${currentSong.title}`);
+          track.textContent = `${currentSong.artist} - ${currentSong.title}`;
           if (cover) {
             if (currentSong.albumArt) {
               cover.src = currentSong.albumArt;
@@ -70,19 +40,22 @@
               cover.alt = "";
             }
           }
+          copy.disabled = false;
+          updateTrackOverflow();
         }
       } catch (metadataError) {
-        renderTrackText("");
+        track.textContent = "";
         if (cover) {
           cover.removeAttribute("src");
           cover.hidden = true;
           cover.alt = "";
         }
+        copy.disabled = true;
       }
     }
 
     async function copyTrack() {
-      const trackText = (track.textContent || "").trim();
+      const trackText = track.textContent.trim();
       if (!trackText) return;
 
       try {
@@ -103,6 +76,24 @@
       window.setTimeout(function () {
         copyFeedback.textContent = "";
       }, 1800);
+    }
+
+    function updateTrackOverflow() {
+      const container = track.parentElement;
+      const styles = container && window.getComputedStyle(container);
+      const horizontalPadding = styles
+        ? parseFloat(styles.paddingLeft) + parseFloat(styles.paddingRight)
+        : 0;
+      const availableWidth = container && container.clientWidth - horizontalPadding;
+      const overflow = container && track.scrollWidth > availableWidth;
+      radio.dataset.trackOverflow = String(overflow);
+
+      if (overflow) {
+        const distance = track.scrollWidth - availableWidth;
+        track.style.setProperty("--track-shift", `-${distance}px`);
+      } else {
+        track.style.removeProperty("--track-shift");
+      }
     }
 
     function updateProgress() {

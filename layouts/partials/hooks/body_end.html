@@ -1,52 +1,64 @@
-<aside class="global-pomodoro" data-pomodoro data-open="false">
-	<div class="pomodoro-header">
-		<span class="pomodoro-label" data-pomodoro-label>POMODORO</span>
-		<div class="pomodoro-actions">
-			<button class="pomodoro-toggle" type="button" data-pomodoro-toggle>{{ if eq .Language.Lang "pt" }}Iniciar{{ else }}Start{{ end }}</button>
-			<button class="pomodoro-collapse" type="button" data-pomodoro-collapse aria-label="Hide Pomodoro timer">−</button>
+<div class="utility-stack" aria-label="Quick utilities">
+	<aside class="global-pomodoro" data-pomodoro data-open="false">
+		<div class="pomodoro-header">
+			<span class="pomodoro-label" data-pomodoro-label>POMODORO</span>
+			<div class="pomodoro-actions">
+				<button class="pomodoro-toggle" type="button" data-pomodoro-toggle>{{ if eq .Language.Lang "pt" }}Iniciar{{ else }}Start{{ end }}</button>
+				<button class="pomodoro-collapse" type="button" data-pomodoro-collapse aria-label="Hide Pomodoro timer">−</button>
+			</div>
 		</div>
-	</div>
-	<div class="pomodoro-body">
-		<div class="pomodoro-time" data-pomodoro-display>25:00</div>
-		<div class="pomodoro-modes" aria-label="Select timer mode">
-			<button class="pomodoro-mode is-active" type="button" data-pomodoro-mode="pomodoro" aria-pressed="true">{{ if eq .Language.Lang "pt" }}Pomodoro{{ else }}Pomodoro{{ end }}</button>
-			<button class="pomodoro-mode" type="button" data-pomodoro-mode="short" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Pausa{{ else }}Short{{ end }}</button>
-			<button class="pomodoro-mode" type="button" data-pomodoro-mode="long" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Longa{{ else }}Long{{ end }}</button>
+		<div class="pomodoro-body">
+			<div class="pomodoro-time" data-pomodoro-display>25:00</div>
+			<div class="pomodoro-modes" aria-label="Select timer mode">
+				<button class="pomodoro-mode is-active" type="button" data-pomodoro-mode="pomodoro" aria-pressed="true">{{ if eq .Language.Lang "pt" }}Pomodoro{{ else }}Pomodoro{{ end }}</button>
+				<button class="pomodoro-mode" type="button" data-pomodoro-mode="short" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Pausa{{ else }}Short{{ end }}</button>
+				<button class="pomodoro-mode" type="button" data-pomodoro-mode="long" aria-pressed="false">{{ if eq .Language.Lang "pt" }}Longa{{ else }}Long{{ end }}</button>
+			</div>
 		</div>
-	</div>
-	<div class="pomodoro-collapsed" data-pomodoro-collapsed>
-		<span class="pomodoro-collapsed-label">POMODORO</span>
-		<span class="pomodoro-collapsed-time" data-pomodoro-collapsed-time>25:00</span>
-		<span class="pomodoro-collapsed-state" data-pomodoro-collapsed-state>Ready</span>
-		<button class="pomodoro-expand" type="button" data-pomodoro-expand>{{ if eq .Language.Lang "pt" }}Abrir{{ else }}Open{{ end }}</button>
-	</div>
-</aside>
+		<div class="pomodoro-collapsed" data-pomodoro-collapsed>
+			<span class="pomodoro-collapsed-label">POMODORO</span>
+			<span class="pomodoro-collapsed-time" data-pomodoro-collapsed-time>25:00</span>
+			<span class="pomodoro-collapsed-state" data-pomodoro-collapsed-state>Ready</span>
+			<button class="pomodoro-expand" type="button" data-pomodoro-expand>{{ if eq .Language.Lang "pt" }}Abrir{{ else }}Open{{ end }}</button>
+		</div>
+	</aside>
 
-<section class="global-radio" data-home-radio
-	data-play-label="{{ if eq .Language.Lang "pt" }}Reproduzir rádio indie{{ else }}Play indie radio{{ end }}"
-	data-pause-label="{{ if eq .Language.Lang "pt" }}Pausar rádio indie{{ else }}Pause indie radio{{ end }}"
-	data-unavailable-label="{{ if eq .Language.Lang "pt" }}A rádio está temporariamente indisponível.{{ else }}The radio is temporarily unavailable.{{ end }}"
-	data-copy-label="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}"
-	data-copied-label="{{ if eq .Language.Lang "pt" }}Faixa copiada{{ else }}Track copied{{ end }}"
-	aria-label="Indie Radio">
-	<div class="global-radio-header">
-		<span class="radio-label">INDIE RADIO</span>
-		<span class="radio-wave" aria-hidden="true"><i></i><i></i><i></i></span>
-	</div>
-	<div class="global-radio-track-wrap">
-		<img class="radio-cover" data-radio-cover alt="" hidden>
-		<button class="radio-track" type="button" data-radio-copy data-copy-label="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" title="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" disabled>
-			<span data-radio-track aria-live="polite">{{ if eq .Language.Lang "pt" }}Carregando faixa...{{ else }}Loading track...{{ end }}</span>
-			<span class="radio-copy-feedback" data-radio-copy-feedback role="status" aria-live="polite"></span>
-		</button>
-	</div>
-	<button class="radio-toggle" type="button" data-radio-toggle
-		aria-label="{{ if eq .Language.Lang "pt" }}Reproduzir rádio indie{{ else }}Play indie radio{{ end }}" aria-pressed="false">
-		<span class="radio-toggle-icon" aria-hidden="true"></span>
-	</button>
-	<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
-	<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
-</section>
+	<section class="global-radio" data-home-radio
+		data-play-label="{{ if eq .Language.Lang "pt" }}Reproduzir rádio indie{{ else }}Play indie radio{{ end }}"
+		data-pause-label="{{ if eq .Language.Lang "pt" }}Pausar rádio indie{{ else }}Pause indie radio{{ end }}"
+		data-unavailable-label="{{ if eq .Language.Lang "pt" }}A rádio está temporariamente indisponível.{{ else }}The radio is temporarily unavailable.{{ end }}"
+		data-copy-label="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}"
+		data-copied-label="{{ if eq .Language.Lang "pt" }}Faixa copiada{{ else }}Track copied{{ end }}"
+		aria-label="Indie Radio">
+		<div class="global-radio-header">
+			<span class="radio-label">
+				<span class="radio-eq" aria-hidden="true">
+					<span class="radio-eq-bar"></span>
+					<span class="radio-eq-bar"></span>
+					<span class="radio-eq-bar"></span>
+				</span>
+				indie radio
+			</span>
+		</div>
+		<div class="global-radio-main">
+			<button class="radio-track" type="button" data-radio-copy data-copy-label="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" title="{{ if eq .Language.Lang "pt" }}Copiar faixa{{ else }}Copy track{{ end }}" disabled>
+				<span data-radio-track aria-live="polite">{{ if eq .Language.Lang "pt" }}Carregando faixa...{{ else }}Loading track...{{ end }}</span>
+				<span class="radio-copy-feedback" data-radio-copy-feedback role="status" aria-live="polite"></span>
+			</button>
+			<div class="radio-controls">
+				<div class="radio-progress" aria-hidden="true">
+					<span class="radio-progress-bar" data-radio-progress-bar></span>
+				</div>
+				<button class="radio-toggle" type="button" data-radio-toggle
+					aria-label="{{ if eq .Language.Lang "pt" }}Reproduzir rádio indie{{ else }}Play indie radio{{ end }}" aria-pressed="false">
+					<span class="radio-toggle-icon" aria-hidden="true"></span>
+				</button>
+			</div>
+		</div>
+		<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
+		<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
+	</section>
+</div>
 {{- with resources.Get "js/home-radio.js" | fingerprint -}}
 <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}
