@@ -2,21 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://geiltonxavier.com.br/posts/diligence-as-the-engineering-of-anticipation/</loc>
-    <lastmod>2026-06-22T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://geiltonxavier.com.br/pt/posts/diligencia-como-engenharia-de-antecipacao/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://geiltonxavier.com.br/posts/diligence-as-the-engineering-of-anticipation/"
-                />
-  </url><url>
     <loc>https://geiltonxavier.com.br/</loc>
-    <lastmod>2026-06-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-08-27T12:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -28,8 +15,11 @@
                 href="https://geiltonxavier.com.br/"
                 />
   </url><url>
+    <loc>https://geiltonxavier.com.br/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/</loc>
+    <lastmod>2026-08-27T12:08:00+00:00</lastmod>
+  </url><url>
     <loc>https://geiltonxavier.com.br/posts/</loc>
-    <lastmod>2026-06-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-08-27T12:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
@@ -39,6 +29,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://geiltonxavier.com.br/posts/"
+                />
+  </url><url>
+    <loc>https://geiltonxavier.com.br/posts/diligence-as-the-engineering-of-anticipation/</loc>
+    <lastmod>2026-06-22T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://geiltonxavier.com.br/pt/posts/diligencia-como-engenharia-de-antecipacao/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://geiltonxavier.com.br/posts/diligence-as-the-engineering-of-anticipation/"
                 />
   </url><url>
     <loc>https://geiltonxavier.com.br/tags/ai/</loc>

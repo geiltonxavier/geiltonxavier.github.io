@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geilton Xavier</title>
-    <link>http://localhost:1313/</link>
+    <link>https://geiltonxavier.com.br/</link>
     <description>Recent content on Geilton Xavier</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Aug 2026 12:08:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geiltonxavier.com.br/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>If You Started Coding After the AI Boom, Read the 12-Factor App</title>
-      <link>http://localhost:1313/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/</link>
+      <link>https://geiltonxavier.com.br/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/</link>
       <pubDate>Thu, 27 Aug 2026 12:08:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/</guid>
+      <guid>https://geiltonxavier.com.br/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/</guid>
       <description>&lt;p&gt;I didn&amp;rsquo;t write this for experienced software engineers.&lt;/p&gt;&#xA;&lt;p&gt;If you&amp;rsquo;ve spent years building and running production systems, you probably already know the &lt;a href=&#34;https://12factor.net/&#34;&gt;&lt;strong&gt;12-Factor App&lt;/strong&gt;&lt;/a&gt;. Maybe you don&amp;rsquo;t remember all twelve factors by number, but most of the ideas will be familiar.&lt;/p&gt;&#xA;&lt;p&gt;This post is for people who started coding more recently, especially after ChatGPT, GitHub Copilot, Claude, Codex and similar tools made it ridiculously easy to generate working code.&lt;/p&gt;&#xA;&lt;p&gt;I love these tools. I use them a lot. They made creating software much easier, but understanding why a production system is built in a certain way is still something we have to learn.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Diligence as the Engineering of Anticipation</title>
-      <link>http://localhost:1313/posts/diligence-as-the-engineering-of-anticipation/</link>
+      <link>https://geiltonxavier.com.br/posts/diligence-as-the-engineering-of-anticipation/</link>
       <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/diligence-as-the-engineering-of-anticipation/</guid>
+      <guid>https://geiltonxavier.com.br/posts/diligence-as-the-engineering-of-anticipation/</guid>
       <description>&lt;p&gt;In 2013, I worked at FCamara and was part of a group called the Critical Operations Team. From time to time we&amp;rsquo;d meet in a way that broke from the usual routine. No meeting room, no slides, no rigid agenda. It was more of an informal gathering, something like a scrum with pizza.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;d go to a pizza place, eat, talk about day to day work, and somewhere in between there&amp;rsquo;d be these improvised talks. Nothing formal, just someone sharing experience while everyone ate.&lt;/p&gt;</description>
     </item>
     <item>
       <title>When I stopped thinking about latency the way I always had</title>
-      <link>http://localhost:1313/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</link>
+      <link>https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</link>
       <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</guid>
+      <guid>https://geiltonxavier.com.br/posts/when-i-stopped-thinking-about-latency-the-way-i-always-had/</guid>
       <description>&lt;p&gt;For most of my career, latency was a number. You measured it, set a threshold, and if the number was too high you went to fix it. A request goes in, a response comes out. Either it&amp;rsquo;s within acceptable range or it isn&amp;rsquo;t.&lt;/p&gt;&#xA;&lt;p&gt;Then I started building AI into an internal operations platform.&lt;/p&gt;&#xA;&lt;p&gt;The platform handled the usual enterprise stuff: user provisioning, license management, access control, integrations with other systems. Real operational stuff, used by real people. At some point the idea came up to let users interact with it through a chat interface. Instead of navigating menus, they could just ask: who has this license? provision this user, revoke this access.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Reliability in Software Engineering: The Gap Between Assistant and Actor</title>
-      <link>http://localhost:1313/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/</link>
+      <link>https://geiltonxavier.com.br/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/</guid>
-      <description>&lt;p&gt;When you use AI as an assistant, a wrong answer is annoying. When AI is an actor in your production system, a wrong answer has consequences.&lt;/p&gt;&#xA;&lt;p&gt;That distinction matters more than most architectural discussions about AI acknowledge.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;figure class=&#34;&#34;&gt;&#xA;&#xA;    &lt;div class=&#34;img-container&#34; &gt;&#xA;        &lt;img loading=&#34;lazy&#34; alt=&#34;AI as Assistant vs AI as Actor&#34; src=&#34;http://localhost:1313/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/ai-as-assistant-vs-ai-as-actor.png&#34; &gt;&#xA;    &lt;/div&gt;&#xA;&#xA;    &#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;the-two-modes-of-ai-in-engineering-systems&#34;&gt;&#xA;  The Two Modes of AI in Engineering Systems&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#the-two-modes-of-ai-in-engineering-systems&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;There are two fundamentally different ways AI ends up in a software system.&lt;/p&gt;&#xA;&lt;p&gt;The first is AI as assistant: the model helps a human think, draft, or decide. The human reviews the output and acts. The AI has no agency. Errors are filtered before they reach production.&lt;/p&gt;</description>
+      <guid>https://geiltonxavier.com.br/posts/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/</guid>
+      <description>&lt;p&gt;When you use AI as an assistant, a wrong answer is annoying. When AI is an actor in your production system, a wrong answer has consequences.&lt;/p&gt;&#xA;&lt;p&gt;That distinction matters more than most architectural discussions about AI acknowledge.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;figure class=&#34;&#34;&gt;&#xA;&#xA;    &lt;div class=&#34;img-container&#34; &gt;&#xA;        &lt;img loading=&#34;lazy&#34; alt=&#34;AI as Assistant vs AI as Actor&#34; src=&#34;https://geiltonxavier.com.br/img/ai-reliability-in-software-engineering-the-gap-between-assistant-and-actor/ai-as-assistant-vs-ai-as-actor.png&#34; &gt;&#xA;    &lt;/div&gt;&#xA;&#xA;    &#xA;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;the-two-modes-of-ai-in-engineering-systems&#34;&gt;&#xA;  The Two Modes of AI in Engineering Systems&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#the-two-modes-of-ai-in-engineering-systems&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;There are two fundamentally different ways AI ends up in a software system.&lt;/p&gt;&#xA;&lt;p&gt;The first is AI as assistant: the model helps a human think, draft, or decide. The human reviews the output and acts. The AI has no agency. Errors are filtered before they reach production.&lt;/p&gt;</description>
     </item>
     <item>
       <title>AI Browsers. The cost of convenience</title>
-      <link>http://localhost:1313/posts/ai-browsers-the-cost-of-convenience/</link>
+      <link>https://geiltonxavier.com.br/posts/ai-browsers-the-cost-of-convenience/</link>
       <pubDate>Mon, 03 Nov 2025 14:47:29 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ai-browsers-the-cost-of-convenience/</guid>
+      <guid>https://geiltonxavier.com.br/posts/ai-browsers-the-cost-of-convenience/</guid>
       <description>&lt;p&gt;Have you ever wondered about the scope of having a browser with artificial intelligence inside?&lt;/p&gt;&#xA;&lt;p&gt;From the outside, it sounds absolutely fantastic. An assistant always present, able to sum up pages, answer questions about what you are reading, help you formulate a well-crafted email, pull information here and there – all that, without closing your browser.&lt;/p&gt;&#xA;&lt;p&gt;No effort, instant gratification. A perfect future, where everything is possible.&lt;/p&gt;&#xA;&lt;p&gt;But there is a catch with that form of thinking that you are likely not considering.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Tim Hortons Test</title>
-      <link>http://localhost:1313/memory-notes/tim-hortons/</link>
+      <link>https://geiltonxavier.com.br/memory-notes/tim-hortons/</link>
       <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/memory-notes/tim-hortons/</guid>
+      <guid>https://geiltonxavier.com.br/memory-notes/tim-hortons/</guid>
       <description>I finally tried the coffee I had seen in so many Canada videos. It did not live up to the expectation, but the hot chocolate did.</description>
     </item>
     <item>
       <title>Toronto, from Will&#39;s balcony</title>
-      <link>http://localhost:1313/memory-notes/toronto-will/</link>
+      <link>https://geiltonxavier.com.br/memory-notes/toronto-will/</link>
       <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/memory-notes/toronto-will/</guid>
+      <guid>https://geiltonxavier.com.br/memory-notes/toronto-will/</guid>
       <description>My first visit to Canada, seen from the balcony of my friend Will&amp;rsquo;s apartment.</description>
     </item>
     <item>
       <title>A View Toward Pena Palace</title>
-      <link>http://localhost:1313/memory-notes/mira-sintra/</link>
+      <link>https://geiltonxavier.com.br/memory-notes/mira-sintra/</link>
       <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/memory-notes/mira-sintra/</guid>
+      <guid>https://geiltonxavier.com.br/memory-notes/mira-sintra/</guid>
       <description>A fourth-floor view toward the Pena Palace, with wires, hills, and beautiful late-afternoon light.</description>
     </item>
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://geiltonxavier.com.br/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;figure class=&#34;about-memory&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/img/vancouver/geilton-xavier-anmore-bc-canada.png&#34; alt=&#34;Landscape in Anmore, British Columbia, photographed on June 3, 2023&#34; loading=&#34;lazy&#34;&gt;&#xA;  &lt;figcaption&gt;Anmore, BC, June 3, 2023. A day on the road with friends from my English course, discovering the quiet landscapes around Vancouver.&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;div class=&#34;about-bio&#34;&gt;&#xA;  &lt;p&gt;I&#39;m Geilton.&lt;/p&gt;&#xA;  &lt;p&gt;I was born in Ilhéus, on the southern coast of Bahia, and moved to São Paulo when I was eight years old.&lt;/p&gt;&#xA;  &lt;p&gt;I didn&#39;t enter technology through architecture. I started in support, ERP implementations, SQL fixes, user training, and the kind of operational work where every bug has a person waiting on the other side. That experience taught me that software is rarely the real problem. Friction is.&lt;/p&gt;</description>
+      <guid>https://geiltonxavier.com.br/about/</guid>
+      <description>&lt;figure class=&#34;about-memory&#34;&gt;&#xA;  &lt;img src=&#34;https://geiltonxavier.com.br/img/vancouver/geilton-xavier-anmore-bc-canada.png&#34; alt=&#34;Landscape in Anmore, British Columbia, photographed on June 3, 2023&#34; loading=&#34;lazy&#34;&gt;&#xA;  &lt;figcaption&gt;Anmore, BC, June 3, 2023. A day on the road with friends from my English course, discovering the quiet landscapes around Vancouver.&lt;/figcaption&gt;&#xA;&lt;/figure&gt;&#xA;&lt;div class=&#34;about-bio&#34;&gt;&#xA;  &lt;p&gt;I&#39;m Geilton.&lt;/p&gt;&#xA;  &lt;p&gt;I was born in Ilhéus, on the southern coast of Bahia, and moved to São Paulo when I was eight years old.&lt;/p&gt;&#xA;  &lt;p&gt;I didn&#39;t enter technology through architecture. I started in support, ERP implementations, SQL fixes, user training, and the kind of operational work where every bug has a person waiting on the other side. That experience taught me that software is rarely the real problem. Friction is.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CV</title>
-      <link>http://localhost:1313/cv/</link>
+      <link>https://geiltonxavier.com.br/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/cv/</guid>
+      <guid>https://geiltonxavier.com.br/cv/</guid>
       <description>&lt;div class=&#34;cv-page&#34;&gt;&#xA;  &lt;section class=&#34;cv-header&#34;&gt;&#xA;    &lt;h1&gt;Geilton Xavier&lt;/h1&gt;&#xA;    &lt;p class=&#34;cv-roleline&#34;&gt;Solutions Architect · Staff Engineer · Technical Lead · .NET · Azure · Distributed Systems&lt;/p&gt;&#xA;    &lt;p class=&#34;cv-contact&#34;&gt;&#xA;      &lt;a href=&#34;mailto:geilton@live.com&#34;&gt;geilton@live.com&lt;/a&gt;&#xA;      &lt;span&gt;|&lt;/span&gt;&#xA;      &lt;span&gt;+351 910 702 889&lt;/span&gt;&#xA;      &lt;span&gt;|&lt;/span&gt;&#xA;      &lt;a href=&#34;https://www.linkedin.com/in/geiltonxavier/&#34;&gt;linkedin.com/in/geiltonxavier&lt;/a&gt;&#xA;    &lt;/p&gt;&#xA;  &lt;/section&gt;&#xA;&#xA;  &lt;section class=&#34;cv-section&#34;&gt;&#xA;    &lt;h2&gt;Summary&lt;/h2&gt;&#xA;    &lt;p&gt;Software engineer with 10+ years building high-scale distributed systems on .NET and Azure. Currently at &lt;strong&gt;Siemens&lt;/strong&gt; as a hands-on &lt;strong&gt;Solutions Architect&lt;/strong&gt; and &lt;strong&gt;Technical Lead&lt;/strong&gt;, designing enterprise platforms that integrate &lt;strong&gt;Dynamics CRM&lt;/strong&gt;, &lt;strong&gt;SAP&lt;/strong&gt;, &lt;strong&gt;Salesforce&lt;/strong&gt;, and &lt;strong&gt;ServiceNow&lt;/strong&gt; — with a projected $1M+ in annual operational savings.&lt;/p&gt;&#xA;    &lt;p&gt;I operate as a force multiplier: led technical standardization across 300+ engineers, designed &lt;strong&gt;Internal Developer Platforms&lt;/strong&gt; adopted by 70+ projects, and built cross-cutting influence in architecture decisions beyond my immediate team.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Great Code Starts With Amazing People</title>
-      <link>http://localhost:1313/memory-notes/vizir-great-code/</link>
+      <link>https://geiltonxavier.com.br/memory-notes/vizir-great-code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/memory-notes/vizir-great-code/</guid>
+      <guid>https://geiltonxavier.com.br/memory-notes/vizir-great-code/</guid>
       <description>A Vizir Software Studio notebook, a team, and one of the most important chapters of my career.</description>
     </item>
     <item>
       <title>Now</title>
-      <link>http://localhost:1313/now/</link>
+      <link>https://geiltonxavier.com.br/now/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/now/</guid>
-      <description>&lt;div class=&#34;now-page&#34;&gt;&#xA;  &lt;p class=&#34;now-kicker&#34;&gt;Updated August 2026&lt;/p&gt;&#xA;  &lt;p class=&#34;now-intro&#34;&gt;A snapshot of what I&#39;m building, learning, and trying to figure out.&lt;/p&gt;&#xA;  &lt;p&gt;A now page is an occasionally updated summary of what I&#39;m working on and what I&#39;m thinking about based on the original concept from &lt;a href=&#34;https://sive.rs/nowff&#34;&gt;Derek Sivers&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;  &lt;section&gt;&#xA;    &lt;h2&gt;At work&lt;/h2&gt;&#xA;&#xA;    &lt;p&gt;I&#39;m a Solutions Architect and hands-on technical lead at Siemens.&lt;/p&gt;&#xA;    &lt;img src=&#34;http://localhost:1313/img/siemens/siemens-digital-garden.png&#34; alt=&#34;Siemens digital garden&#34; loading=&#34;lazy&#34;&gt;&#xA;&#xA;    &lt;p&gt;Most days I move between architecture diagrams, .NET code, Azure infrastructure, APIs, identity systems, and the occasional production problem that suddenly becomes everyone&#39;s priority.&lt;/p&gt;</description>
+      <guid>https://geiltonxavier.com.br/now/</guid>
+      <description>&lt;div class=&#34;now-page&#34;&gt;&#xA;  &lt;p class=&#34;now-kicker&#34;&gt;Updated August 2026&lt;/p&gt;&#xA;  &lt;p class=&#34;now-intro&#34;&gt;A snapshot of what I&#39;m building, learning, and trying to figure out.&lt;/p&gt;&#xA;  &lt;p&gt;A now page is an occasionally updated summary of what I&#39;m working on and what I&#39;m thinking about based on the original concept from &lt;a href=&#34;https://sive.rs/nowff&#34;&gt;Derek Sivers&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;  &lt;section&gt;&#xA;    &lt;h2&gt;At work&lt;/h2&gt;&#xA;&#xA;    &lt;p&gt;I&#39;m a Solutions Architect and hands-on technical lead at Siemens.&lt;/p&gt;&#xA;    &lt;img src=&#34;https://geiltonxavier.com.br/img/siemens/siemens-digital-garden.png&#34; alt=&#34;Siemens digital garden&#34; loading=&#34;lazy&#34;&gt;&#xA;&#xA;    &lt;p&gt;Most days I move between architecture diagrams, .NET code, Azure infrastructure, APIs, identity systems, and the occasional production problem that suddenly becomes everyone&#39;s priority.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
