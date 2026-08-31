@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    If You Started Coding After the AI Boom, Read the 12-Factor App | Geilton Xavier
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/">
+  <meta property="og:site_name" content="Geilton Xavier">
+  <meta property="og:title" content="If You Started Coding After the AI Boom, Read the 12-Factor App">
+  <meta property="og:description" content="I didn’t write this for experienced software engineers.
+If you’ve spent years building and running production systems, you probably already know the 12-Factor App. Maybe you don’t remember all twelve factors by number, but most of the ideas will be familiar.
+This post is for people who started coding more recently, especially after ChatGPT, GitHub Copilot, Claude, Codex and similar tools made it ridiculously easy to generate working code.
+I love these tools. I use them a lot. They made creating software much easier, but understanding why a production system is built in a certain way is still something we have to learn.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-08-27T12:08:00+00:00">
+    <meta property="article:modified_time" content="2026-08-27T12:08:00+00:00">
+      <meta property="og:image" content="http://localhost:1313/img/gx-social-preview.png">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.2d0642f1f00c757d325b50b6bdb1d1e433f32ccbec769449c07a3e4c448c8548.css" media="all">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="auto">
+
+  <div class="content">
+    <header>
+      <div class="header">
+    
+    <h1 class="header-title">
+        <a href="/">Geilton Xavier</a>
+    </h1>
+
+    <div class="header-menu">
+        
+        
+        <p class="small">
+            <a href="/">/home</a>
+        </p>
+        
+
+        
+        <p class="small bold">
+            <a href="/posts/">/Posts</a>
+        </p>
+        
+        <p class="small ">
+            <a href="/memory-notes/">/Memory Notes</a>
+        </p>
+        
+        <p class="small ">
+            <a href="/now/">/Now</a>
+        </p>
+        
+        <p class="small ">
+            <a href="/about/">/About</a>
+        </p>
+        
+        <p class="small ">
+            <a href="/cv/">/CV</a>
+        </p>
+        
+
+           
+           
+           
+           
+           
+           
+           <p class="small language-switcher">
+               <a href="/pt/">PT</a>
+           </p>
+           
+           
+           
+    </div>
+    
+</div>
+
+    </header>
+
+    <main class="main" data-page-content tabindex="-1">
+      
+
+
+
+
+<div class="breadcrumbs"><a href="/">~</a><span class="breadcrumbs-separator">/</span><a href="/posts/">Posts</a><span class="breadcrumbs-separator">/</span>
+        <a href="/posts/if-you-started-coding-after-the-ai-boom-read-the-12-factor-app/">If You Started Coding After the AI Boom, Read the 12-Factor App</a></div>
+
+
+<div >
+  <article>
+    <header class="single-intro-container">
+        
+        <h1 class="single-title">If You Started Coding After the AI Boom, Read the 12-Factor App</h1>
+        
+        <div class="single-subsummary">
+          
+          <div>
+            
+            <p class="single-date">
+              <time datetime="2026-08-27T12:08:00&#43;00:00">27 Aug 2026</time>
+            </p>
+          </div>
+        </div>
+        
+    </header>
+    
+    <div class="single-content">
+      <p>I didn&rsquo;t write this for experienced software engineers.</p>
+<p>If you&rsquo;ve spent years building and running production systems, you probably already know the <a href="https://12factor.net/"><strong>12-Factor App</strong></a>. Maybe you don&rsquo;t remember all twelve factors by number, but most of the ideas will be familiar.</p>
+<p>This post is for people who started coding more recently, especially after ChatGPT, GitHub Copilot, Claude, Codex and similar tools made it ridiculously easy to generate working code.</p>
+<p>I love these tools. I use them a lot. They made creating software much easier, but understanding why a production system is built in a certain way is still something we have to learn.</p>
+<p>There is another side to this that I think we are still learning. AI gives us leverage, and leverage works in both directions. If you understand the fundamentals, AI can multiply what you are able to build. If you don&rsquo;t, it can also help you produce a much larger amount of bad decisions in a very short time.</p>
+<p>A junior developer used to be able to write a few hundred questionable lines of code in an afternoon. Now the same person can generate an API, a worker, Terraform, Docker, CI/CD, queues and Kubernetes manifests before lunch. The problem is not that AI always generates bad code. The problem is that it can scale whatever engineering judgement you bring to it, good or bad.</p>
+<h2 class="heading" id="making-something-work-is-surprisingly-easy-now">
+  Making something work is surprisingly easy now
+  <a class="anchor" href="#making-something-work-is-surprisingly-easy-now">#</a>
+</h2>
+<p>You can ask an LLM to create an API in Python with PostgreSQL, Redis, Docker and authentication. A few minutes later, something is running. That is honestly amazing.</p>
+<p>Then the questions begin.</p>
+<p>Where should the database password live? What happens when you deploy the application three times? Can you run five instances of it? What happens to the local files when one container disappears? Can you replace PostgreSQL without changing half of the application?</p>
+<p>And there are more. What happens when the process receives a shutdown signal? Where do the logs go? Why does production behave differently from your laptop? How do you reproduce the exact version that is running right now?</p>
+<p>At this point, generating more code is no longer the difficult part. You are dealing with engineering, and this is why I think people starting in software today should read about the 12-Factor App.</p>
+<h2 class="heading" id="the-funny-part-is-that-this-thing-is-old">
+  The funny part is that this thing is old
+  <a class="anchor" href="#the-funny-part-is-that-this-thing-is-old">#</a>
+</h2>
+<p>The <a href="https://12factor.net/">12-Factor App</a> existed long before the current AI boom. It came before AI agents generating entire applications and before &ldquo;vibe coding&rdquo; became a thing.</p>
+<p>Still, the problems it tries to prevent feel very current. AI helps us create things fast, and working fast makes it easy to accumulate decisions we never stopped to think about.</p>
+<p>The application works. Great. But the configuration is hardcoded. Secrets are sitting in configuration files. Dependencies are implicit. Development and production barely look like the same system. Important state lives on the local disk. Logs go into random files. Deployment means copying something somewhere and restarting it. Background processes do not shut down correctly.</p>
+<p>None of this looks too serious on the first day. Months later, someone asks why the application is so painful to operate. The answer usually started much earlier.</p>
+<h2 class="heading" id="1-codebase-one-codebase-many-deployments">
+  1. Codebase: one codebase, many deployments
+  <a class="anchor" href="#1-codebase-one-codebase-many-deployments">#</a>
+</h2>
+<p>The first factor sounds almost boring: one codebase tracked in version control, with many deployments.</p>
+<p>Development, QA and production should be deployments of the same application. They should not slowly become three different applications that happen to share some files.</p>
+<p>This is worth saying when AI is generating the code because it is very easy to end up with <code>app-final.py</code>, <code>app-final-v2.py</code>, <code>app-prod.py</code>, <code>app-prod-working.py</code> and <code>app-prod-working-final.py</code>.</p>
+<p>Please don&rsquo;t do that. Git exists for a reason. The codebase represents the application. The environment tells you where that application is running. Those are separate concerns.</p>
+<h2 class="heading" id="2-dependencies-be-explicit">
+  2. Dependencies: be explicit
+  <a class="anchor" href="#2-dependencies-be-explicit">#</a>
+</h2>
+<p>Does the application depend on something? Declare it.</p>
+<p>Do not assume the machine already has a library installed. Do not assume a package will magically be there. And do not build a deployment around some random binary that somebody installed manually on the server six months ago.</p>
+<p>When I clone a repository, I should be able to see what the application needs. That may be in <code>requirements.txt</code>, <code>pyproject.toml</code>, <code>package.json</code>, <code>go.mod</code> or <code>.csproj</code>. Use whatever makes sense for the ecosystem, but do not leave dependencies inside someone&rsquo;s head or laptop.</p>
+<p>It sounds obvious until you inherit an application whose deployment documentation says, &ldquo;install these three packages manually on the server.&rdquo;</p>
+<h2 class="heading" id="3-config-stop-putting-secrets-in-code">
+  3. Config: stop putting secrets in code
+  <a class="anchor" href="#3-config-stop-putting-secrets-in-code">#</a>
+</h2>
+<p>This may be the most important factor for people generating applications with AI.</p>
+<p>Configuration belongs in the environment. Values such as <code>DATABASE_URL</code>, <code>API_KEY</code>, <code>SERVICE_ENDPOINT</code> and <code>CLIENT_ID</code> should not force you to change the source code for each environment. Dev may use one database, QA another and production another. The application is still the same.</p>
+<p>Also, <code>password = &quot;SuperSecret123&quot;</code> is not configuration management. It is a future incident.</p>
+<p>AI often generates examples like this because hardcoded values make a demo easier to understand. Our job is to remember that a demo and a production system have different requirements.</p>
+<h2 class="heading" id="4-backing-services-databases-are-resources">
+  4. Backing services: databases are resources
+  <a class="anchor" href="#4-backing-services-databases-are-resources">#</a>
+</h2>
+<p>A database, cache, message queue, object storage, email provider or search engine is a backing service. The application should treat it as an attached resource.</p>
+<p>Suppose the application uses PostgreSQL and tomorrow I give you another PostgreSQL instance with a different connection string. Ideally, you change the resource instead of rewriting the application.</p>
+<p>This happens all the time on cloud platforms. Databases and Redis instances are replaced. Storage accounts, queues and endpoints change. The application should not have an existential crisis every time one of them does.</p>
+<h2 class="heading" id="5-build-release-run-these-are-different-things">
+  5. Build, release, run: these are different things
+  <a class="anchor" href="#5-build-release-run-these-are-different-things">#</a>
+</h2>
+<p>This factor is easy to ignore while deployment is simple. Once deployment becomes painful, it suddenly makes a lot more sense.</p>
+<p>Building the software is one step. Creating a release is another. Running that release is another. When everything is mixed together, deployment turns into magic, and magic stops being fun when production breaks.</p>
+<p>A healthy pipeline has a traceable flow. Code becomes a build, the build becomes an artifact, the artifact becomes a release, and the release runs.</p>
+<p>What matters here is reproducibility. If version 1.4.2 is running in production, I want to know exactly what version 1.4.2 contains. I do not want the answer to be, &ldquo;I think João changed something directly on the server Tuesday.&rdquo; That sentence should terrify you.</p>
+<h2 class="heading" id="6-processes-assume-your-application-can-disappear">
+  6. Processes: assume your application can disappear
+  <a class="anchor" href="#6-processes-assume-your-application-can-disappear">#</a>
+</h2>
+<p>Application processes should be stateless. Important information should not depend on the local memory or filesystem of one specific process surviving forever.</p>
+<p>A request may arrive at instance A. The next one may go to instance C. Instance B may disappear completely, and a new instance D may show up.</p>
+<p>That is normal with containers, Kubernetes, serverless platforms and autoscaling. Important state belongs in something built to hold state, such as a database, cache, storage service or another external resource.</p>
+<p>Your process is temporary. Design it with that in mind.</p>
+<h2 class="heading" id="7-port-binding">
+  7. Port binding
+  <a class="anchor" href="#7-port-binding">#</a>
+</h2>
+<p>Traditionally, port binding means the application exposes its service through a port, for example <code>http://localhost:8080</code>.</p>
+<p>The implementation may look different with containers, Kubernetes, Azure Functions, AWS Lambda or another platform. The useful mental model is still the same: the application has a clear interface with the world around it and does not need mysterious configuration inside a giant application server just to exist.</p>
+<h2 class="heading" id="8-concurrency-scale-by-adding-processes">
+  8. Concurrency: scale by adding processes
+  <a class="anchor" href="#8-concurrency-scale-by-adding-processes">#</a>
+</h2>
+<p>Imagine the API is overloaded and you want to turn one instance into five. That is horizontal scaling.</p>
+<p>It works much better when the earlier factors are already in place. If the application depends heavily on local state, adding instances becomes complicated very quickly. If the processes are independent, scaling is much easier.</p>
+<p>These architecture principles are connected. One factor often makes the next one possible.</p>
+<h2 class="heading" id="9-disposability-start-and-die-gracefully">
+  9. Disposability: start and die gracefully
+  <a class="anchor" href="#9-disposability-start-and-die-gracefully">#</a>
+</h2>
+<p>Cloud applications die. Containers die. Virtual machines restart. Deployments replace processes, autoscaling removes instances and networks fail. This is normal.</p>
+<p>The application should start quickly and shut down properly. When a process receives a shutdown signal, it should finish whatever can be finished safely, stop accepting new work and exit cleanly.</p>
+<p>The alternative is a process still trying to handle 400 messages while Kubernetes wants it dead. Graceful shutdown matters a lot when you work with queues, background jobs and distributed systems.</p>
+<h2 class="heading" id="10-devprod-parity">
+  10. Dev/prod parity
+  <a class="anchor" href="#10-devprod-parity">#</a>
+</h2>
+<p>One of the oldest jokes in software is still, &ldquo;it works on my machine.&rdquo;</p>
+<p>Development, staging and production will never be completely identical. But the bigger the gap between them, the more surprises you create.</p>
+<p>If development uses SQLite, QA uses PostgreSQL 15 and production uses an ancient PostgreSQL instance that nobody wants to touch, you are asking for interesting evenings.</p>
+<p>Keep the environments conceptually close. Containers helped with this. Infrastructure as code helped too, as did CI/CD. The principle is older than all of them.</p>
+<h2 class="heading" id="11-logs-streams-of-events">
+  11. Logs: streams of events
+  <a class="anchor" href="#11-logs-streams-of-events">#</a>
+</h2>
+<p>Please do not design the application&rsquo;s logging around a file called <code>C:\MyApp\logs\production-final-2.txt</code>.</p>
+<p>The application produces events. Another system can collect them, whether that is Application Insights, CloudWatch, Datadog, Grafana Loki, Splunk, ELK or something else that fits the environment.</p>
+<p>The application does not need to know where someone will search the logs later. It needs to produce useful, structured information and let the platform handle collection and storage.</p>
+<p>This becomes especially important when you have several instances. Connecting through SSH to five containers and hunting for a text file is not observability. It is archaeology.</p>
+<h2 class="heading" id="12-admin-processes">
+  12. Admin processes
+  <a class="anchor" href="#12-admin-processes">#</a>
+</h2>
+<p>Sometimes you need to run a task once: a database migration, data repair, user import, cleanup, reindexing job or backfill.</p>
+<p>These administrative tasks should use the same code, configuration and environment assumptions as the application. They should not depend on a mysterious script sitting on someone&rsquo;s desktop called <code>fix-production-real-final-v3.py</code>.</p>
+<p>I have seen enough versions of this pattern to know how it ends. Nobody deletes the script. Nobody understands the script. Somehow, the company depends on it. Usually, everyone is afraid to touch it.</p>
+<h2 class="heading" id="why-should-someone-starting-today-care-about-this">
+  Why should someone starting today care about this?
+  <a class="anchor" href="#why-should-someone-starting-today-care-about-this">#</a>
+</h2>
+<p>AI made code much faster and cheaper to produce. It did not stop databases from failing, networks from failing or processes from crashing.</p>
+<p>Deployments still need to be reproducible. Credentials still leak. Applications still need to scale. Logs still need to be searchable. Configuration still changes between environments. Distributed systems are still distributed systems.</p>
+<p>An LLM can generate a controller, service, repository, Dockerfile, Terraform, pipeline, database, queue and cache in a ridiculously short amount of time. That is useful, but those files are only the beginning. You still need to understand why the system has that structure.</p>
+<p>This is where old, foundational material becomes useful again.</p>
+<h2 class="heading" id="what-i-would-add-if-this-was-written-today">
+  What I would add if this was written today
+  <a class="anchor" href="#what-i-would-add-if-this-was-written-today">#</a>
+</h2>
+<p>I would not try to turn the 12-Factor App into a 17-Factor App. The original list is useful partly because it is small and easy to remember. But there are a few things I would put next to it if I were explaining production systems to someone starting today.</p>
+<h3 class="heading" id="observability-is-more-than-logs">
+  Observability is more than logs
+  <a class="anchor" href="#observability-is-more-than-logs">#</a>
+</h3>
+<p>Logs are only one part of observability. In production, you will usually also care about metrics and traces. A request may cross an API, a queue, three services and a database before it fails. A log entry from one process may not tell you the whole story.</p>
+<p>This is where correlation IDs, distributed tracing and metrics start becoming useful.</p>
+<h3 class="heading" id="idempotency">
+  Idempotency
+  <a class="anchor" href="#idempotency">#</a>
+</h3>
+<p>This one becomes very important as soon as queues, retries and distributed systems enter the picture.</p>
+<p>If a message is delivered twice, does your system create two users? Charge someone twice? Send the same email five times? Networks time out. Queues redeliver messages. Clients retry requests after the server may already have completed them.</p>
+<p>Designing operations so they can safely happen more than once saves a lot of pain.</p>
+<h3 class="heading" id="identity-and-secrets">
+  Identity and secrets
+  <a class="anchor" href="#identity-and-secrets">#</a>
+</h3>
+<p>Moving a password out of source code and into an environment variable is better, but it is not the end of the security discussion.</p>
+<p>When the platform supports it, prefer things such as managed identities, workload identities, short-lived credentials and secret stores. A <code>.env</code> file is useful. It is not the final form of security.</p>
+<h3 class="heading" id="infrastructure-should-be-reproducible-too">
+  Infrastructure should be reproducible too
+  <a class="anchor" href="#infrastructure-should-be-reproducible-too">#</a>
+</h3>
+<p>If the application is perfectly versioned but production depends on somebody clicking through twenty screens in a cloud portal, part of the system still exists only in someone&rsquo;s head.</p>
+<p>Tools such as Terraform, Bicep and CloudFormation bring the same idea of reproducibility to infrastructure. I want to know not only which application version is running, but also how the environment around it was created.</p>
+<h3 class="heading" id="partial-failure-is-normal">
+  Partial failure is normal
+  <a class="anchor" href="#partial-failure-is-normal">#</a>
+</h3>
+<p>Distributed systems also force you to accept that failure is not always binary. The API may be healthy while Redis is down. The database may be healthy while the network between the application and the database is not. A dependency may be responding, just much more slowly than usual.</p>
+<p>Timeouts, retries, backoff and circuit breakers make much more sense once you accept that parts of a system can fail independently.</p>
+<p>None of these ideas make the original twelve factors obsolete. If anything, they sit naturally next to them.</p>
+<h2 class="heading" id="dont-treat-the-12-factors-like-religion">
+  Don&rsquo;t treat the 12 factors like religion
+  <a class="anchor" href="#dont-treat-the-12-factors-like-religion">#</a>
+</h2>
+<p>The 12-Factor App is not a checklist from God.</p>
+<p>Technology changed. Containers became mainstream. Kubernetes happened. Serverless happened. Managed cloud services exploded, and platform engineering became a discipline. Some factors need a modern interpretation, which is fine.</p>
+<p>The useful part is the instinct behind the list. A hardcoded password should make you uncomfortable. So should manual changes in production, critical state stored locally, completely different dependencies in each environment, or a scaling plan that requires rewriting half the system.</p>
+<p>That instinct is worth much more than memorizing twelve definitions.</p>
+<h2 class="heading" id="ai-can-write-the-code-you-still-need-to-understand-the-system">
+  AI can write the code. You still need to understand the system
+  <a class="anchor" href="#ai-can-write-the-code-you-still-need-to-understand-the-system">#</a>
+</h2>
+<p>AI coding tools are incredible. Use them. I do. Just do not hand your engineering judgement over to them.</p>
+<p>Ask AI to generate Dockerfiles, write Terraform, create APIs, refactor code and build pipelines. Then look at what it generated and ask a few uncomfortable questions.</p>
+<p>Why is this here? Where does the configuration live? Where does the state live? What happens if this process dies? Can I run ten instances? Can I reproduce this deployment? Can I replace this dependency? Can I understand what happened in production?</p>
+<p>Being able to answer those questions means you understand more than the generated files. You are starting to understand the system.</p>
+<p>For someone who started coding during the AI boom, the 12-Factor App is still one of the simplest places to begin building that mindset.</p>
+<p>Read it. It is short. You will probably spend the rest of your career rediscovering why those boring little principles matter.</p>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+  
+
+<div class="single-pagination">
+    <hr />
+
+    <div class="flexnowrap">
+
+        <div class="single-pagination-prev">
+            
+            <div class="single-pagination-container-prev">
+                <div class="single-pagination-text">←</div>
+                <div class="single-pagination-text">
+                    <a href="/posts/diligence-as-the-engineering-of-anticipation/">
+                        Diligence as the Engineering of Anticipation
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="single-pagination-next">
+            
+        </div>
+
+    </div>
+
+    <hr />
+</div>
+
+
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  
+  
+
+
+
+
+
+    
+
+
+   
+    <section class="global-radio" data-home-radio
+	data-play-label="Play indie radio"
+	data-pause-label="Pause indie radio"
+	data-unavailable-label="The radio is temporarily unavailable."
+	data-copy-label="Copy track"
+	data-copied-label="Track copied"
+	aria-label="Indie Radio">
+	<button class="radio-toggle" type="button" data-radio-toggle
+		aria-label="Play indie radio" aria-pressed="false">
+		<span class="radio-toggle-icon" aria-hidden="true"></span>
+	</button>
+	<div class="global-radio-info">
+		<span class="global-radio-heading">
+			<span class="radio-label">INDIE RADIO</span>
+			<span class="radio-wave" aria-hidden="true"><i></i><i></i><i></i></span>
+		</span>
+		<span class="radio-state" data-radio-state>Stopped</span>
+		<button class="radio-track" type="button" data-radio-copy data-copy-label="Copy track" title="Copy track" disabled>
+			<span data-radio-track aria-live="polite">Loading track...</span>
+			<span class="radio-copy-feedback" data-radio-copy-feedback role="status" aria-live="polite"></span>
+		</button>
+	</div>
+	<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
+	<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
+</section><script defer src="/js/home-radio.d18efe3b35652b175cbdc810ca29adf4c5ec51689cfc2ea3e0c75e6598014ce5.js" integrity="sha256-0Y7&#43;OzVlKxdcvcgQyimt9MXsUWic/C6j4MdeZZgBTOU=" crossorigin="anonymous"></script>
+
+
+
+  <footer>
+    
+
+
+  </footer>
+
+  
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>
