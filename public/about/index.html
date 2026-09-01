@@ -57,7 +57,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.d5f2e56d57ff2800611d8f3dbe5f9bfec4a5f83951a4e15cfbc3acdf6e40a9cb.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.8a8bef3e166c86306684b7c13e066b66e5e3d0cf44e9a15aaef79218c7f0286a.css" media="all">
 
 
 
@@ -82,11 +82,22 @@
 
 
 
-<body class="auto page-about">
+<body class="light page-about">
 
   <div class="content">
     <header>
-      <div class="header">
+      <script>
+    (function () {
+        try {
+            var t = localStorage.getItem("color-theme");
+            if (t === "dark" || t === "light") {
+                document.body.classList.remove("auto", "light", "dark");
+                document.body.classList.add(t);
+            }
+        } catch (e) {}
+    })();
+</script>
+<div class="header">
     
     <h1 class="header-title">
         <a href="/">Geilton Xavier</a>
@@ -128,6 +139,12 @@
             <p class="small header-local-time">
                 <time class="header-time" data-local-time aria-live="polite"></time>
                 <span class="header-weather" data-local-weather aria-live="polite"></span>
+            </p>
+
+            <p class="small theme-toggle-wrap">
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark theme" title="Switch to dark theme">
+                    <span data-theme-toggle-icon aria-hidden="true">☾</span>
+                </button>
             </p>
 
             
@@ -243,7 +260,7 @@
 		<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
 		<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
 	</section>
-</div><script defer src="/js/home-radio.34719609968bf7af6b3dc1ad3297c7bdc95efb0dcc9c72b404891d1c5cfd2363.js" integrity="sha256-NHGWCZaL969rPcGtMpfHvcle&#43;w3MnHK0BIkdHFz9I2M=" crossorigin="anonymous"></script><script defer src="/js/pomodoro.f90332ef3335fcfbd21dca54451042a89e96d66b2391c05822d438e07d371a8c.js" integrity="sha256-&#43;QMy7zM1/PvSHcpURRBCqJ6W1msjkcBYItQ44H03Gow=" crossorigin="anonymous"></script><script defer src="/js/local-time.5afaef9e82f51824dae79a94dd16e87d4c6e13f481c19406dda553d47c089236.js" integrity="sha256-WvrvnoL1GCTa55qU3RbofUxuE/SBwZQG3aVT1HwIkjY=" crossorigin="anonymous"></script>
+</div><script defer src="/js/home-radio.34719609968bf7af6b3dc1ad3297c7bdc95efb0dcc9c72b404891d1c5cfd2363.js" integrity="sha256-NHGWCZaL969rPcGtMpfHvcle&#43;w3MnHK0BIkdHFz9I2M=" crossorigin="anonymous"></script><script defer src="/js/pomodoro.f90332ef3335fcfbd21dca54451042a89e96d66b2391c05822d438e07d371a8c.js" integrity="sha256-&#43;QMy7zM1/PvSHcpURRBCqJ6W1msjkcBYItQ44H03Gow=" crossorigin="anonymous"></script><script defer src="/js/local-time.6bf01330998c73c4283b708497a78b11fe0129e4ce1b0a01049716f65aa2836b.js" integrity="sha256-a/ATMJmMc8QoO3CEl6eLEf4BKeTOGwoBBJcW9lqig2s=" crossorigin="anonymous"></script><script defer src="/js/theme-toggle.920d1ce04fbdc5f11cac6a60059a49c933af11453961cb11e9b69cf793da972f.js" integrity="sha256-kg0c4E&#43;9xfEcrGpgBZpJyTOvEUU5YcsR6bac95Paly8=" crossorigin="anonymous"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const wraps = document.querySelectorAll('.home-name-wrap');
@@ -276,6 +293,28 @@
 
 
   <footer>
+    
+
+    
+    
+
+
+
+
+
+    
+
+
+
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
     
 
 

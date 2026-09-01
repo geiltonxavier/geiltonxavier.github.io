@@ -1,3 +1,14 @@
+<script>
+    (function () {
+        try {
+            var t = localStorage.getItem("color-theme");
+            if (t === "dark" || t === "light") {
+                document.body.classList.remove("auto", "light", "dark");
+                document.body.classList.add(t);
+            }
+        } catch (e) {}
+    })();
+</script>
 <div class="header">
     {{ if or (not (.Param "hideHeader")) .IsHome }}
     <h1 class="header-title">
@@ -24,6 +35,12 @@
             <p class="small header-local-time">
                 <time class="header-time" data-local-time aria-live="polite"></time>
                 <span class="header-weather" data-local-weather aria-live="polite"></span>
+            </p>
+
+            <p class="small theme-toggle-wrap">
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark theme" title="Switch to dark theme">
+                    <span data-theme-toggle-icon aria-hidden="true">☾</span>
+                </button>
             </p>
 
             {{ if .Translations }}

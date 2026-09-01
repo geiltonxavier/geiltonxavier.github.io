@@ -85,7 +85,7 @@ tag = 'tags'
 description = "Geilton Xavier is a Software Engineer and Solutions Architect who brings order to fragmented, multi-team systems."
 
 # Appearance settings
-theme = 'auto'
+theme = 'light'
 colorPalette = 'default'
 hideHeader = false
 
@@ -98,7 +98,7 @@ listDateFormat = '02 Jan 2006'
 listSummaryLength = 220
 
 # Footer
-showFooter = false
+showFooter = true
 
 # Breadcrumbs
 [params.breadcrumbs]

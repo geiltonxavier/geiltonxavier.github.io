@@ -1417,3 +1417,100 @@ p + p {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* Minimal textual theme toggle in the header meta row. */
+.theme-toggle {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--content-secondary);
+  font-size: 0.82rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: color 120ms ease, opacity 120ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--content-primary);
+  opacity: 1;
+}
+
+/* Dark mode: this site was heavily customized with hardcoded light-theme ink
+   (#1f1f1c / rgba(31, 31, 28, x)) and paper (#efefeb) colors that do not react
+   to the theme. These overrides re-map only those hardcoded values so dark
+   mode stays readable, without touching the existing light-theme rules. */
+.dark a,
+.dark a:hover,
+.dark a:focus-visible {
+  color: #ebebed;
+}
+
+.dark a::after {
+  background: rgba(235, 235, 237, 0.34);
+}
+
+.dark a:hover::after,
+.dark a:focus-visible::after {
+  background: rgba(235, 235, 237, 0.72);
+}
+
+.dark a[data-tooltip]::before {
+  background: rgba(235, 235, 237, 0.96);
+  color: #121214;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.dark .header-time {
+  color: rgba(235, 235, 237, 0.8);
+}
+
+.dark .header-weather {
+  color: rgba(235, 235, 237, 0.68);
+}
+
+.dark .single-content .about-bio {
+  background: transparent;
+}
+
+.dark .single-content .about-bio,
+.dark .single-content .about-bio p,
+.dark .single-content .about-bio strong,
+.dark .single-content .about-bio a,
+.dark .single-content .about-bio a:hover,
+.dark .intro .home-bio,
+.dark .intro .home-bio p,
+.dark .intro .home-bio strong,
+.dark .intro .home-bio a,
+.dark .intro .home-bio a:hover,
+.dark .home-bio .home-name,
+.dark .home-bio p {
+  color: #ebebed;
+}
+
+.dark .home-bio .home-name::after {
+  background: rgba(235, 235, 237, 0.35);
+}
+
+/* Utility widget (pomodoro + radio) shares ink tokens, so remap the tokens. */
+.dark .utility-stack {
+  --ctl-ink: rgba(235, 235, 237, 0.6);
+  --ctl-ink-soft: rgba(235, 235, 237, 0.42);
+  --ctl-ink-strong: rgba(235, 235, 237, 0.92);
+}
+
+.dark .pomodoro-time {
+  color: rgba(235, 235, 237, 0.7);
+}
+
+.dark .global-radio .radio-track {
+  color: rgba(235, 235, 237, 0.72);
+}
+
+.dark .pomodoro-toggle,
+.dark .pomodoro-mode-toggle,
+.dark .global-radio .radio-toggle {
+  color: rgba(235, 235, 237, 0.72);
+}
+
