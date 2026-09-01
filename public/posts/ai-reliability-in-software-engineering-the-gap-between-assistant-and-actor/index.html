@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en-US"
   dir="ltr">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -43,9 +43,9 @@
   <meta property="og:title" content="AI Reliability in Software Engineering: The Gap Between Assistant and Actor">
   <meta property="og:description" content="When you use AI as an assistant, a wrong answer is annoying. When AI is an actor in your production system, a wrong answer has consequences.
 That distinction matters more than most architectural discussions about AI acknowledge.
-The Two Modes of AI in Engineering Systems # There are two fundamentally different ways AI ends up in a software system.
+The Two Modes of AI in Engineering Systems#There are two fundamentally different ways AI ends up in a software system.
 The first is AI as assistant: the model helps a human think, draft, or decide. The human reviews the output and acts. The AI has no agency. Errors are filtered before they reach production.">
-  <meta property="og:locale" content="en">
+  <meta property="og:locale" content="en_US">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-05-15T00:00:00+00:00">
@@ -68,7 +68,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.7c1de58542f21386ffb1687500d59174825661ec94546825804519d60a0a756a.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.d5f2e56d57ff2800611d8f3dbe5f9bfec4a5f83951a4e15cfbc3acdf6e40a9cb.css" media="all">
 
 
 
@@ -286,7 +286,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 <p><strong>Strict system prompt boundaries.</strong> The system prompt defines not just what the agent can do, but what it is. A narrow, explicit identity reduces the surface area for drift. Instead of &ldquo;you are a helpful assistant for user management,&rdquo; the prompt specifies: you are an operator of this specific system, you have access to these specific operations, you respond only to requests within this scope, and you treat anything outside this scope as an invalid input.</p>
 <p>This does not eliminate prompt injection, but it raises the effort required significantly. The model&rsquo;s behavior in ambiguous cases trends toward the boundaries defined at system level.</p>
 <p>In practice, a restrictive system prompt needs three things to be effective: explicit negative identity, few-shot rejection examples, and programmatic post-response validation. The system prompt alone is not enough , models are trained to be helpful and will find ways to respond to ambiguous questions. The few-shot examples teach the rejection pattern. The programmatic validation is the only layer that does not depend on the model behaving correctly.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-style:italic">// Layer 1: Explicit negative identity</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-style:italic">// Layer 1: Explicit negative identity</span>
 </span></span><span style="display:flex;"><span><span style="">var</span> strictPrompt = <span style="font-style:italic">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span>    You are an <span style="font-weight:bold">operator</span> of the UserLifecycle system.
 </span></span><span style="display:flex;"><span>    You are NOT a general-purpose assistant.
@@ -315,7 +315,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 </span></span><span style="display:flex;"><span>    User: <span style="font-style:italic">&#34;Show me users who haven&#39;t logged in for 90 days.&#34;</span>
 </span></span><span style="display:flex;"><span>    Assistant: [calls ListInactiveUsers tool with threshold=90]
 </span></span><span style="display:flex;"><span>    <span style="font-style:italic">&#34;&#34;&#34;;
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-style:italic">// Layer 3: Programmatic post-response validation</span>
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-style:italic">// Layer 3: Programmatic post-response validation</span>
 </span></span><span style="display:flex;"><span><span style="font-style:italic">// This runs after the model responds, before the user sees anything.</span>
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">public</span> <span style="font-weight:bold">class</span> <span style="font-weight:bold">ScopeValidator</span>
 </span></span><span style="display:flex;"><span>{
@@ -345,7 +345,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><strong>Scope enforcement at the tool layer, not just the prompt layer.</strong> The agent has access to tools, functions that execute real operations. Those tools enforce their own preconditions independently of whatever reasoning the model used to call them. A license removal tool requires a verified user ID, a system ID, and a confirmation token generated by the application, not by the model. The model cannot generate a valid token by reasoning about it. This decouples confirmation from the agent&rsquo;s judgment about whether confirmation happened.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-weight:bold">public</span> <span style="font-weight:bold">class</span> <span style="font-weight:bold">LicenseRemovalTool</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-weight:bold">public</span> <span style="font-weight:bold">class</span> <span style="font-weight:bold">LicenseRemovalTool</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="font-weight:bold">private</span> <span style="font-weight:bold">readonly</span> IConfirmationTokenService _tokenService;
 </span></span><span style="display:flex;"><span>    <span style="font-weight:bold">private</span> <span style="font-weight:bold">readonly</span> ILicenseRepository _licenseRepository;
@@ -379,7 +379,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p><strong>Context anchoring.</strong> Every agent turn includes a structured preamble that restates the operational context: current user, current session scope, active system. This makes it harder for injected instructions to redirect the agent, because the model&rsquo;s context window is already grounded in the application&rsquo;s state rather than starting from a blank slate.</p>
 <p><strong>Behavioral monitoring for out-of-scope responses.</strong> Log what the agent says, not just what it does. If the agent starts answering questions unrelated to the system&rsquo;s domain, that is a signal worth catching before it becomes an incident. Monitoring the content of responses, not just the success or failure of tool calls, gives you an earlier detection layer.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-weight:bold">public</span> <span style="font-weight:bold">class</span> <span style="font-weight:bold">AgentResponseMonitor</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="font-weight:bold">public</span> <span style="font-weight:bold">class</span> <span style="font-weight:bold">AgentResponseMonitor</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="font-weight:bold">private</span> <span style="font-weight:bold">static</span> <span style="font-weight:bold">readonly</span> <span style="">string</span>[] OutOfScopeSignals =
 </span></span><span style="display:flex;"><span>    [
@@ -528,7 +528,7 @@ The first is AI as assistant: the model helps a human think, draft, or decide. T
 		<audio data-radio-audio preload="none" src="https://ice1.somafm.com/indiepop-128-mp3"></audio>
 		<p class="radio-error" data-radio-error role="status" aria-live="polite" hidden></p>
 	</section>
-</div><script defer src="/js/home-radio.6e92d8924b62b06f580a97f012403bbdb2a6c7e51738015e75d1936e9e1525b1.js" integrity="sha256-bpLYkktisG9YCpfwEkA7vbKmx&#43;UXOAFeddGTbp4VJbE=" crossorigin="anonymous"></script><script defer src="/js/pomodoro.c7bfba9f09c0312f13a10171a13e340d628cae5baac79299b223f6ec6d3d4551.js" integrity="sha256-x7&#43;6nwnAMS8ToQFxoT40DWKMrluqx5KZsiP27G09RVE=" crossorigin="anonymous"></script><script defer src="/js/local-time.3e87510a82ccda12b6f5a2d6ad7ed7e4b4a4a068240e8f8a700533abff513143.js" integrity="sha256-PodRCoLM2hK29aLWrX7X5LSkoGgkDo&#43;KcAUzq/9RMUM=" crossorigin="anonymous"></script>
+</div><script defer src="/js/home-radio.34719609968bf7af6b3dc1ad3297c7bdc95efb0dcc9c72b404891d1c5cfd2363.js" integrity="sha256-NHGWCZaL969rPcGtMpfHvcle&#43;w3MnHK0BIkdHFz9I2M=" crossorigin="anonymous"></script><script defer src="/js/pomodoro.f90332ef3335fcfbd21dca54451042a89e96d66b2391c05822d438e07d371a8c.js" integrity="sha256-&#43;QMy7zM1/PvSHcpURRBCqJ6W1msjkcBYItQ44H03Gow=" crossorigin="anonymous"></script><script defer src="/js/local-time.5afaef9e82f51824dae79a94dd16e87d4c6e13f481c19406dda553d47c089236.js" integrity="sha256-WvrvnoL1GCTa55qU3RbofUxuE/SBwZQG3aVT1HwIkjY=" crossorigin="anonymous"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const wraps = document.querySelectorAll('.home-name-wrap');
