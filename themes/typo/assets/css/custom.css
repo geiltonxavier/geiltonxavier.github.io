@@ -1437,6 +1437,24 @@ p + p {
   opacity: 1;
 }
 
+/* Minimal textual "IP" copy utility, matching the header meta items. */
+.copy-ip {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  transition: color 120ms ease, opacity 120ms ease;
+}
+
+.copy-ip:hover,
+.copy-ip:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Dark mode: this site was heavily customized with hardcoded light-theme ink
    (#1f1f1c / rgba(31, 31, 28, x)) and paper (#efefeb) colors that do not react
    to the theme. These overrides re-map only those hardcoded values so dark

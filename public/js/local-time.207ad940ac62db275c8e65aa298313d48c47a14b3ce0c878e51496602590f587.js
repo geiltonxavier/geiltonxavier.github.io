@@ -63,12 +63,12 @@
         ipNode.dataset.bound = "true";
         ipNode.hidden = false;
 
-        const idleLabel = ipNode.dataset.label || "IP";
-        const copiedLabel = ipNode.dataset.copiedLabel || "✓";
-        const iconNode = ipNode.querySelector("[data-copy-ip-icon]") || ipNode;
-        iconNode.textContent = idleLabel;
-        ipNode.setAttribute("aria-label", "Copy IP address");
-        ipNode.setAttribute("title", "Copy IP address");
+        const idleLabel = ipNode.dataset.label || "Copy IP";
+        const copiedLabel = ipNode.dataset.copiedLabel || "Copied";
+        const labelNode = ipNode.querySelector("[data-copy-ip-label]") || ipNode;
+        labelNode.textContent = idleLabel;
+        ipNode.setAttribute("aria-label", idleLabel + ": " + ip);
+        ipNode.setAttribute("title", ip);
 
         ipNode.addEventListener("click", async () => {
           try {
@@ -85,10 +85,10 @@
             fallback.remove();
           }
 
-          iconNode.textContent = copiedLabel;
+          labelNode.textContent = copiedLabel;
           window.setTimeout(() => {
-            iconNode.textContent = idleLabel;
-          }, 1000);
+            labelNode.textContent = idleLabel;
+          }, 1600);
         });
       };
 

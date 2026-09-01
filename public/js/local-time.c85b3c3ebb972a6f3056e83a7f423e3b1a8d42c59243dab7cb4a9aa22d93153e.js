@@ -56,55 +56,21 @@
       timeNode.textContent = formatLocalTime(now);
     };
     const fetchLocalTemperature = async () => {
-      const ipNode = document.querySelector("[data-copy-ip]");
-
-      const setupCopyIp = (ip) => {
-        if (!ipNode || !ip || ipNode.dataset.bound === "true") return;
-        ipNode.dataset.bound = "true";
-        ipNode.hidden = false;
-
-        const idleLabel = ipNode.dataset.label || "IP";
-        const copiedLabel = ipNode.dataset.copiedLabel || "✓";
-        const iconNode = ipNode.querySelector("[data-copy-ip-icon]") || ipNode;
-        iconNode.textContent = idleLabel;
-        ipNode.setAttribute("aria-label", "Copy IP address");
-        ipNode.setAttribute("title", "Copy IP address");
-
-        ipNode.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(ip);
-          } catch (clipboardError) {
-            const fallback = document.createElement("textarea");
-            fallback.value = ip;
-            fallback.setAttribute("readonly", "");
-            fallback.style.position = "fixed";
-            fallback.style.opacity = "0";
-            document.body.appendChild(fallback);
-            fallback.select();
-            document.execCommand("copy");
-            fallback.remove();
-          }
-
-          iconNode.textContent = copiedLabel;
-          window.setTimeout(() => {
-            iconNode.textContent = idleLabel;
-          }, 1000);
-        });
-      };
+      if (!weatherNode) return;
 
       const resolveCoordinates = async () => {
         const providers = [
           {
             url: "https://ipapi.co/json/",
-            parse: (data) => ({ latitude: Number(data?.latitude), longitude: Number(data?.longitude), ip: data?.ip })
+            parse: (data) => ({ latitude: Number(data?.latitude), longitude: Number(data?.longitude) })
           },
           {
             url: "https://ipwho.is/",
-            parse: (data) => ({ latitude: Number(data?.latitude), longitude: Number(data?.longitude), ip: data?.ip })
+            parse: (data) => ({ latitude: Number(data?.latitude), longitude: Number(data?.longitude) })
           },
           {
             url: "https://freeipapi.com/api/json",
-            parse: (data) => ({ latitude: Number(data?.latitude), longitude: Number(data?.longitude), ip: data?.ipAddress })
+            parse: (data) => ({ latitude: Number(data?.latitude), longitude: Number(data?.longitude) })
           }
         ];
 
@@ -114,8 +80,7 @@
             if (!response.ok) continue;
 
             const data = await response.json();
-            const { latitude, longitude, ip } = provider.parse(data);
-            if (ip) setupCopyIp(String(ip));
+            const { latitude, longitude } = provider.parse(data);
             if (Number.isFinite(latitude) && Number.isFinite(longitude)) {
               return { latitude, longitude };
             }
@@ -126,8 +91,6 @@
 
         return null;
       };
-
-      if (!weatherNode) return;
 
       try {
         const coordinates = await resolveCoordinates();

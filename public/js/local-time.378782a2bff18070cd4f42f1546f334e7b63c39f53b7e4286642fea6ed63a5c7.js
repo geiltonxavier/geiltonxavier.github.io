@@ -63,12 +63,13 @@
         ipNode.dataset.bound = "true";
         ipNode.hidden = false;
 
-        const idleLabel = ipNode.dataset.label || "IP";
-        const copiedLabel = ipNode.dataset.copiedLabel || "✓";
-        const iconNode = ipNode.querySelector("[data-copy-ip-icon]") || ipNode;
-        iconNode.textContent = idleLabel;
-        ipNode.setAttribute("aria-label", "Copy IP address");
-        ipNode.setAttribute("title", "Copy IP address");
+        const idleLabel = ipNode.dataset.label || "Copy IP";
+        const copiedLabel = ipNode.dataset.copiedLabel || "Copied";
+        const iconNode = ipNode.querySelector("[data-copy-ip-icon]");
+        const idleIcon = iconNode ? iconNode.innerHTML : "";
+        const checkIcon = '<path d="M5 13l4 4L19 7"></path>';
+        ipNode.setAttribute("aria-label", idleLabel + ": " + ip);
+        ipNode.setAttribute("title", ip);
 
         ipNode.addEventListener("click", async () => {
           try {
@@ -85,10 +86,14 @@
             fallback.remove();
           }
 
-          iconNode.textContent = copiedLabel;
+          if (iconNode) iconNode.innerHTML = checkIcon;
+          ipNode.classList.add("is-copied");
+          ipNode.setAttribute("aria-label", copiedLabel + ": " + ip);
           window.setTimeout(() => {
-            iconNode.textContent = idleLabel;
-          }, 1000);
+            if (iconNode) iconNode.innerHTML = idleIcon;
+            ipNode.classList.remove("is-copied");
+            ipNode.setAttribute("aria-label", idleLabel + ": " + ip);
+          }, 1600);
         });
       };
 
