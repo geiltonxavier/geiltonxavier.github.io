@@ -2,6 +2,7 @@
 title: "Sobre"
 description: "Geilton Xavier é Arquiteto de Soluções e líder técnico hands-on, atuando com sistemas distribuídos, platform engineering e developer experience."
 translationKey: "about"
+bodyClass: "page-about"
 hideBackToTop: true
 hidePagination: true
 ---

@@ -2,6 +2,7 @@
 title: "About"
 description: "Geilton Xavier is a Solutions Architect and hands-on technical lead working on distributed systems, platform engineering, and developer experience."
 translationKey: "about"
+bodyClass: "page-about"
 hideBackToTop: true
 hidePagination: true
 ---

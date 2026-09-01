@@ -12,7 +12,7 @@
 {{ $theme = .}}
 {{ end }}
 
-<body class="{{ $theme }}">
+<body class="{{ $theme }}{{ with .Param "bodyClass" }} {{ . }}{{ end }}">
 
   <div class="content">
     <header>

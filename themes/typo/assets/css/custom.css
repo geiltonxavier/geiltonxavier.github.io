@@ -508,7 +508,7 @@ p + p {
 }
 
 .single-content .about-bio {
-  max-width: 680px;
+  max-width: var(--main-width);
   padding: 2.5rem 2rem 3rem;
   background: #efefeb;
   color: #1f1f1c;
@@ -519,12 +519,12 @@ p + p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.08rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #1f1f1c;
 }
 
 .single-content .about-bio p + p {
-  margin-top: 1.4rem;
+  margin-top: 1.6rem;
 }
 
 .single-content .about-bio strong,
@@ -572,7 +572,7 @@ p + p {
 }
 
 .about-memory {
-  max-width: 680px;
+  max-width: var(--main-width);
   margin: 0 0 2.5rem;
 }
 
@@ -939,6 +939,19 @@ p + p {
   padding: 0;
 }
 
+/* About page: let the content collapse to its natural height and let the
+   player follow the biography in normal flow with deliberate breathing room,
+   instead of being pinned to the bottom of the viewport. */
+.page-about .content {
+  min-height: auto !important;
+}
+
+.page-about .utility-stack {
+  position: static;
+  bottom: auto;
+  margin-top: 7rem;
+}
+
 .global-pomodoro,
 .global-radio {
   position: relative;
@@ -1249,6 +1262,10 @@ p + p {
     .global-radio {
       width: 100%;
       flex: none;
+    }
+
+    .page-about .utility-stack {
+      margin-top: 3rem;
     }
 
     .global-pomodoro {
