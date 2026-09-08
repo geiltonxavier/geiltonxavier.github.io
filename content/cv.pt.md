@@ -1,10 +1,10 @@
-+++
-title = "CV"
-description = "Currículo de Geilton Xavier."
-type = "cv"
-slug = "cv"
-translationKey = "cv"
-+++
+---
+title: "CV"
+description: "Currículo de Geilton Xavier."
+type: "cv"
+slug: "cv"
+translationKey: "cv"
+---
 
 {{< rawhtml >}}
 <div class="cv-page">

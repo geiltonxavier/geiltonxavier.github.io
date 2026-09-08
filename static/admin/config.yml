@@ -6,9 +6,12 @@ backend:
   auth_endpoint: auth
 
 publish_mode: editorial_workflow
+locale: 'pt'
 
-media_folder: "static/images/posts"
-public_folder: "/images/posts"
+# As imagens do site ficam em /img (static/img). A config antiga apontava
+# para static/images/posts, pasta que o site não usa.
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
   - name: "posts"
@@ -19,7 +22,160 @@ collections:
     extension: "md"
     format: "frontmatter"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: true }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]" }
+      - { label: "Rascunho", name: "draft", widget: "boolean", default: true }
+      - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Categorias", name: "categories", widget: "list", required: false }
+      - { label: "Mostrar tempo de leitura", name: "readTime", widget: "boolean", required: false }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+      - { label: "translationKey", name: "translationKey", widget: "hidden" }
+      - { label: "slug", name: "slug", widget: "hidden" }
+
+  - name: "memory-notes"
+    label: "Memory Notes"
+    folder: "content/memory-notes"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss[Z]", required: false }
+      - { label: "Descrição", name: "description", widget: "text", required: false }
+      - { label: "Resumo (listagem)", name: "summary", widget: "text", required: false }
+      - { label: "Local", name: "location", widget: "string", required: false }
+      - { label: "Legenda da data", name: "dateLabel", widget: "string", required: false }
+      - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+      - { label: "translationKey", name: "translationKey", widget: "hidden" }
+      - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - name: "home-en"
+        label: "Início (English)"
+        file: "content/_index.en.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "home-pt"
+        label: "Início (Português)"
+        file: "content/_index.pt.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "about-en"
+        label: "Sobre (English)"
+        file: "content/about.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "about-pt"
+        label: "Sobre (Português)"
+        file: "content/about.pt.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "now-en"
+        label: "Now (English)"
+        file: "content/now.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "now-pt"
+        label: "Now (Português)"
+        file: "content/now.pt.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "cv-en"
+        label: "CV (English)"
+        file: "content/cv.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "type", name: "type", widget: "hidden" }
+          - { label: "slug", name: "slug", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "cv-pt"
+        label: "CV (Português)"
+        file: "content/cv.pt.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+          - { label: "type", name: "type", widget: "hidden" }
+          - { label: "slug", name: "slug", widget: "hidden" }
+          - { label: "bodyClass", name: "bodyClass", widget: "hidden" }
+          - { label: "hideBackToTop", name: "hideBackToTop", widget: "hidden" }
+          - { label: "hidePagination", name: "hidePagination", widget: "hidden" }
+      - name: "posts-index-en"
+        label: "Lista de posts (intro, English)"
+        file: "content/posts/_index.en.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+      - name: "posts-index-pt"
+        label: "Lista de posts (intro, Português)"
+        file: "content/posts/_index.pt.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+      - name: "memory-notes-index-en"
+        label: "Lista de memory notes (intro, English)"
+        file: "content/memory-notes/_index.en.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
+      - name: "memory-notes-index-pt"
+        label: "Lista de memory notes (intro, Português)"
+        file: "content/memory-notes/_index.pt.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Descrição (meta)", name: "description", widget: "text", required: false }
+          - { label: "Corpo", name: "body", widget: "markdown" }
+          - { label: "translationKey", name: "translationKey", widget: "hidden" }
