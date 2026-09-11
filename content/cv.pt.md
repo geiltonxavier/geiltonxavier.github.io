@@ -17,8 +17,10 @@ translationKey: "cv"
       <span>+351 910 702 889</span>
       <span>|</span>
       <a href="https://www.linkedin.com/in/geiltonxavier/">linkedin.com/in/geiltonxavier</a>
-      <span>|</span>
+    </p>
+    <p class="cv-actions">
       <a href="/cv/geilton-xavier-cv-pt.pdf">Baixar PDF</a>
+      <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn →</a>
     </p>
   </section>
 
