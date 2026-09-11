@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+{{/* Social Icons */}}
+
+{{ with site.Params.social }}
+<div class="social-icons">
+    {{- range . }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank"
+        rel="noopener noreferrer me"
+        title="{{ (.title | default .name) | title }}">
+        {{ partial "svg.html" . }}
+    </a>
+    {{- end }}
+</div>
+{{ end }}
+
+{{/* Recent writing — 3 latest posts in the current language, no summaries to keep home minimal */}}
+
+{{ $posts := where (where .Site.RegularPages "Section" "posts") "Lang" .Lang }}
+{{ $posts = sort $posts "Date" "desc" }}
+{{ $recent := first 3 $posts }}
+
+{{ if gt (len $recent) 0 }}
+<div class="list-container home-recent">
+    {{ if eq .Lang "pt" }}
+    <h1>Posts recentes</h1>
+    {{ else }}
+    <h1>Recent writing</h1>
+    {{ end }}
+
+    {{ $dateFormat := .Site.Params.listDateFormat | default "2 Jan 2006" }}
+
+    {{ range $recent }}
+    <div class="post-line">
+        <p class="line-date">{{ .Date | time.Format $dateFormat }} </p>
+        <div>
+            <p class="line-title">
+                <a href="{{ .RelPermalink }}">
+                    {{ .Title }}
+                </a>
+            </p>
+        </div>
+    </div>
+    {{ end }}
+
+    <p class="home-more">
+        {{ if eq .Lang "pt" }}
+        <a href="{{ "posts" | relLangURL }}">Todos os posts →</a>
+        {{ else }}
+        <a href="{{ "posts" | relLangURL }}">All posts →</a>
+        {{ end }}
+    </p>
+</div>
+{{ end }}
+
+{{ end }}
