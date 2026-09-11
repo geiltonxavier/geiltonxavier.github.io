@@ -26,9 +26,9 @@ translationKey: "cv"
 
   <section class="cv-section">
     <h2>Resumo</h2>
-    <p>Engenheiro de software com mais de 10 anos construindo sistemas distribuídos de alta escala em .NET e Azure. Atualmente trabalha na <strong>Siemens</strong> como <strong>Solutions Architect</strong> e <strong>Technical Lead</strong>, projetando plataformas empresariais que integram <strong>Dynamics CRM</strong>, <strong>SAP</strong>, <strong>Salesforce</strong> e <strong>ServiceNow</strong>, com economia operacional anual projetada superior a US$ 1 milhão.</p>
-    <p>Atua como multiplicador técnico: liderou a padronização técnica de mais de 300 engenheiros, projetou <strong>Internal Developer Platforms</strong> adotadas por mais de 70 projetos e influencia decisões de arquitetura além do seu time imediato.</p>
-    <p>O detalhamento completo — experiência, competências, formação — está na <a href="/cv/geilton-xavier-cv-pt.pdf">versão em PDF</a> e no <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn</a>.</p>
+    <p>Sou engenheiro de software e trabalho com .NET e sistemas distribuídos há mais de 10 anos. Hoje estou na Siemens, como Solutions Architect e Technical Lead. Desenho plataformas que precisam conversar com Dynamics CRM, SAP, Salesforce e ServiceNow ao mesmo tempo.</p>
+    <p>A maior parte do meu trabalho é simplificar sistema complexo. Liderei padronização técnica para mais de 300 engenheiros e ajudei a construir uma plataforma interna de desenvolvimento usada hoje por mais de 70 projetos. Acho que arquitetura boa é tirar atrito do caminho, não colocar mais camada.</p>
+    <p>Quer ver o detalhe? Está na <a href="/cv/geilton-xavier-cv-pt.pdf">versão em PDF</a> e no <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn</a>.</p>
   </section>
 </div>
 {{< /rawhtml >}}

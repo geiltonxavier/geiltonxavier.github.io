@@ -26,9 +26,9 @@ translationKey: "cv"
 
   <section class="cv-section">
     <h2>Summary</h2>
-    <p>Software engineer with 10+ years building high-scale distributed systems on .NET and Azure. Currently at <strong>Siemens</strong> as a hands-on <strong>Solutions Architect</strong> and <strong>Technical Lead</strong>, designing enterprise platforms that integrate <strong>Dynamics CRM</strong>, <strong>SAP</strong>, <strong>Salesforce</strong>, and <strong>ServiceNow</strong> — with a projected $1M+ in annual operational savings.</p>
-    <p>I operate as a force multiplier: led technical standardization across 300+ engineers, designed <strong>Internal Developer Platforms</strong> adopted by 70+ projects, and built cross-cutting influence in architecture decisions beyond my immediate team.</p>
-    <p>The full detail — experience, skills, education — is in the <a href="/cv/geilton-xavier-cv-en.pdf">PDF version</a> and on <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn</a>.</p>
+    <p>I am a software engineer and I have worked with .NET and distributed systems for over 10 years. Today I work at Siemens as Solutions Architect and Technical Lead. I design enterprise platforms, the kind that has to talk to Dynamics CRM, SAP, Salesforce and ServiceNow at the same time.</p>
+    <p>Most of my work is making complex systems simpler to build and run. I led technical standards across 300+ engineers and helped build an Internal Developer Platform now used by 70+ projects. I think good architecture is mostly about removing friction, not adding layers.</p>
+    <p>Want the details? They are in the <a href="/cv/geilton-xavier-cv-en.pdf">PDF version</a> and on <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn</a>.</p>
   </section>
 </div>
 {{< /rawhtml >}}
