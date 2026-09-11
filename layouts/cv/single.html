@@ -79,6 +79,18 @@
       margin-bottom: 0;
     }
 
+    /* Same behavior as home: short page, so the player/pomodoro follows
+       the content in normal flow, aligned to the content column —
+       instead of sticking to the right edge of the viewport. */
+    .utility-stack {
+      position: static;
+      bottom: auto;
+      max-width: 680px;
+      margin: 7.5rem auto 1.25rem;
+      padding: 0 1.5rem;
+      box-sizing: border-box;
+    }
+
     .cv-actions {
       display: flex;
       flex-wrap: wrap;
