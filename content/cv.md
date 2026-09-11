@@ -19,7 +19,7 @@ translationKey: "cv"
       <a href="https://www.linkedin.com/in/geiltonxavier/">linkedin.com/in/geiltonxavier</a>
     </p>
     <p class="cv-actions">
-      <a href="/cv/geilton-xavier-cv-en.pdf">Download PDF</a>
+      <a href="/cv/geilton-xavier-cv-en.pdf" download>Download PDF</a>
       <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn →</a>
     </p>
   </section>

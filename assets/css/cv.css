@@ -1,0 +1,169 @@
+/* CV page styles — loaded globally (not inline) so the page stays styled
+   when reached through the site's SPA navigation, which only swaps
+   [data-page-content] + header and never reloads <head>. */
+
+.page-cv {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  background: #efefeb;
+  color: rgb(29, 29, 31);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page-cv main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cv-page a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.cv-page a::after {
+  display: none;
+}
+
+.cv-page {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.cv-header {
+  margin-bottom: 3rem;
+}
+
+.cv-header h1 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.cv-roleline,
+.cv-contact,
+.cv-section p,
+.cv-section li {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.cv-roleline {
+  margin-bottom: 0.5rem;
+}
+
+.cv-contact {
+  color: rgb(110, 110, 115);
+  font-size: 1rem;
+}
+
+.cv-topbar {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 1.5rem var(--main-padding) 0;
+}
+
+.cv-topbar .header {
+  margin-bottom: 0;
+}
+
+/* Same behavior as home: short page, so the player/pomodoro follows
+   the content in normal flow, aligned to the content column —
+   instead of sticking to the right edge of the viewport. */
+.page-cv .utility-stack {
+  position: static;
+  bottom: auto;
+  max-width: 680px;
+  margin: 7.5rem auto 1.25rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0;
+}
+
+.cv-actions a {
+  text-decoration: none;
+  border: 1px solid rgb(29, 29, 31);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.98rem;
+}
+
+.cv-actions a:hover {
+  background: rgb(29, 29, 31);
+  color: #efefeb;
+}
+
+@media print {
+  .cv-topbar,
+  .cv-actions,
+  .utility-stack {
+    display: none;
+  }
+}
+
+.cv-section {
+  margin-top: 2.75rem;
+}
+
+.cv-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.cv-page strong {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.cv-header h1 strong,
+.cv-page .cv-roleline strong,
+.cv-page .cv-contact strong {
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .cv-page {
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .cv-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .cv-roleline,
+  .cv-contact,
+  .cv-section p,
+  .cv-section li {
+    font-size: 1.02rem;
+  }
+
+  .cv-contact span {
+    display: none;
+  }
+
+  .cv-contact a,
+  .cv-contact .cv-contact-item {
+    display: block;
+  }
+}

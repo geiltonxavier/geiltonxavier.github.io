@@ -207,8 +207,8 @@
       document.title = nextDocument.title;
       document.documentElement.lang = nextDocument.documentElement.lang;
 
-      const currentHeader = document.querySelector("body > .content > header");
-      const nextHeader = nextDocument.querySelector("body > .content > header");
+      const currentHeader = document.querySelector("body > .content > header, body > .cv-topbar > header");
+      const nextHeader = nextDocument.querySelector("body > .content > header, body > .cv-topbar > header");
       if (currentHeader && nextHeader) currentHeader.replaceChildren(...nextHeader.childNodes);
 
       if (addHistoryEntry) window.history.pushState({}, "", url);
