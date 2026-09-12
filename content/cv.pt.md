@@ -26,8 +26,8 @@ translationKey: "cv"
 
   <section class="cv-section">
     <h2>Resumo</h2>
-    <p>Sou engenheiro de software e trabalho com .NET e sistemas distribuídos há mais de 10 anos. Hoje estou na Siemens, como Solutions Architect e Technical Lead. Desenho plataformas que precisam conversar com Dynamics CRM, SAP, Salesforce e ServiceNow ao mesmo tempo.</p>
-    <p>A maior parte do meu trabalho é simplificar sistema complexo. Liderei padronização técnica para mais de 300 engenheiros e ajudei a construir uma plataforma interna de desenvolvimento usada hoje por mais de 70 projetos. Acho que arquitetura boa é tirar atrito do caminho, não colocar mais camada.</p>
+    <p>Sou engenheiro de software e trabalho com .NET e sistemas distribuídos há mais de 15 anos. Hoje estou na Siemens, como Solutions Architect e Technical Lead. Desenho plataformas que precisam conversar com Dynamics CRM, SAP, Salesforce e ServiceNow ao mesmo tempo.</p>
+    <p>A maior parte do meu trabalho é simplificar sistema complexo. Liderei Platform Engineering e padronização cloud-native em 17+ times, treinei mais de 300 desenvolvedores e construí uma plataforma interna de desenvolvimento cujos templates estão por trás de mais de 70 projetos. Acho que arquitetura boa é tirar atrito do caminho, não colocar mais camada.</p>
     <p>Quer ver o detalhe? Está na <a href="/cv/geilton-xavier-cv-pt.pdf">versão em PDF</a> e no <a href="https://www.linkedin.com/in/geiltonxavier/">LinkedIn</a>.</p>
   </section>
 </div>
