@@ -175,6 +175,18 @@ a[data-tooltip]:focus-visible::before {
   transform: translateX(-50%) translateY(0);
 }
 
+/* The tooltip bubble is a hover-only affordance: on touch screens it can never
+   be read, and its `white-space: nowrap` box is wider than a phone viewport,
+   which pushes the document wider than the device width — Chrome then widens
+   the mobile layout viewport and the whole page renders zoomed out, with the
+   header squeezed into the leftover width. Hide the bubble on touch devices
+   and wherever the viewport is too narrow to hold it. */
+@media (hover: none), (max-width: 820px) {
+  a[data-tooltip]::before {
+    display: none;
+  }
+}
+
 .header-title {
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -1290,6 +1302,39 @@ p + p {
   background: var(--background);
   color: var(--content-secondary);
   font-size: 0.8rem;
+}
+
+/* Narrow screens: the single nav row cannot hold the menu and the meta items
+   side by side, so the meta items (clock, temperature, IP, theme, language) get
+   squeezed into a one-character-per-line column. Give each row its own line and
+   keep every meta item unbreakable. */
+@media screen and (max-width: 620px) {
+  .header-nav-wrap {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .header-meta {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+
+  .header-menu,
+  .header-meta {
+    min-width: 0;
+  }
+
+  .header-meta p,
+  .header-local-time,
+  .header-time,
+  .header-weather,
+  .copy-ip,
+  .theme-toggle,
+  .language-switcher {
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 480px) {
