@@ -1,13 +1,26 @@
 ---
-date: '2026-09-13T16:47:13Z'
+title: Working is not the criterion
+date: 2026-09-13T16:47:13Z
 draft: false
-title: 'Working is not the criterion'
-description: 'A patch rejected on a coding platform and merged in rqlite. The platform measured if the task was hard, the maintainer measured if the patch was good.'
-tags: ['ai', 'open-source', 'rqlite', 'software-engineering']
-translationKey: 'funciona-nao-e-o-criterio'
+description: A patch rejected on a coding platform and merged in rqlite. The
+  platform measured if the task was hard, the maintainer measured if the patch
+  was good.
+tags:
+  - ai
+  - open-source
+  - rqlite
+  - software-engineering
+translationKey: funciona-nao-e-o-criterio
 ---
 
 I have a patch merged in rqlite and a rejected challenge on a coding platform, both with the same bugfix. Both verdicts are correct, and the difference between them is one question.
+
+{{< rawhtml >}}
+<article class="memory-note">
+  <figure>
+    <img src="/img/it-works-is-it-good.png" alt=">
+  </figure>
+{{< /rawhtml >}}
 
 The platform asked if the problem was hard. The maintainer asked if the patch was good.
 
