@@ -16,19 +16,15 @@ I have a patch merged in rqlite and a rejected challenge on a coding platform, b
 
 {{< rawhtml >}}
 
-
-
 <article class="memory-note">
 
   <figure>
 
-\    <img src="/img/it-works-is-it-good.png" alt="It works versus is it good">
+  <img src="/img/it-works-is-it-good.png" alt="It works versus is it good">
 
   </figure>
 
 </article>
-
-
 
 {{< /rawhtml >}}
 
