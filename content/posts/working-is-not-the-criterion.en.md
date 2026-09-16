@@ -32,8 +32,6 @@ rqlite is an open-source distributed relational database built on SQLite and Raf
 
 Before going on, the obvious part: the analysis came from a coding agent, and the rqlite repository asks for that disclosure. What matters here is not who found the bug, but who judged the quality of what came out. That becomes clear at the end.
 
-
-
 ## The bug
 
 rqlite is a distributed SQLite. Its `Dump` accepts a table filter, and the filtered dump does not load into an empty database:
