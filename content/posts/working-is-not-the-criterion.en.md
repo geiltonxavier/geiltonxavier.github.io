@@ -12,7 +12,7 @@ tags:
   - software-engineering
 translationKey: funciona-nao-e-o-criterio
 ---
-I have a patch merged in rqlite and a rejected challenge on a coding platform, both with the same bugfix. Both verdicts are correct, and the difference between them is one question.
+I have a patch [merged in rqlite](https://github.com/rqlite/rqlite/pull/2779) and a rejected challenge on a coding platform, both with the same bugfix. Both verdicts are correct, and the difference between them is one question.
 
 {{< rawhtml >}}
 
@@ -99,6 +99,6 @@ Notice the alignment: the platform measured if the task was hard, the maintainer
 
 Whoever uses an agent and only checks the green is outsourcing the question that matters. It is yours.
 
-The patch went into rqlite with 2 files and 193 lines, and there is a line in the CHANGELOG of v10.3.3 with my name. But what I really took from it was the question I was not asking: this works, ok. And is this good?
+The patch went into rqlite with 2 files and 193 lines, and there is a line in the [CHANGELOG of v10.3.3](https://github.com/rqlite/rqlite/blob/master/CHANGELOG.md#v1033-september-13th-2026) with my name. But what I really took from it was the question I was not asking: this works, ok. And is this good?
 
 Well, that is it.
