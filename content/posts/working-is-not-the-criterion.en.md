@@ -42,19 +42,13 @@ rqlite is an open-source distributed relational database built on SQLite and Raf
 
   <img src="/img/rqlite.png" alt="rqlite GitHub repository">
 
- <figcaption>    
-
-   rqlite a lightweight distributed relational database built on SQLite and Raft.    
-
-</figcaption>
+ <figcaption>  rqlite a lightweight distributed relational database built on SQLite and Raft.    </figcaption>
 
   </figure>
 
 </article>
 
 {{< /rawhtml >}}
-
-
 
 Before going on, the obvious part: the analysis came from a coding agent, and the rqlite repository asks for that disclosure. What matters here is not who found the bug, but who judged the quality of what came out. That becomes clear at the end.
 
