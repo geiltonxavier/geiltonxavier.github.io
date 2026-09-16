@@ -1,9 +1,25 @@
 ---
 title: If You Started Coding After the AI Boom, Read the 12-Factor App
-date: 2026-08-27T12:08:00Z
+date: 2026-08-27T12:08:00.000Z
 draft: false
 ---
 I didn't write this for experienced software engineers. If you have spent years building and running production systems, you probably know the [12-Factor App](https://12factor.net/) already. Maybe you cannot list all twelve factors by heart, but the ideas will sound familiar.
+
+
+
+{{< rawhtml >}}
+
+<article class="memory-note">
+
+  <figure>
+
+  <img src="/img/12-factor-app.png" alt="12 factor app">
+
+  </figure>
+
+</article>
+
+
 
 This post is for people who started coding more recently, after tools like ChatGPT, GitHub Copilot, Claude and Codex made it ridiculously easy to generate code that works.
 
