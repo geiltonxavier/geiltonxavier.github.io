@@ -1,5 +1,5 @@
 ---
-title: "Open source in the age of AI: difficulty is not quality"
+title: "Open source in the age of AI"
 date: 2026-09-13T16:47:13.000Z
 draft: false
 description: Contributing to open source when agents write patches. A bugfix
@@ -7,6 +7,7 @@ description: Contributing to open source when agents write patches. A bugfix
   quality.
 aliases:
   - /posts/working-is-not-the-criterion/
+  - /posts/open-source-na-era-da-ia/
 tags:
   - ai
   - open-source

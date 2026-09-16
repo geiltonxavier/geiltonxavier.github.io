@@ -1,7 +1,7 @@
 ---
 date: '2026-09-13T16:47:13Z'
 draft: false
-title: 'Open source na era da IA: dificuldade não é qualidade'
+title: 'Open source na era da IA'
 description: 'Contribuir com open source quando agentes escrevem patch. Um bugfix reprovado como fácil demais para treino de IA e mergeado por um mantenedor que julgou qualidade.'
 aliases:
   - /pt/posts/funciona-nao-e-o-criterio/
