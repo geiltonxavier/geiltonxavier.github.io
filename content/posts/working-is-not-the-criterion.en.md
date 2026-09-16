@@ -16,21 +16,23 @@ I have a patch [merged in rqlite](https://github.com/rqlite/rqlite/pull/2779) an
 
 {{< rawhtml >}}
 
-<article class="memory-note">
-
-  <figure>
-
-  <img src="/img/it-works-is-it-good.png" alt="It works versus is it good">
-
-  </figure>
-
-</article>
+<article class="memory-note">  <figure>    <img src="/img/it-works-is-it-good.png" alt="It works versus is it good">  </figure></article>
 
 {{< /rawhtml >}}
 
 The platform asked if the problem was hard. The maintainer asked if the patch was good.
 
-Before going on, the obvious part: the analysis came from a coding agent, and the rqlite repository asks for that disclosure. What matters here is not who found the bug, it is who judged the quality of what came out. That becomes clear at the end.
+rqlite is an open-source distributed relational database built on SQLite and Raft. It is a real project, used in real systems, with a codebase that has accumulated years of engineering decisions. That context matters for what happened next.
+
+{{< rawhtml >}}
+
+<article class="memory-note">  <figure>    <img src="/img/rqlite.png" alt="rqlite GitHub repository">    <figcaption>      The rqlite repository on GitHub.    </figcaption>  </figure></article>
+
+{{< /rawhtml >}}
+
+Before going on, the obvious part: the analysis came from a coding agent, and the rqlite repository asks for that disclosure. What matters here is not who found the bug, but who judged the quality of what came out. That becomes clear at the end.
+
+
 
 ## The bug
 
