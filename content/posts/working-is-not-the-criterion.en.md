@@ -32,6 +32,7 @@ The platform asked if the problem was hard. The maintainer asked if the patch wa
 
 Before going on, the obvious part: the analysis came from a coding agent, and the rqlite repository asks for that disclosure. What matters here is not who found the bug, it is who judged the quality of what came out. That becomes clear at the end.
 
+
 ## The bug
 
 rqlite is a distributed SQLite. Its `Dump` accepts a table filter, and the filtered dump does not load into an empty database:
