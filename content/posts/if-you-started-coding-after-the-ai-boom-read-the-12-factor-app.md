@@ -19,6 +19,8 @@ I didn't write this for experienced software engineers. If you have spent years 
 
 </article>
 
+{{< /rawhtml >}}
+
 
 
 This post is for people who started coding more recently, after tools like ChatGPT, GitHub Copilot, Claude and Codex made it ridiculously easy to generate code that works.
