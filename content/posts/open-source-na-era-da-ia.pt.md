@@ -1,13 +1,27 @@
 ---
 date: '2026-09-13T16:47:13Z'
 draft: false
-title: 'Funciona não é o critério'
-description: 'Um patch reprovado numa plataforma de challenges e mergeado no rqlite. A plataforma mediu se a tarefa era difícil, o mantenedor mediu se o patch estava bom.'
+title: 'Open source na era da IA: dificuldade não é qualidade'
+description: 'Contribuir com open source quando agentes escrevem patch. Um bugfix reprovado como fácil demais para treino de IA e mergeado por um mantenedor que julgou qualidade.'
+aliases:
+  - /pt/posts/funciona-nao-e-o-criterio/
 tags: ['ai', 'open-source', 'rqlite', 'engenharia-de-software']
 translationKey: 'funciona-nao-e-o-criterio'
 ---
 
-Tenho um patch mergeado no rqlite e um challenge reprovado numa plataforma de coding challenges, os dois com o mesmo bugfix. Os dois veredictos estão certos, e a diferença entre eles é uma pergunta só.
+Faz anos que contribuo para projetos open source. Uma dessas contribuições, de muito tempo atrás, acabou chamando atenção do pessoal da shipd.ai e virou um convite para colaborar num projeto ligado a modelos de linguagem: avaliar a complexidade de tarefas reais de código.
+
+O critério ali não é código certo ou errado, é complexidade. A tarefa só vale se desafiar de verdade um agente de IA, e isso vai muito além de achar um bug.
+
+Foi assim que saí olhando projetos relevantes no GitHub atrás de uma tarefa difícil o bastante para ensinar algo novo a um modelo. E foi assim que cheguei no rqlite.
+
+## O que é o rqlite
+
+O [rqlite](https://github.com/rqlite/rqlite) é o SQLite em versão distribuída. O mesmo SQL que você já conhece, replicado entre nós com consenso Raft, então dá para ter um relacional tolerante a falhas sem operar um bancão. Tem mais de 17 mil estrelas no GitHub e é usado onde o pessoal quer a semântica do SQLite com clustering e alta disponibilidade.
+
+Achei um bug real lá, abri o patch, e aqui a história muda de direção. A minha intenção era aprovar uma tarefa válida no processo da shipd.ai, mas é um processo complicado: para valer no treinamento de LLM, o modelo precisa não conseguir resolver o problema a cada tentativa. Se ela resolve o mesmo problema que eu resolvi, significa que não estou ensinando nada de novo para a IA.
+
+Bom, ainda não consegui passar na shipd.ai. Mas saí de lá com um patch mergeado no rqlite e um challenge reprovado na mesma plataforma, os dois com o mesmo bugfix. Os dois veredictos estão certos, e a diferença entre eles é uma pergunta só.
 
 A plataforma perguntou se o problema era difícil. O mantenedor perguntou se o patch estava bom.
 
@@ -70,11 +84,11 @@ Lendo isso três vezes, entendi o que ele estava dizendo. Com o `Filter` como m�
 
 O meu diff encolheu a cada rodada: de 237 linhas de inserção para 193, e de 3 testes de banco para 1 puro mais 1 de integração.
 
-## Funciona é o piso
+## Teste verde não é qualidade
 
 Aqui está a parte que eu queria escrever desde o começo, e que vale para qualquer um que use agente no dia a dia.
 
-Teste verde não é qualidade, é piso. Um agente chega no piso rápido, e chega bem: o meu código passava em tudo, o dump carregava, nada quebrou. O que ele não entrega sozinho é o julgamento sobre o que saiu. Se o arquivo novo deveria existir, se o teste novo diz algo que o antigo não dizia, se aquela lógica mora no lugar certo. Isso sai de alguém lendo o diff e perguntando se está bom.
+Teste verde não é qualidade, é só o começo. Um agente chega lá rápido, e chega bem: o meu código passava em tudo, o dump carregava, nada quebrou. O que ele não entrega sozinho é o julgamento sobre o que saiu. Se o arquivo novo deveria existir, se o teste novo diz algo que o antigo não dizia, se aquela lógica mora no lugar certo. Isso sai de alguém lendo o diff e perguntando se está bom.
 
 Repara no alinhamento: a plataforma mediu se a tarefa era difícil, o mantenedor mediu se o patch estava bom. Nenhum dos dois perguntou se funciona, porque isso era o mínimo. No meu caso o "funciona" estava resolvido desde a primeira versão, e foi a qualidade que precisou de quatro rodadas.
 

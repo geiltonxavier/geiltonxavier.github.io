@@ -1,10 +1,12 @@
 ---
-title: Working is not the criterion
+title: "Open source in the age of AI: difficulty is not quality"
 date: 2026-09-13T16:47:13.000Z
 draft: false
-description: A patch rejected on a coding platform and merged in rqlite. The
-  platform measured if the task was hard, the maintainer measured if the patch
-  was good.
+description: Contributing to open source when agents write patches. A bugfix
+  rejected as too easy for AI training and merged by a maintainer who judged
+  quality.
+aliases:
+  - /posts/working-is-not-the-criterion/
 tags:
   - ai
   - open-source
@@ -12,7 +14,19 @@ tags:
   - software-engineering
 translationKey: funciona-nao-e-o-criterio
 ---
-I have a patch [merged in rqlite](https://github.com/rqlite/rqlite/pull/2779) and a rejected challenge on a coding platform, both with the same bugfix. Both verdicts are correct, and the difference between them is one question.
+I have contributed to open source for years. One of those old contributions caught the attention of the folks at shipd.ai and turned into an invite to collaborate on a project tied to language models: evaluating the complexity of real coding tasks.
+
+The criterion there is not right or wrong code, it is complexity. A task only counts if it genuinely challenges an AI agent, and that goes way beyond finding a bug.
+
+So I went looking at relevant projects on GitHub for a task hard enough to teach something new to a model. That is how I got to rqlite.
+
+## What is rqlite
+
+[rqlite](https://github.com/rqlite/rqlite) is SQLite made distributed. Same SQL you already know, replicated across nodes with Raft consensus, so you get a fault-tolerant relational store without running a big database. It has over 17,000 stars on GitHub and is used where people want SQLite semantics with clustering and high availability.
+
+I found a real bug there, opened a patch, and here the story changes direction. My goal was to get a valid task through in the shipd.ai process, but that process is tricky: for a task to count for LLM training, the model must fail to solve it on every attempt. If the model solves the same problem I solved, I am not teaching the AI anything new.
+
+I still have not cracked it at shipd.ai. But I walked out with a [merged PR in rqlite](https://github.com/rqlite/rqlite/pull/2779), and a rejected challenge on that same platform, both with the same bugfix. Both verdicts are correct, and the difference between them is one question.
 
 {{< rawhtml >}}
 
@@ -31,6 +45,20 @@ I have a patch [merged in rqlite](https://github.com/rqlite/rqlite/pull/2779) an
 The platform asked if the problem was hard. The maintainer asked if the patch was good.
 
 Before going on, the obvious part: the analysis came from a coding agent, and the rqlite repository asks for that disclosure. What matters here is not who found the bug, it is who judged the quality of what came out. That becomes clear at the end.
+
+{{< rawhtml >}}
+
+<article class="memory-note">
+
+  <figure>
+
+  <img src="/img/rqlite.png" alt="It works versus is it good">
+
+  </figure>
+
+</article>
+
+{{< /rawhtml >}}
 
 ## The bug
 
@@ -89,7 +117,7 @@ Reading that three times, I understood what he was saying. With `Filter` as a me
 
 My diff shrank on every round: from 237 inserted lines to 193, and from 3 database tests to 1 pure test plus 1 integration test.
 
-## Working is the floor
+## A green test is the floor
 
 Here is the part I wanted to write since the beginning, and it applies to anyone using agents every day.
 
